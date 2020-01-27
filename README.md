@@ -50,7 +50,7 @@ Thanks for all this stuff !
 
 ### Team
 * Joseph Logan
-* Guillaume Sanchez
+* Guillaume Sanchez (NkStream)
 * Matthias
 
 ## Versionning
