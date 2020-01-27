@@ -2,4 +2,4 @@
 
 ## Projet Web des The Independent Gamers
 
-Les Languages utilisés : [PHP (Laravel)/JS & MySQ]
+Les Languages utilisés : `PHP (Laravel)/JS & MySQ`
