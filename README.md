@@ -49,7 +49,7 @@ Thanks for all this stuff !
 * Minipomme (Brandon SIMON-VERMOT)
 
 ### Team
-* Joseph Logan
+* Joseph Logan(Todiun)
 * Guillaume Sanchez (NkStream)
 * Matthias Guy
 
