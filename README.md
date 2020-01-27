@@ -1,3 +1,3 @@
-# \The Independent Home /
+# \The Independent Home/
 
 ## Projet Web des The Independent Gamers
