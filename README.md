@@ -1,16 +1,8 @@
-# \The Independent Home/
-
-## Projet Web des The Independent Gamers
-
-Les Languages utilisés : `PHP (Laravel.6)/JS & MySQL.8, Bootstrap.4, Font Awesome.5`
-
-# Indicon Join
-
-Indicon join is a great Proof of Concept with Beacons, Android and Arduino for localisation.
-We tried to localise a beacon with Arduino, trilateration and Android application throught little games like "Hot/Cold" or "Treasure Hunt".
+## The Independent Home
 
 ## Main purpose
 
+The Independent Home is a showcase website for the team [The Independent Gamers](https://www.seek-team.com/fr/multigaming/649/fun-the-independent-gamers).
 
 ## What we used
 
