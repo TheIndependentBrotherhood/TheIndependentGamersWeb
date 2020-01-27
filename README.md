@@ -37,13 +37,13 @@ If you want to learn more about the libraries with use.
 
 Thanks for all this stuff !
 
-### Project Manager
-* Minipomme (Brandon SIMON-VERMOT)
+### Project Managers
+* Brandon SIMON-VERMOT (Minipomme)
+* Guillaume SANCHEZ (NkStream)
 
 ### Team
-* Joseph Logan(Todiun)
-* Guillaume Sanchez (NkStream)
-* Matthias Guy
+* Joseph LOGAN (Todiun)
+* Matthias GUY (Matwands)
 
 ## Versionning
 
