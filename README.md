@@ -38,7 +38,7 @@ If you want to learn more about the libraries with use.
 Thanks for all this stuff !
 
 ### Project Managers
-* Brandon SIMON-VERMOT (Minipomme)
+* [Brandon SIMON-VERMOT](https://www.linkedin.com/in/brandon-simon-vermot-ab8736123/) (Minipomme)
 * Guillaume SANCHEZ (NkStream)
 
 ### Team
