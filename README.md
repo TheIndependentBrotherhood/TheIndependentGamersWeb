@@ -6,7 +6,7 @@ The Independent Home is a showcase website for the team [The Independent Gamers]
 
 ## What we used
 
-If you want to learn more about the libraries with use.
+If you want to learn more about the tools/languages/libraries we use.
 
 ### Development
 
