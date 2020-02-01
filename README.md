@@ -29,10 +29,10 @@ If you want to learn more about the tools/languages/libraries we use.
 
 ### Libraries
 
-- Bootstrap 4
+- Bootstrap 4.4
 [Link here](https://getbootstrap.com/)
 
-- Font Awesome 5
+- Font Awesome 5.12
 [Link here](https://fontawesome.com/)
 
 Thanks for all this stuff !
