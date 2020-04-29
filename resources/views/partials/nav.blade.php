@@ -16,29 +16,29 @@
         <ul class="navbar-nav ml-1">
 
         <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="/">Home
+            <a class="nav-link text-uppercase text-expanded" href="<?=url("/"); ?>">Home
             <!-- <span class="sr-only">(current)</span> -->
             </a>
         </li>
 
         <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="/jeux">Jeux</a>
+            <a class="nav-link text-uppercase text-expanded" href="<?=url("/jeux"); ?>">Jeux</a>
         </li>
 
         <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="/membres">Membres</a>
+            <a class="nav-link text-uppercase text-expanded" href="<?=url("/membres"); ?>">Membres</a>
         </li>
 
         <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="/twitch">Twitch</a>
+            <a class="nav-link text-uppercase text-expanded" href="<?=url("/twitch"); ?>">Twitch</a>
         </li>
 
         <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="/events">Events</a>
+            <a class="nav-link text-uppercase text-expanded" href="<?=url("/events"); ?>">Events</a>
         </li>
 
         <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="/recrutements">Recrutements</a>
+            <a class="nav-link text-uppercase text-expanded" href="<?=url("/recrutements"); ?>">Recrutements</a>
         </li>
 
         </ul>

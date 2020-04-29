@@ -8,9 +8,9 @@
       </div>
     </footer>
     <!-- JavaScript -->
-    <script src="../js/app.js"></script>
-    <!--Bootstrap core JavaScript-->
-    <!-- <script src="{{asset('js/bootstrap.min.js')}}"></script> -->
+    <script src="<?=url("/js/app.js"); ?>"></script>
+    <!--Bootstrap core JavaScript
+    <script src="url("/js/bootstrap.min.js"); ?>"></script> --> 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/4217f10c9f.js" crossorigin="anonymous"></script>
   </body>
