@@ -11,6 +11,26 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('/main/home');
+});
+
+Route::get('/jeux', 'JeuxController@list');
+
+Route::get('/membres', 'MembresController@list');
+
+Route::get('/twitch', function () {
+    return view('/devlop/devlop');
+});
+
+Route::get('/events', function () {
+    return view('/devlop/devlop');
+});
+
+Route::get('/recrutements', function () {
+    return view('/devlop/devlop');
 });
