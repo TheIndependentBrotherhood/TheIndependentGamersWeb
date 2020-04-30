@@ -87,7 +87,10 @@ p{
 .text-primary{color:#e6a756!important}.bg-primary{background-color:#e6a756!important}.btn{box-shadow:0 3px 3px 0 rgba(33,37,41,.1)}.btn-primary{background-color:#e6a756;border-color:#e6a756}.btn-primary:active,.btn-primary:focus,.btn-primary:hover{background-color:#df902a;border-color:#df902a}.font-weight-light{font-weight:100!important}
 
 #logo{
-    height: 8rem;
+    height: 128px;
+    width: 95.703px;
+    margin-left: 2rem; 
+    margin-right: 1rem; 
 }
 
 #login--container{
@@ -103,7 +106,6 @@ p{
 
 .block--membre{
     width: 30%;
-    /*background-color: rgba(240, 248, 255, 0.61);*/
 }
 
 
