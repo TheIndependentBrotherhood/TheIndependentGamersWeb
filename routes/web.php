@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('/main/home');
 });
 
+Route::get('/mentions-légales', function () {
+    return view('/mentions/mentions');
+});
+
 Route::get('/jeux', 'JeuxController@list');
 
 Route::get('/membres', 'MembresController@list');

@@ -13,13 +13,13 @@
 
 
                 <div class="p-2 text-center">
-                    <h2 class="pb-2 text-primary">Minipomme</h2>
                     <img class="rounded-circle img--membre" src="images/membre/minipomme.png" alt="">
+                    <h2 class="pb-2 text-primary">Minipomme</h2>
                 </div>
 
                 <div class="p-2 text-center">
-                    <h2 class="pb-2 text-primary">Max.R</h2>
                     <img class="rounded-circle img--membre" src="images/membre/maxr.png" alt="">
+                    <h2 class="pb-2 text-primary">Max.R</h2>
                 </div>
 
 
@@ -28,40 +28,40 @@
 
 
                 <div class="p-2 col col-lg-4 text-center">
-                    <h2 class="pb-2 text-primary">Miniviruce</h2>
                     <img class="rounded-circle img--membre" src="images/membre/miniviruce.png" alt="">
+                    <h2 class="pb-2 text-primary">Miniviruce</h2>
                 </div>
                 <div class="p-2 col col-lg-4 text-center">
-                    <h2 class="pb-2 text-primary">Matwands</h2>
                     <img class="rounded-circle img--membre" src="images/membre/matwands.png" alt="">
+                    <h2 class="pb-2 text-primary">Matwands</h2>
                 </div>
                 <div class="p-2 col col-lg-4 text-center">
+                    <img class="rounded-circle img--membre" src="images/membre/mercenaire.png" alt="">
                     <h2 class="pb-2 text-primary">Mercenaire</h2>
-                    <img class="rounded-circle img--membre" src="images/membre/mercenaire.png" alt="">
                 </div>
                 <div class="p-2 col col-lg-4 text-center">
+                    <img class="rounded-circle img--membre" src="images/membre/mercenaire.png" alt="">
                     <h2 class="pb-2 text-primary">Nevlix</h2>
-                    <img class="rounded-circle img--membre" src="images/membre/mercenaire.png" alt="">
                 </div>
                 <div class="p-2 col col-lg-4 text-center">
-                    <h2 class="pb-2 text-primary">Moon Moon</h2>
                     <img class="rounded-circle img--membre" src="images/membre/moonmoon.png" alt="">
+                    <h2 class="pb-2 text-primary">Moon Moon</h2>
                 </div>
                 <div class="p-2 col col-lg-4 text-center">
-                    <h2 class="pb-2 text-primary">Desperados</h2>
                     <img class="rounded-circle img--membre" src="images/membre/desperados.png" alt="">
+                    <h2 class="pb-2 text-primary">Desperados</h2>
                 </div>
                 <div class="p-2 col col-lg-4 text-center">
+                    <img class="rounded-circle img--membre" src="images/membre/kerlliest.png" alt="">
                     <h2 class="pb-2 text-primary">Kerlliest</h2>
-                    <img class="rounded-circle img--membre" src="images/membre/mercenaire.png" alt="">
                 </div>
                 <div class="p-2 col col-lg-4 text-center">
-                    <h2 class="pb-2 text-primary">Larandar</h2>
                     <img class="rounded-circle img--membre" src="images/membre/larandar.png" alt="">
+                    <h2 class="pb-2 text-primary">Larandar</h2>
                 </div>
                 <div class="p-2 col col-lg-4 text-center">
-                    <h2 class="pb-2 text-primary">GouduRisque</h2>
                     <img class="rounded-circle img--membre" src="images/membre/mercenaire.png" alt="">
+                    <h2 class="pb-2 text-primary">GouduRisque</h2>
                 </div>
 
 
@@ -70,18 +70,18 @@
 
 
                 <div class="p-2 text-center">
-                    <h2 class="pb-2 text-primary">Todiun</h2>
                     <img class="rounded-circle img--membre" src="images/membre/todiun.png" alt="">
+                    <h2 class="pb-2 text-primary">Todiun</h2>
                 </div>
 
                 <div class="p-2 text-center">
-                    <h2 class="pb-2 text-primary">Riiwolk</h2>
                     <img class="rounded-circle img--membre" src="images/membre/riiwolk.png" alt="">
+                    <h2 class="pb-2 text-primary">Riiwolk</h2>
                 </div>
 
                 <div class="p-2 text-center">
-                    <h2 class="pb-2 text-primary">Nk</h2>
                     <img class="rounded-circle img--membre" src="images/membre/nk.png" alt="">
+                    <h2 class="pb-2 text-primary">Nk</h2>
                 </div>
 
 
