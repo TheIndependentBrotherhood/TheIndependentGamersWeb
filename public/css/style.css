@@ -48,7 +48,61 @@ p{
     line-height:4rem
 }
 
-.page-section{margin-top:5rem;margin-bottom:5rem}.section-heading{text-transform:uppercase}.section-heading .section-heading-upper{display:block;font-size:1rem;font-weight:800}.section-heading .section-heading-lower{display:block;font-size:3rem;font-weight:100}.bg-faded{background-color:rgba(255,255,255,.85)}#mainNav{background-color:rgba(47,23,15,.9); font-family:Raleway}#mainNav .navbar-brand{color:#e6a756} #mainNav .navbar-nav .nav-item.active .nav-link{color:#e6a756}@media (min-width:992px){#mainNav .navbar-nav .nav-item .nav-link{font-size:.9rem}#mainNav .navbar-nav .nav-item }#mainNav .navbar-nav .nav-item.active .nav-link:hover{color:#e6a756}}.btn-xl{font-weight:700;font-size:.8rem;padding-top:1.5rem;padding-bottom:1.5rem;padding-left:2rem;padding-right:2rem}
+.page-section{
+    margin-top:5rem;
+    margin-bottom:5rem
+}
+
+.section-heading{
+    text-transform:uppercase
+}
+
+.section-heading .section-heading-upper{
+    display:block;
+    font-size:1rem;
+    font-weight:800
+
+}.section-heading .section-heading-lower{
+    display:block;
+    font-size:3rem;
+    font-weight:100
+}
+
+.bg-faded{
+    background-color:rgba(255,255,255,.85)
+}
+
+#mainNav{
+    background-color:rgba(47,23,15,.9);
+    font-family:Raleway
+}
+
+#mainNav .navbar-brand{
+    color:#e6a756
+}
+
+#mainNav .navbar-nav .nav-item.active .nav-link{
+    color:#e6a756
+}
+
+@media (min-width:992px){
+    #mainNav .navbar-nav .nav-item .nav-link{
+        font-size:.9rem
+    }
+    
+    #mainNav .navbar-nav .nav-item.active .nav-link:hover{
+        color:#e6a756
+    }
+}
+
+.btn-xl{
+    font-weight:700;
+    font-size:.8rem;
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+    padding-left:2rem;
+    padding-right:2rem
+}
 
 .intro{
     position:relative
@@ -250,6 +304,7 @@ p{
 /* Mentions Légales */
 
 .mention{
+    margin-top: 4rem;
     background: transparent !important;
     color: white;
 }
