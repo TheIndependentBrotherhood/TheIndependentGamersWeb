@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="p-2 text-center">
-                    <img class="rounded-circle img--membre" src="images/membre/maxr.png" alt="">
+                    <img class="rounded-circle img--membre" src="images/membre/max-r.png" alt="">
                     <h2 class="pb-2 text-primary">Max.R</h2>
                 </div>
 
