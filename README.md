@@ -39,7 +39,7 @@ Thanks for all this stuff !
 
 ### Project Managers
 * [Brandon SIMON-VERMOT](https://www.linkedin.com/in/brandon-simon-vermot-ab8736123/) (Minipomme)
-* Guillaume SANCHEZ (NkStream)
+* [Guillaume SANCHEZ](https://www.linkedin.com/in/guillaume-sanchez/) (NkStream)
 
 ### Team
 * Joseph LOGAN (Todiun)
