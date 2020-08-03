@@ -2,19 +2,25 @@ html{
     height: 100%;
 }
 
+/* Lora */
+
 body{
     min-height: 100%;
     position: relative;
-    font-family:Lora;
+    font-family: Raleway, Helvetica, Arial, sans-serif;
     background:linear-gradient(rgba(47,23,15,.65),rgba(47,23,15,.65)),url(../images/bg.png);
     background-attachment:fixed;
     background-position:center;
     background-size:cover;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-family:Raleway
+h1{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
+
+h2,h3,h4,h5,h6{
+    font-family:Raleway
+} 
 
 p{
     line-height:1.75
@@ -27,7 +33,7 @@ p{
 .site-heading{
     text-transform:uppercase;
     line-height:1;
-    font-family:Raleway
+    /* font-family:Raleway */
 }
 
 .site-heading .site-heading-upper{
@@ -42,7 +48,61 @@ p{
     line-height:4rem
 }
 
-.page-section{margin-top:5rem;margin-bottom:5rem}.section-heading{text-transform:uppercase}.section-heading .section-heading-upper{display:block;font-size:1rem;font-weight:800}.section-heading .section-heading-lower{display:block;font-size:3rem;font-weight:100}.bg-faded{background-color:rgba(255,255,255,.85)}#mainNav{background-color:rgba(47,23,15,.9);font-family:Raleway}#mainNav .navbar-brand{color:#e6a756}#mainNav .navbar-nav .nav-item .nav-link{color:rgba(255,255,255,.7);font-weight:800}#mainNav .navbar-nav .nav-item.active .nav-link{color:#e6a756}@media (min-width:992px){#mainNav .navbar-nav .nav-item .nav-link{font-size:.9rem}#mainNav .navbar-nav .nav-item .nav-link:hover{color:rgba(255,255,255,.4)}#mainNav .navbar-nav .nav-item.active .nav-link:hover{color:#e6a756}}.btn-xl{font-weight:700;font-size:.8rem;padding-top:1.5rem;padding-bottom:1.5rem;padding-left:2rem;padding-right:2rem}
+.page-section{
+    margin-top:5rem;
+    margin-bottom:5rem
+}
+
+.section-heading{
+    text-transform:uppercase
+}
+
+.section-heading .section-heading-upper{
+    display:block;
+    font-size:1rem;
+    font-weight:800
+
+}.section-heading .section-heading-lower{
+    display:block;
+    font-size:3rem;
+    font-weight:100
+}
+
+.bg-faded{
+    background-color:rgba(255,255,255,.85)
+}
+
+#mainNav{
+    background-color:rgba(47,23,15,.9);
+    font-family:Raleway
+}
+
+#mainNav .navbar-brand{
+    color:#e6a756
+}
+
+#mainNav .navbar-nav .nav-item.active .nav-link{
+    color:#e6a756
+}
+
+@media (min-width:992px){
+    #mainNav .navbar-nav .nav-item .nav-link{
+        font-size:.9rem
+    }
+    
+    #mainNav .navbar-nav .nav-item.active .nav-link:hover{
+        color:#e6a756
+    }
+}
+
+.btn-xl{
+    font-weight:700;
+    font-size:.8rem;
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+    padding-left:2rem;
+    padding-right:2rem
+}
 
 .intro{
     position:relative
@@ -86,9 +146,6 @@ p{
 
 .text-primary{color:#e6a756!important}.bg-primary{background-color:#e6a756!important}.btn{box-shadow:0 3px 3px 0 rgba(33,37,41,.1)}.btn-primary{background-color:#e6a756;border-color:#e6a756}.btn-primary:active,.btn-primary:focus,.btn-primary:hover{background-color:#df902a;border-color:#df902a}.font-weight-light{font-weight:100!important}
 
-#logo{
-    height: 8rem;
-}
 
 #login--container{
     width: 30% !important;
@@ -103,7 +160,6 @@ p{
 
 .block--membre{
     width: 30%;
-    /*background-color: rgba(240, 248, 255, 0.61);*/
 }
 
 
@@ -129,4 +185,149 @@ p{
 
 .retour{
     color: #e6a756;
+}
+
+
+/* ================== CSS PERSO ================== */
+
+
+/*  header  */
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-imgtitle{
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 2rem; 
+    margin-right: 2rem; 
+}
+
+.header-navicon a{
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 991px) {
+    .header{
+        display: block;
+        text-align: center;
+    }
+
+    .header-imgtitle{
+        margin: 0 !important;
+        color: white;
+        display: block;
+    }
+
+    .header-title {
+        display: none;
+    }
+}
+
+#logo{
+    height: 128px;
+    width: 95.703px;
+    margin-left: 2rem; 
+    margin-right: 2rem; 
+}
+
+/* Nav */
+
+.nav-content{
+    background-color: rgba(61, 29, 18, 0.9) !important;
+}
+
+@media only screen and (max-width: 991px) {
+    .nav-title{
+        display: initial !important;
+    }
+}
+
+.nav-title{
+    display: none;
+    color: white !important;
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.8rem;
+}
+
+.navbar-toggler-icon{
+    color: white;
+}
+
+.nav-link, .nav-item{
+    color:rgba(255,255,255,.7) !important;
+    font-weight:800 !important;
+}
+
+.nav-item.active{
+    color:#ce4710 !important;
+}
+
+.nav-link.active{
+    color:#ce4710 !important;
+}
+
+.nav-link:hover , .nav-item:hover{
+    color:rgba(255,255,255,.4) !important;
+}
+
+/* Home */
+
+.home{
+    margin-top: 4rem;
+    margin-bottom: 15rem;
+    background: transparent !important;
+    color: white;
+}
+
+.home-text span{
+    color:#ce4710;
+}
+
+.home-title{
+    padding: 1rem;
+    border-bottom: 1px white solid;
+}
+
+@media only screen and (max-width: 991px) {
+    .home{
+        text-align: center;
+    }
+}
+
+/* Mentions Légales */
+
+.mention{
+    margin-top: 4rem;
+    background: transparent !important;
+    color: white;
+}
+
+.mention-title{
+    padding: 1rem;
+    border-bottom: 1px white solid;
+}
+
+.mention li{
+    list-style: none;
+}
+
+.mention a{
+    color: #ce4710;
+}
+
+@media only screen and (max-width: 991px) {
+    .mention{
+        text-align: center;
+    }
+
+    .mention-ul{
+        text-align: left;
+    }
 }
