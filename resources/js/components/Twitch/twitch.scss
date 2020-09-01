@@ -1,0 +1,83 @@
+.twitch{
+    & img{
+        width: 150px;
+        height: 150px;
+        background-color: white;
+    }
+
+    p{
+        color: #e6a756 !important;
+        font-weight: 800;
+        font-size: 1.2rem;
+    }
+
+    .twitch-container{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 50px auto;
+
+        .choise{
+            padding: 10px 10px;
+            height: 200px;
+            width: 200px;
+            margin: 15px;
+            transition: all 0.4; 
+            border-radius: 10px;
+
+            &:hover{
+                transform: translateY(-5px);
+            }
+            cursor: pointer;
+        }
+    }
+
+    .containerDecale{
+        margin: 0 30px 0 30px;
+    }
+
+    @media only screen and (max-width: 991px) {
+        .containerDecale{
+            margin: 0 0 0 0;
+        }
+    }
+
+    @media only screen and (max-width: 936px) {
+
+
+        & img{
+            width: 50px;
+            height: 50px;
+            background-color: white;
+        }
+
+        .twitch-container{
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px auto;
+    
+            .choise{
+                padding: 10px 10px;
+                height: 75px;
+                width: 75px;
+                margin: 15px;
+                position: relative;
+                transition: all 0.4; 
+                border-radius: 10px;
+                box-shadow: 2px 11px 36px -16px rgba(0,0,0,0.75);
+    
+                &:hover{
+                    transform: translateY(-5px);
+                }
+                cursor: pointer;
+
+                .text-card-twitch{
+                    display: none;
+                }
+            }
+        }
+    }
+}

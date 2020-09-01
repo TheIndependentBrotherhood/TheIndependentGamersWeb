@@ -1,0 +1,21 @@
+.home{
+    margin-top: 10rem;
+    margin-bottom: 15rem;
+    background: transparent !important;
+    color: white;
+
+    .home-text span{
+        color:#ce4710;
+    }
+    
+    .home-title{
+        padding: 1rem;
+        border-bottom: 1px white solid;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .home{
+        text-align: center;
+    }
+}

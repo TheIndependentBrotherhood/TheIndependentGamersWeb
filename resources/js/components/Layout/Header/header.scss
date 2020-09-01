@@ -1,0 +1,123 @@
+.header{
+
+    .discord--Frame__valide{
+        position: absolute;
+        top: 85px;
+        right: 80px;
+    }
+
+    .discord--Frame__invalide{
+        display: none;
+    }
+
+    .header-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header-imgtitle{
+            color: white;
+            display: flex;
+            align-items: center;
+            margin-left: 2rem; 
+            margin-right: 2rem; 
+        }
+        
+        .header-navicon a{
+            margin: 1rem;
+            justify-content: center;
+            font-size: 2rem;
+
+            .fa-discord{
+                color: #7289da;
+            }
+
+            .seekteam{
+                color: white;
+            }
+
+            .fa-youtube{
+                color: #ff0000;
+            }
+
+            .fa-twitch{
+                color: #9147ff;
+            }
+        }
+    
+        #logo{
+            height: 128px;
+            width: 95.703px;
+            margin-left: 2rem; 
+            margin-right: 2rem; 
+        }
+    }
+
+    .nav-content{
+        background-color: rgba(88, 46, 32, 0.5) !important;
+
+        .fa-bars{
+        color: white;
+        }
+
+        .nav-title{
+            display: none;
+            color: white !important;
+            text-align: center;
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            font-size: 1.5rem;
+        }
+        
+        .navbar-toggler-icon{
+            color: white;
+        }
+        
+        .nav-link, .nav-item{
+            color:white !important;
+            font-weight:800 !important;
+            &:hover , &:hover{
+                color:rgba(255,255,255,.4) !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .header{
+
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+
+        .discord--Frame__valide{
+            position: relative;
+            top: 0px;
+            right: 0;
+            width: 100%;
+        }
+
+        .header-content{
+            display: block;
+            justify-content: center;
+            .header-imgtitle{
+                margin: 0 !important;
+                color: white !important;
+
+                .header-img{
+                    margin-left: 0 !important; 
+                    margin-right: 0 !important;
+                    margin: 2rem auto !important;
+                }
+            }
+        
+            .header-title {
+                display: none;
+            }
+        }
+
+        .nav-title{
+            display: initial !important;
+        }
+    }
+}

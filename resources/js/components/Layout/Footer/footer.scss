@@ -1,0 +1,9 @@
+.footer{
+    color: white;
+    & a{
+        color: white;
+        &:hover{
+            color:#ce4710;
+        }
+    }
+}
