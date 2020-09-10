@@ -4,11 +4,15 @@ const api = axios.create({
   headers: {
     'Accept': 'application/vnd.twitchtv.v5+json',
     'Client-ID': 'i47r11huc1dxwlf1sx2pfhimfo10ey',
-    'Authorization': 'Bearer 8eax70tve6sd2v5r21tccgi8xn8hy1'
+    'Authorization': 'Bearer 81adc5w99e23eo5b6k9ldndu5ua0ii'
   },
 });
 
 /*
+
+Token localhost : 8eax70tve6sd2v5r21tccgi8xn8hy1
+Token theindependent : 81adc5w99e23eo5b6k9ldndu5ua0ii
+
 
 CLIENT_ID = i47r11huc1dxwlf1sx2pfhimfo10ey
 REDIRECT = 'http://localhost:8080/'
