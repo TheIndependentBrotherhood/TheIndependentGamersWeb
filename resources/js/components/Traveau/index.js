@@ -12,9 +12,9 @@ const Traveau = () => (
       <div className="row">
         <div className="col-xl-9 mx-auto">
           <div className="cta-inner text-center rounded">
-              <h1 className="display-2 m-3 align-self-center bd-highlight site-heading text-center text-white">
-                <span className="site-heading-upper">Whoops</span>
-              </h1>
+            <h1 className="display-2 m-3 align-self-center bd-highlight site-heading text-center text-white">
+              <span className="site-heading-upper">Whoops</span>
+            </h1>
             <p className="mb-6 text-white">Cette page est en cours de développement, merci de revenir plus tard !</p>
 
             <NavLink className="retour nav nav-link active display-4 m-3 text-center" to="/">Retour Vers la page d'accueil</NavLink>

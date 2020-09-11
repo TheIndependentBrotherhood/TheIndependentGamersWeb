@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// === Membres Pages ===
+
+Route::apiResource('membre/membre', 'MembresController');
+Route::apiResource('membre/admin', 'AdminController');
+Route::apiResource('membre/staff', 'StaffController');
