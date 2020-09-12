@@ -18,8 +18,23 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// === Membres Pages ===
-
-Route::apiResource('membre/membre', 'MembresController');
-Route::apiResource('membre/admin', 'AdminController');
-Route::apiResource('membre/staff', 'StaffController');
+// ====================== Membres Pages ============================
+                                                                 //=
+// === Private Route ===                                         //=
+                                                                 //=
+Route::middleware('auth:api')->group( function() {               //= 
+    Route::apiResource('membre/membre', 'MembresController');    //=
+    Route::apiResource('membre/admin', 'AdminController');       //=
+    Route::apiResource('membre/staff', 'StaffController');       //=
+});                                                              //=
+                                                                 //=
+// === Public Route ===                                          //=
+                                                                 //=
+Route::get('/membre/membre', 'MembresController@index');         //=
+Route::get('/membre/membre/{membre}', 'MembresController@show'); //=
+Route::get('/membre/admin', 'MembresController@index');          //=
+Route::get('/membre/admin{admin}', 'MembresController@show');    //=
+Route::get('/membre/staff', 'MembresController@index');          //=
+Route::get('/membre/staff{staff}', 'MembresController@show');    //=
+                                                                 //=    
+//==================================================================
