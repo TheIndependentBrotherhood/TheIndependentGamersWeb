@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
+// ==== API ==== //
+
+import {fetchMembreList, fetchStaffsList, fetchAdminsList} from './api.membre.js';
+
  // ==== CSS ==== //
 
  import './membres.scss'
@@ -12,52 +16,10 @@ const Membres = () => {
   const [Staffs, setStaffs] = useState([]);
   const [Admins, setAdmins] = useState([]);
 
-  const fetchMembreList = () => {
-    axios.get('https://theindependentgamers.fr/api/membre/membre')
-      .then((response) => {
-        // console.log(response.data)
-        setMembres(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        // console.log("tout c'est bien passé !");
-      });
-  };
-
-  const fetchStaffsList = () => {
-    axios.get('https://theindependentgamers.fr/api/membre/staff')
-      .then((response) => {
-        // console.log(response.data)
-        setStaffs(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        // console.log("tout c'est bien passé !");
-      });
-  };
-
-  const fetchAdminsList = () => {
-    axios.get('https://theindependentgamers.fr/api/membre/admin')
-      .then((response) => {
-        // console.log(response.data)
-        setAdmins(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        // console.log("tout c'est bien passé !");
-      });
-  };
-
   useEffect(() => {
-    fetchMembreList();
-    fetchStaffsList();
-    fetchAdminsList();
+    fetchMembreList(setMembres);
+    fetchStaffsList(setStaffs);
+    fetchAdminsList(setAdmins);
   }, []);
 
   return(

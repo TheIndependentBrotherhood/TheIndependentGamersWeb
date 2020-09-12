@@ -38,6 +38,10 @@ const Nav = () => (
                 <NavLink className="nav-link text-uppercase text-expanded" to="/recrutement">Recrutements</NavLink>
             </li>
 
+            <button className="nav-login nav-item px-lg-4">
+                <NavLink className="nav-link text-uppercase text-expanded" to="/connection">Connection</NavLink>
+            </button>
+
         </ul>
   </div>
 </nav>

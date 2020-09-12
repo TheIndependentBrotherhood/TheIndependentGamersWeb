@@ -1,0 +1,48 @@
+.login{
+
+    margin-top: 3rem !important;
+    margin-bottom: 3rem;
+    color: white;
+
+    .login-content{
+
+        padding-top: 3rem !important;
+        padding-bottom: 3rem;
+        width: 25rem;
+        margin: 2rem auto 2rem auto;
+        background-color: rgba(88, 46, 32, 0.5) !important;;
+
+        .login-title{
+            text-align: center;
+        }
+
+        .login-form{
+
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .login-form-input{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                & input{
+                    width: 20rem;
+                }
+                
+            }
+
+            .login-form-button{
+                margin-top: 2rem;
+                width: 10rem;
+                border-radius: 30px;
+                color: white;
+                background-color: #ce4710;
+            }
+        }
+    }
+}

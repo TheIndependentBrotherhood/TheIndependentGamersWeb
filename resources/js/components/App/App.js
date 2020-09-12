@@ -18,6 +18,7 @@ import Home from '../Home';
 import Jeux from '../Jeux';
 import Membres from '../Membres';
 import Twitch from '../Twitch';
+import Login from '../Login';
 import Mentions from '../Mentions';
 import Cookies from '../CookiesBar';
 import Traveau from '../Traveau';
@@ -48,6 +49,9 @@ const App = () => {
           </Route>
           <Route  path="/recrutement">
             <Traveau />
+          </Route>
+          <Route  path="/connection">
+            <Login />
           </Route>
           <Route  path="/mentions-legales">
             <Mentions />
