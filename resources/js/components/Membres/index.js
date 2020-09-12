@@ -13,7 +13,7 @@ const Membres = () => {
   const [Admins, setAdmins] = useState([]);
 
   const fetchMembreList = () => {
-    axios.get('http://localhost:8000/api/membre/membre')
+    axios.get('https://theindependentgamers.fr/api/membre/membre')
       .then((response) => {
         // console.log(response.data)
         setMembres(response.data);
@@ -27,7 +27,7 @@ const Membres = () => {
   };
 
   const fetchStaffsList = () => {
-    axios.get('http://localhost:8000/api/membre/staff')
+    axios.get('https://theindependentgamers.fr/api/membre/staff')
       .then((response) => {
         // console.log(response.data)
         setStaffs(response.data);
@@ -41,7 +41,7 @@ const Membres = () => {
   };
 
   const fetchAdminsList = () => {
-    axios.get('http://localhost:8000/api/membre/admin')
+    axios.get('https://theindependentgamers.fr/api/membre/admin')
       .then((response) => {
         // console.log(response.data)
         setAdmins(response.data);
