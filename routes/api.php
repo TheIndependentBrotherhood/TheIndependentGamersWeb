@@ -31,10 +31,7 @@ Route::middleware('auth:api')->group( function() {               //=
 // === Public Route ===                                          //=
                                                                  //=
 Route::get('/membre/membre', 'MembresController@index');         //=
-Route::get('/membre/membre/{membre}', 'MembresController@show'); //=
-Route::get('/membre/admin', 'MembresController@index');          //=
-Route::get('/membre/admin{admin}', 'MembresController@show');    //=
-Route::get('/membre/staff', 'MembresController@index');          //=
-Route::get('/membre/staff{staff}', 'MembresController@show');    //=
+Route::get('/membre/admin', 'AdminController@index');          //=
+Route::get('/membre/staff', 'StaffController@index');          //=
                                                                  //=    
 //==================================================================
