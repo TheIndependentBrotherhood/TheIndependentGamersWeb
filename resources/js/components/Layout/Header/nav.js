@@ -39,7 +39,7 @@ const Nav = () => (
             </li>
 
             <button className="nav-login nav-item px-lg-4">
-                <NavLink className="nav-link text-uppercase text-expanded" to="/connection">Connection</NavLink>
+                <NavLink className="nav-link text-uppercase text-expanded" to="/connection">Connexion</NavLink>
             </button>
 
         </ul>

@@ -1,3 +1,5 @@
+
+
 .header{
 
     .discord--Frame__valide{
@@ -32,8 +34,8 @@
                 color: #7289da;
             }
 
-            .seekteam{
-                color: white;
+            .fa-facebook-square{
+                color: #3a559f;
             }
 
             .fa-youtube{
@@ -125,8 +127,20 @@
             }
         }
 
-        .nav-title{
-            display: initial !important;
+        .nav-content{
+            
+            .nav-title{
+                display: initial !important;
+            }
+
+            .nav-login{
+                background-color: #ce461086;
+                cursor: pointer;
+                border-radius: 10px;
+                position: relative;
+                right: 0;
+                padding: 0 !important;
+            }
         }
     }
 }

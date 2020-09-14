@@ -46,6 +46,8 @@ const Header = () => {
 
 						<a onClick={handleClick} onMouseOver={handleMouseOver} ><i className="fab fa-discord"></i></a>
 
+						<a href="https://www.facebook.com/theindependentgamers" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
+
 						<a href="https://www.youtube.com/channel/UC1qQ_J-7e9WGjwo9FzbHkHg" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
 
 						<Link to="/twitch"><i className="fab fa-twitch"></i></Link>
