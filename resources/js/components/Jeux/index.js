@@ -9,7 +9,7 @@ const Jeux = () => (
     <article className="jeux-article clearfix">
         <div className="container">
         <div className="intro">
-            <img className="intro-img img-fluid mb-3 mb-lg-0 rounded" src="images/jeux/callofduty.png" alt="" />
+            <img className="intro-img img-fluid mb-3 mb-lg-0 rounded" src="https://theindependentgamers.fr/images/jeux/callofduty.png" alt="" />
             <div className="intro-text left-0 text-center bg-faded rounded p-5">
             <h2 className="article-heading mb-4">
                 <span className="article-heading-upper">Call of Duty</span>
@@ -24,7 +24,7 @@ const Jeux = () => (
     <article className="jeux-article clearfix">
         <div className="container">
         <div className="intro">
-            <img className="intro-img img-fluid mb-3 mb-lg-0 rounded" src="images/jeux/counter.png" alt="" />
+            <img className="intro-img img-fluid mb-3 mb-lg-0 rounded" src="https://theindependentgamers.fr/images/jeux/counter.png" alt="" />
             <div className="intro-text left-0 text-center bg-faded rounded p-5">
             <h2 className="article-heading mb-4">
                 <span className="article-heading-upper">Counter Strike: Global Offensive</span>
@@ -39,7 +39,7 @@ const Jeux = () => (
     <article className="jeux-article clearfix">
         <div className="container">
         <div className="intro">
-            <img className="intro-img img-fluid mb-3 mb-lg-0 rounded" src="images/jeux/dos2.png" alt="" />
+            <img className="intro-img img-fluid mb-3 mb-lg-0 rounded" src="https://theindependentgamers.fr/images/jeux/dos2.png" alt="" />
             <div className="intro-text left-0 text-center bg-faded rounded p-5">
             <h2 className="article-heading mb-4">
                 <span className="article-heading-upper">Divinity: Original Sin 2</span>

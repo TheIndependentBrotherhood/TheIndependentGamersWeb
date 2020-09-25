@@ -6433,7 +6433,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "body {\n  min-height: 100%;\n  position: relative;\n  font-family: Raleway, Helvetica, Arial, sans-serif;\n  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url(http://theindependentgamers.fr/images/bg.png);\n  background-attachment: fixed;\n  background-position: center;\n  background-size: cover;\n}\n\nh1 {\n  font-family: \"Yanone Kaffeesatz\", sans-serif;\n}\n\nh2, h3, h4, h5, h6 {\n  font-family: Raleway;\n}\n\np {\n  line-height: 1.75;\n}", ""]);
+exports.push([module.i, "body {\n  min-height: 100%;\n  position: relative;\n  font-family: Raleway, Helvetica, Arial, sans-serif;\n  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url(https://theindependentgamers.fr/images/bg.png);\n  background-attachment: fixed;\n  background-position: center;\n  background-size: cover;\n}\n\nh1 {\n  font-family: \"Yanone Kaffeesatz\", sans-serif;\n}\n\nh2, h3, h4, h5, h6 {\n  font-family: Raleway;\n}\n\np {\n  line-height: 1.75;\n}", ""]);
 
 // exports
 
@@ -71116,7 +71116,7 @@ var Jeux = function Jeux() {
     className: "intro"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "intro-img img-fluid mb-3 mb-lg-0 rounded",
-    src: "images/jeux/callofduty.png",
+    src: "https://theindependentgamers.fr/images/jeux/callofduty.png",
     alt: ""
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "intro-text left-0 text-center bg-faded rounded p-5"
@@ -71134,7 +71134,7 @@ var Jeux = function Jeux() {
     className: "intro"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "intro-img img-fluid mb-3 mb-lg-0 rounded",
-    src: "images/jeux/counter.png",
+    src: "https://theindependentgamers.fr/images/jeux/counter.png",
     alt: ""
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "intro-text left-0 text-center bg-faded rounded p-5"
@@ -71152,7 +71152,7 @@ var Jeux = function Jeux() {
     className: "intro"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "intro-img img-fluid mb-3 mb-lg-0 rounded",
-    src: "images/jeux/dos2.png",
+    src: "https://theindependentgamers.fr/images/jeux/dos2.png",
     alt: ""
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "intro-text left-0 text-center bg-faded rounded p-5"
@@ -71398,7 +71398,7 @@ var Header = function Header() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "header-img",
     id: "logo",
-    src: "images/logo.png",
+    src: "https://theindependentgamers.fr/images/logo.png",
     alt: "logo"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "header-title"
@@ -71719,7 +71719,7 @@ var Membres = function Membres() {
       className: "p-2 text-center"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       className: "rounded-circle img--membre",
-      src: "images/membre/".concat(admin.picture, ".png"),
+      src: "https://theindependentgamers.fr/images/membre/".concat(admin.picture, ".png"),
       alt: ""
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
       className: "pb-2 text-primary"
@@ -71732,7 +71732,7 @@ var Membres = function Membres() {
       className: "p-2 col col-lg-4 text-center"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       className: "rounded-circle img--membre",
-      src: "images/membre/".concat(membre.picture, ".png"),
+      src: "https://theindependentgamers.fr/images/membre/".concat(membre.picture, ".png"),
       alt: ""
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
       className: "pb-2 text-primary"
@@ -71745,7 +71745,7 @@ var Membres = function Membres() {
       className: "p-2 text-center"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       className: "rounded-circle img--membre",
-      src: "images/membre/".concat(staff.picture, ".png"),
+      src: "https://theindependentgamers.fr/images/membre/".concat(staff.picture, ".png"),
       alt: ""
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
       className: "pb-2 text-primary"
