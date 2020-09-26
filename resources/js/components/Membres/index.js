@@ -28,7 +28,7 @@ const Membres = () => {
 
       <div className="m-3 p-5">
 
-        <h1 className="p-5 site-heading text-center d-none d-lg-block">
+        <h1 className="p-5 site-heading text-center d-block">
           <span className="site-heading-upper text-white mb-3">Les Membres</span>
         </h1>
     

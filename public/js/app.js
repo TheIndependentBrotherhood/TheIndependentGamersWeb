@@ -71414,7 +71414,7 @@ var Header = function Header() {
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "fab fa-facebook-square"
+    className: "fab fa-facebook-square"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.youtube.com/channel/UC1qQ_J-7e9WGjwo9FzbHkHg",
     target: "_blank",
@@ -71451,64 +71451,87 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Nav = function Nav() {
+  var handleclickonburger = function handleclickonburger(evt) {
+    var nav = document.getElementById('navshow');
+
+    if (nav.className === "collapse navbar-collapse") {
+      return nav.className = "collapse navbar-collapse show";
+    }
+
+    return nav.className = "collapse navbar-collapse";
+  };
+
+  var handleclickonlink = function handleclickonlink(evt) {
+    var nav = document.getElementById('navshow');
+    return nav.className = "collapse navbar-collapse";
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     className: "navbar navbar-expand-lg navbar-light bg-light nav-content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "navbar-toggler",
+    onClick: handleclickonburger,
     type: "button",
     "data-toggle": "collapse",
-    "data-target": "#navbarSupportedContent",
-    "aria-controls": "navbarSupportedContent",
+    "data-target": "#navbarNavAltMarkup",
+    "aria-controls": "navbarNavAltMarkup",
     "aria-expanded": "false",
     "aria-label": "Toggle navigation"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: ""
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-bars"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "nav-title",
+    className: "navbar-toggler-icon"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "navbar-brand nav-title",
     href: ""
   }, "The Independent Gamers"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "collapse navbar-collapse",
-    id: "navbarSupportedContent"
+    id: "navshow"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "navbar-nav"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "navbar-nav ml-1"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item px-lg-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    onClick: handleclickonlink,
     className: "nav-link text-uppercase text-expanded",
     to: "/"
   }, "home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item px-lg-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    onClick: handleclickonlink,
     className: "nav-link text-uppercase text-expanded",
     to: "/jeux"
   }, "Jeux")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item px-lg-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    onClick: handleclickonlink,
     className: "nav-link text-uppercase text-expanded",
     to: "/membres"
   }, "Membres")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item px-lg-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    onClick: handleclickonlink,
     className: "nav-link text-uppercase text-expanded",
     to: "/twitch"
   }, "Twitch")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item px-lg-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    onClick: handleclickonlink,
     className: "nav-link text-uppercase text-expanded",
     to: "/events"
   }, "Events")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item px-lg-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    onClick: handleclickonlink,
     className: "nav-link text-uppercase text-expanded",
     to: "/recrutement"
   }, "Recrutements")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "nav-login nav-item px-lg-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    onClick: handleclickonlink,
     className: "nav-link text-uppercase text-expanded",
     to: "/connection"
-  }, "Connexion")))));
+  }, "Connexion"))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Nav);
@@ -71706,7 +71729,7 @@ var Membres = function Membres() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "m-3 p-5"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "p-5 site-heading text-center d-none d-lg-block"
+    className: "p-5 site-heading text-center d-block"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "site-heading-upper text-white mb-3"
   }, "Les Membres")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
