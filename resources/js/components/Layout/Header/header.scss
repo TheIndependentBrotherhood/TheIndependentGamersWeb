@@ -58,6 +58,12 @@
     .nav-content{
         background-color: rgba(88, 46, 32, 0.5) !important;
 
+        .navbar-toggler{
+            color: white;
+            border: 2px solid white ;
+            border-radius: 10px;
+        }   
+
         .fa-bars{
         color: white;
         }

@@ -1,14 +1,14 @@
-.login{
+.register{
 
     margin-top: 3rem !important;
     margin-bottom: 3rem;
     color: white;
 
-    .login-nav{
+    .register-nav{
         font-size: 2rem;
         margin: auto 2rem;
         text-align: center;
-        .login-nav-link{
+        .register-nav-link{
             padding: 2rem;
 
             &:hover{
@@ -18,7 +18,7 @@
         }
     }
 
-    .login-content{
+    .register-content{
 
         padding-top: 3rem !important;
         padding-bottom: 3rem;
@@ -26,11 +26,11 @@
         margin: 2rem auto 2rem auto;
         background-color: rgba(88, 46, 32, 0.5) !important;;
 
-        .login-title{
+        .register-title{
             text-align: center;
         }
 
-        .login-form{
+        .register-form{
 
             margin-top: 2rem;
             display: flex;
@@ -38,7 +38,7 @@
             align-items: center;
             flex-direction: column;
 
-            .login-form-input{
+            .register-form-input{
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -50,7 +50,7 @@
                 
             }
 
-            .login-form-button{
+            .register-form-button{
                 margin-top: 2rem;
                 width: 10rem;
                 border-radius: 30px;
@@ -62,30 +62,30 @@
 }
 
 @media only screen and (max-width: 991px) {
-    .login{
+    .register{
 
         margin-top: 3rem !important;
         margin-bottom: 3rem;
         color: white;
     
-        .login-nav{
+        .register-nav{
             font-size: 1.5rem;
             margin: auto 0;
             text-align: center;
-            .login-nav-link{
+            .register-nav-link{
                 padding: 0.5rem;
             }
         }
     
-        .login-content{
+        .register-content{
             width: 100%;
             background-color: rgba(88, 46, 32, 0.5) !important;
     
-            .login-title{
+            .register-title{
                 text-align: center;
             }
     
-            .login-form{
+            .register-form{
     
                 margin-top: 2rem;
                 display: flex;
@@ -93,7 +93,7 @@
                 align-items: center;
                 flex-direction: column;
     
-                .login-form-input{
+                .register-form-input{
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -105,7 +105,7 @@
                     
                 }
     
-                .login-form-button{
+                .register-form-button{
                     margin-top: 2rem;
                     width: 10rem;
                     border-radius: 30px;

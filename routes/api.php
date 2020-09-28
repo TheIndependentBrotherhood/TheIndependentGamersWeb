@@ -23,9 +23,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // === Private Route ===                                         //=
                                                                  //=
 Route::middleware('auth:api')->group( function() {               //= 
-    Route::apiResource('membre/membre', 'MembresController');    //=
-    Route::apiResource('membre/admin', 'AdminController');       //=
-    Route::apiResource('membre/staff', 'StaffController');       //=
+    Route::apiResource('/membre/membre', 'MembresController');    //=
+    Route::apiResource('/membre/admin', 'AdminController');       //=
+    Route::apiResource('/membre/staff', 'StaffController');       //=
 });                                                              //=
                                                                  //=
 // === Public Route ===                                          //=
@@ -35,3 +35,7 @@ Route::get('/membre/admin', 'AdminController@index');          //=
 Route::get('/membre/staff', 'StaffController@index');          //=
                                                                  //=    
 //==================================================================
+
+Route::post('/register', 'UserController@register');
+Route::post('/login', 'UserController@login');
+Route::get('/profile', 'UserController@getAuthenticatedUser');
