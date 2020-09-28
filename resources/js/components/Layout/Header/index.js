@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { NavLink, Link } from "react-router-dom";
 
@@ -11,20 +11,14 @@ import { NavLink, Link } from "react-router-dom";
 import Nav from './nav'
 import Discord from './discord'
 
-const Header = () => {
-
-	const [discord, setDiscord] = useState(false);
-
-	const handleMouseOver = (evt) => {
-		const discordFocus = document.getElementById('discord')
-		discordFocus.classList.add('discord--Frame__valide');
-		discordFocus.classList.remove('discord--Frame__invalide');
-	};
+const Header = (isLogged) => {
 
 	const handleClick = (evt) => {
 		const discordFocus = document.getElementById('discord')
-		discordFocus.classList.add('discord--Frame__invalide');
-		discordFocus.classList.remove('discord--Frame__valide');
+		if (discordFocus.className === "discord--Frame__invalide") {
+			return discordFocus.className = "discord--Frame__valide";
+		}
+		return discordFocus.className = "discord--Frame__invalide"
 	};
 
 	return(
@@ -44,7 +38,7 @@ const Header = () => {
 
 				<div className="header-navicon">
 
-						<a onClick={handleClick} onMouseOver={handleMouseOver} ><i className="fab fa-discord"></i></a>
+						<a onClick={handleClick} ><i className="fab fa-discord"></i></a>
 
 						<a href="https://www.facebook.com/theindependentgamers" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square"></i></a>
 
@@ -54,7 +48,7 @@ const Header = () => {
 
 				</div>
 			</div>
-			<Nav />
+			<Nav isLogged={isLogged} />
 			<Discord />
 	</header>
   );
