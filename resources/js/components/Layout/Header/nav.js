@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { NavLink, Redirect } from "react-router-dom";
-import Login from '../../Login';
+import { Dropdown } from 'react-bootstrap';
 
 const Nav = ({isLogged, changeField, name}) => {
 
@@ -12,17 +12,6 @@ const Nav = ({isLogged, changeField, name}) => {
             return nav.className = "collapse navbar-collapse show";
         }
         return nav.className = "collapse navbar-collapse";
-    };
-
-    const handleclickonprofile = (evt) => {
-
-        let div = document.getElementById('drop-profil-menu-div');
-        let li = document.getElementById('drop-profil-menu-li');
-
-        if (div.className === "dropdown-menu" ){
-            return div.className = "dropdown-menu show" , li.className = "nav-logged nav-item dropdown px-lg-4 show";
-        }
-        else return div.className = "dropdown-menu" , li.className = "nav-logged nav-item dropdown px-lg-4";
     };
 
     const handleclickonlink = (evt) => {
@@ -86,16 +75,17 @@ const Nav = ({isLogged, changeField, name}) => {
                         </li>
                     )}
                     {isLogged && (
-                        <li onClick={handleclickonprofile} className="nav-logged nav-item dropdown px-lg-4" id="drop-profil-menu-li">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <Dropdown className="nav-logged">
+                            <Dropdown.Toggle variant="none" id="dropdown-basic">
                                 {name}
-                            </a>
-                            <div className="dropdown-menu" id="drop-profil-menu-div" aria-labelledby="navbarDropdown">
-                                <a onClick={handleclickonlink} className="dropdown-item" href="#">Profil</a>
-                                <div className="dropdown-divider"></div>
-                                <a onClick={handleclickonlink, handleLoggout} className="dropdown-item">Déconnexion</a>
-                            </div>
-                        </li>
+                            </Dropdown.Toggle>
+    
+                            <Dropdown.Menu>
+                                <Dropdown.Item onClick={handleclickonlink} href="#/action-1">Profil</Dropdown.Item>
+                                <Dropdown.Divider />
+                                <Dropdown.Item onClick={handleclickonlink, handleLoggout} href="#/action-2">Deconnexion</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
                     )}
                     </ul>
                 </div>
