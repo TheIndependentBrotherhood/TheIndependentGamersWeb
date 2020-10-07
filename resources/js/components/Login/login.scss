@@ -50,6 +50,16 @@
                 
             }
 
+            .login-form-checkbox{
+                label{
+                    margin-left: 0.5rem;
+                }
+                a:hover{
+                    color: #ce9c10;
+                    text-decoration: none;
+                }
+            }
+
             .login-form-button{
                 margin-top: 2rem;
                 width: 10rem;

@@ -2,7 +2,7 @@
 // import api from 'src/api';
 import axios from 'axios';
 
-import { LOG_IN, REGISTER_USER, saveUser, registerOk, registerNop } from '../actions/user';
+import { LOG_IN, LOG_IN_CHECK, REGISTER_USER, saveUser, registerOk, registerNop } from '../actions/user';
 
 import { changeFieldLoading } from '../actions/loading';
 
@@ -27,6 +27,7 @@ const loginMiddleware = (store) => (next) => (action) => {
       })
       .catch((error) => {
         console.log(error);
+        store.dispatch(changeFieldLoading(false, 'loading'));
       })
 
       next(action);
@@ -52,6 +53,32 @@ const loginMiddleware = (store) => (next) => (action) => {
       .catch((error) => {
         // console.log(error);
         store.dispatch(registerNop(true));
+      })
+
+      next(action);
+      break;
+    }
+
+    case LOG_IN_CHECK: {
+
+      const checkemail = localStorage.getItem('saveEmail');
+      const checkpassword = localStorage.getItem('savePassword');
+
+      axios
+      .post('http://localhost:8000/api/login', {
+        email: checkemail,
+        password: checkpassword,
+      },{
+          headers: {'Content-Type': 'application/JSON'}
+      })
+      .then((response) => {
+        store.dispatch(saveUser(response.data.token, response.data.name, response.data.email, response.data.role, response.data.api_token, true));
+        store.dispatch(changeFieldLoading(false, 'loading'));
+        // console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+        store.dispatch(changeFieldLoading(false, 'loading'));
       })
 
       next(action);

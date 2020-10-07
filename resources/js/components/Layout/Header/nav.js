@@ -20,6 +20,8 @@ const Nav = ({isLogged, changeField, name}) => {
     }
 
     const handleLoggout = (evt) => {
+        localStorage.removeItem('saveEmail');
+        localStorage.removeItem('savePassword');
         changeField(false, "isLogged");
         changeField('', "loginemail");
         changeField('', "loginpassword");
@@ -81,9 +83,9 @@ const Nav = ({isLogged, changeField, name}) => {
                             </Dropdown.Toggle>
     
                             <Dropdown.Menu>
-                                <Dropdown.Item onClick={handleclickonlink} href="#/action-1">Profil</Dropdown.Item>
+                                <NavLink className="dropdown-item" onClick={handleclickonlink} to="/profil">Profil</NavLink>
                                 <Dropdown.Divider />
-                                <Dropdown.Item onClick={handleclickonlink, handleLoggout} href="#/action-2">Deconnexion</Dropdown.Item>
+                                <Dropdown.Item onClick={handleclickonlink, handleLoggout} href="#">Deconnexion</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                     )}

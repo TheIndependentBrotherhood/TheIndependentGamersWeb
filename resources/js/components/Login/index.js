@@ -9,6 +9,19 @@ import {login} from "../UserFunctions.js"
 
 const Login = ({ changeFieldLoading, loginemail, loginpassword, isLogged, logIn, changeField}) => { 
 
+    const [checkbox, setCheckbox] = useState(null);
+
+    const onChangeCheckbox = (evt) => {
+        setCheckbox(true);
+        localStorage.setItem('saveEmail', loginemail);
+        localStorage.setItem('savePassword', loginpassword);
+        if(checkbox === true){
+            setCheckbox(false);
+            localStorage.removeItem('saveEmail');
+            localStorage.removeItem('savePassword');
+        }
+    }
+
     const submitLogin = (evt) => {
         evt.preventDefault();
         changeFieldLoading(true, 'loading');
@@ -16,10 +29,18 @@ const Login = ({ changeFieldLoading, loginemail, loginpassword, isLogged, logIn,
     }
 
     const onChangeEmail = (evt) => {
+        if (checkbox === true) {
+            changeField(evt.target.value, "loginemail");
+            localStorage.setItem('saveEmail', loginemail);
+        }
         changeField(evt.target.value, "loginemail");
     };
 
     const onChangePassword = (evt) => {
+        if (checkbox === true) {
+            changeField(evt.target.value, "loginpassword");
+            localStorage.setItem('savePassword', loginpassword);
+        }
         changeField(evt.target.value, "loginpassword");
     };
     
@@ -40,6 +61,10 @@ const Login = ({ changeFieldLoading, loginemail, loginpassword, isLogged, logIn,
                     <div className="login-form-input form-group">
                         <label htmlFor="exampleInputPassword1">Mot de Passe</label>
                         <input onChange={onChangePassword} type="password" value={loginpassword} />
+                    </div>
+                    <div className="login-form-checkbox">
+                        <input onChange={onChangeCheckbox} type="checkbox" id="scales" name="scales" />
+                        <label htmlFor="scales">Restez connecté</label>
                     </div>
                     <button className="login-form-button" type="submit">Se Connecter</button>
                 </form>
