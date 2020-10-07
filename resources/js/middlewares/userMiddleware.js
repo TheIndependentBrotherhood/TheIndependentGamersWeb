@@ -14,7 +14,7 @@ const loginMiddleware = (store) => (next) => (action) => {
       const { loginemail, loginpassword } = store.getState().user;
 
       axios
-      .post('http://localhost:8000/api/login', {
+      .post('https://theindependentgamers.fr/api/login', {
         email: loginemail,
         password: loginpassword,
       },{
@@ -39,7 +39,7 @@ const loginMiddleware = (store) => (next) => (action) => {
       const { name, registeremail, registerpassword } = store.getState().user;
 
       axios
-      .post('http://localhost:8000/api/register', {
+      .post('https://theindependentgamers.fr/api/register', {
         name: name,
         email: registeremail,
         password: registerpassword,
@@ -65,7 +65,7 @@ const loginMiddleware = (store) => (next) => (action) => {
       const checkpassword = localStorage.getItem('savePassword');
 
       axios
-      .post('http://localhost:8000/api/login', {
+      .post('https://theindependentgamers.fr/api/login', {
         email: checkemail,
         password: checkpassword,
       },{

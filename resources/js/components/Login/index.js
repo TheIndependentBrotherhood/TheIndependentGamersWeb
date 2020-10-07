@@ -52,7 +52,7 @@ const Login = ({ changeFieldLoading, loginemail, loginpassword, isLogged, logIn,
                 <NavLink className="login-nav-link" to="/inscription">Inscription</NavLink>
             </nav>
             <div className="login-content">
-                <h1 className="login-title">Connection</h1>
+                <h1 className="login-title">Connexion</h1>
                 <form onSubmit={submitLogin} className="login-form" action="" method="post">
                     <div className="login-form-input form-group">
                         <label htmlFor="exampleInputEmail1">Email</label>
