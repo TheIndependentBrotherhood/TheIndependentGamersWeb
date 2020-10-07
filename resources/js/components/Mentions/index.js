@@ -37,7 +37,7 @@ const Footer = () => (
 
                 </ul>
 
-                <h3>Conditions générales d’utilisation</h3>
+                <h3 id="conditions">Conditions générales d’utilisation</h3>
 
                 <p>
                     Ce site (<NavLink to="/">theindependentgamers.fr</NavLink>) est proposé en différents langages web (HTML, HTML5, Javascript, CSS, etc…) pour un meilleur confort d’utilisation et un graphisme plus agréable, nous vous recommandons de recourir à des navigateurs modernes comme Internet explorer, Safari, Firefox, Google Chrome, etc…

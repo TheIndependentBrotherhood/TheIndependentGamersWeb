@@ -4,14 +4,13 @@ import { NavLink, Link } from "react-router-dom";
 
  // ==== CSS ==== //
 
- import './header.scss'
-
+import './header.scss'
   // ==== Components ==== //
 
 import Nav from './nav'
 import Discord from './discord'
 
-const Header = (isLogged) => {
+const Header = ({ isLogged, changeField, name }) => {
 
 	const handleClick = (evt) => {
 		const discordFocus = document.getElementById('discord')
@@ -48,7 +47,7 @@ const Header = (isLogged) => {
 
 				</div>
 			</div>
-			<Nav isLogged={isLogged} />
+			<Nav isLogged={isLogged} changeField={changeField} name={name} />
 			<Discord />
 	</header>
   );

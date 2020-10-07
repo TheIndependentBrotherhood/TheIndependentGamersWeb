@@ -26,7 +26,10 @@
     },
     "dependencies": {
         "prop-types": "^15.7.2",
+        "react-redux": "^7.2.1",
         "react-router-dom": "^5.2.0",
-        "react-twitch-embed-video": "^2.0.4"
+        "react-twitch-embed-video": "^2.0.4",
+        "redux": "^4.0.5",
+        "redux-devtools-extension": "^2.13.8"
     }
 }

@@ -28,6 +28,7 @@ export const login = (user) => {
         .then((response) => {
             localStorage.setItem('usertoken', response.data.token);
             localStorage.setItem('isLogged', true);
+            console.log(response);
         })
         .catch((error) => {
             console.log(error);

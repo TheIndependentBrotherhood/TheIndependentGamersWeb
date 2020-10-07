@@ -12,39 +12,34 @@ import './app.scss';
 
  // ==== Components ==== //
 
-import Header from '../Layout/Header';
+import Loader from '../Loader'; 
+import Header from '../../containers/Layout/Header';
 import Footer from '../Layout/Footer';
 import Home from '../Home';
 import Jeux from '../Jeux';
 import Membres from '../Membres';
 import Twitch from '../Twitch';
-import Login from '../Login';
-import Register from '../Register';
+import Login from '../../containers/Login';
+import Register from '../../containers/Register';
 import Mentions from '../Mentions';
 import Cookies from '../CookiesBar';
 import Traveau from '../Traveau';
 import Error404 from '../Error404';
 
-const App = () => {
-
-  const [isLogged, setIsLogged] = useState(false);
+const App = ({ loading }) => {
 
   const cookiesOk = localStorage.getItem('cookiesOk');
 
-  const checkLogged = () => {
-    if (localStorage.isLogged === 'true'){
-      return setIsLogged(true);
-    }
-    setIsLogged(false)
-  }
-
   useEffect(() => {
-    checkLogged();
+    
   }, []);
 
   return (
       <Router>
-        <Header isLogged={isLogged} />
+        {loading && (
+          <Loader />
+        )}
+        <Header />
         <Switch>
           <Route  path="/" exact>
             <Home />
@@ -64,11 +59,11 @@ const App = () => {
           <Route  path="/recrutement">
             <Traveau />
           </Route>
-          <Route  path="/connection">
-            <Login isLogged={isLogged} />
+          <Route  path="/connexion">
+            <Login />
           </Route>
           <Route  path="/inscription">
-            <Register isLogged={isLogged} />
+            <Register />
           </Route>
           <Route  path="/mentions-legales">
             <Mentions />
@@ -84,7 +79,3 @@ const App = () => {
 };
 
 export default App;
-
-if (document.getElementById('root')) {
-    ReactDOM.render(<App />, document.getElementById('root'));
-};

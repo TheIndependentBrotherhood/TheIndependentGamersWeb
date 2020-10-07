@@ -1,0 +1,35 @@
+.lds-circle {
+    transform: translateZ(1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.308);
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+  }
+  .lds-circle > img {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+
+  @keyframes lds-circle {
+
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(720deg);
+    }
+    100% {
+      transform: rotateY(1440deg);
+    }
+  }
