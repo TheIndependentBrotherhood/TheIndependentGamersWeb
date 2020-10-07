@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 import './traveau.scss';
 
 const Traveau = () => (
-  <main clasName="traveau">
+  <main className="traveau">
     <div className="container">
       <div className="row">
         <div className="col-xl-9 mx-auto">

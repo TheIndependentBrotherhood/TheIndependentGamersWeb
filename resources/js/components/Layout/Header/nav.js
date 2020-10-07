@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { NavLink, Redirect } from "react-router-dom";
-import Login from '../../Login';
+import { Dropdown } from 'react-bootstrap';
 
-const Nav = (isLogged) => {
-
-    const [logOut, setLogOut] = useState(false);
-    const [login, setLogin] = useState(false);
+const Nav = ({isLogged, changeField, name}) => {
 
     const handleclickonburger = (evt) => {
 
@@ -23,16 +20,19 @@ const Nav = (isLogged) => {
     }
 
     const handleLoggout = (evt) => {
-        localStorage.setItem('isLogged', false);
-        setLogOut(true);
+        localStorage.removeItem('saveEmail');
+        localStorage.removeItem('savePassword');
+        changeField(false, "isLogged");
+        changeField('', "loginemail");
+        changeField('', "loginpassword");
+        changeField('', "registeremail");
+        changeField('', "registerpassword");
+        changeField(null, "token");
+        changeField('', "name");
+        changeField('', "email");
+        changeField('', "role");
+        changeField(null, "api_token");
     };
-
-    const checkLogin = () => {
-        if (isLogged.isLogged.isLogged === true){
-            setLogin(true);
-        }
-        setLogin(false);
-    }
 
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-light nav-content">
@@ -71,15 +71,23 @@ const Nav = (isLogged) => {
                             <NavLink onClick={handleclickonlink} className="nav-link text-uppercase text-expanded" to="/recrutement">Recrutements</NavLink>
                         </li>
 
-                    {!isLogged.isLogged.isLogged && (
+                    {!isLogged && (
                         <li className="nav-login nav-item px-lg-4">
-                            <NavLink onClick={handleclickonlink} className="nav-link text-uppercase text-expanded" to="/connection">Connexion</NavLink>
+                            <NavLink onClick={handleclickonlink} className="nav-link text-uppercase text-expanded" to="/connexion">Connexion</NavLink>
                         </li>
                     )}
-                    {isLogged.isLogged.isLogged && (
-                        <li className="nav-login nav-item px-lg-4">
-                            <a onClick={handleclickonlink, handleLoggout} className="nav-link text-uppercase text-expanded">Déconnexion</a>
-                        </li>
+                    {isLogged && (
+                        <Dropdown className="nav-logged">
+                            <Dropdown.Toggle variant="none" id="dropdown-basic">
+                                {name}
+                            </Dropdown.Toggle>
+    
+                            <Dropdown.Menu>
+                                <NavLink className="dropdown-item" onClick={handleclickonlink} to="/profil">Profil</NavLink>
+                                <Dropdown.Divider />
+                                <Dropdown.Item onClick={handleclickonlink, handleLoggout} href="#">Deconnexion</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
                     )}
                     </ul>
                 </div>

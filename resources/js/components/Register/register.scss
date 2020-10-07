@@ -22,7 +22,7 @@
 
         padding-top: 3rem !important;
         padding-bottom: 3rem;
-        width: 25rem;
+        width: 35rem;
         margin: 2rem auto 2rem auto;
         background-color: rgba(88, 46, 32, 0.5) !important;;
 
@@ -50,12 +50,52 @@
                 
             }
 
+            .register-form-checkbox{
+                label{
+                    margin-left: 0.8rem;
+                }
+                a:hover{
+                    color: #ce9c10;
+                    text-decoration: none;
+                }
+            }
+
             .register-form-button{
                 margin-top: 2rem;
                 width: 10rem;
                 border-radius: 30px;
                 color: white;
                 background-color: #ce4710;
+            }
+        }
+
+        .register-send-nop{
+
+            margin: 2rem auto 0 auto;
+            width: 90%;
+            background-color: rgba(207, 95, 95, 0.479);
+            text-align: center;
+            border-radius: 5px;
+    
+            & p{
+                padding: 15px;
+            }
+        }
+
+        .register-send-ok{
+            margin: 2rem auto 0 auto;
+            width: 90%;
+            background-color: #50922769;
+            text-align: center;
+            border-radius: 5px;
+    
+            & p{
+                padding: 15px;
+            }
+
+            & a:hover{
+                color: #ce9c10;
+                text-decoration: none;
             }
         }
     }
