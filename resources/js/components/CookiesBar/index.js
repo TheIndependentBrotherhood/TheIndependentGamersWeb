@@ -8,16 +8,9 @@ import { NavLink } from "react-router-dom";
 
 const Membres = () => {
 
-    const cookiesOk = localStorage.getItem('cookiesOk');
-
-    const [isOk, useIsOk] = useState(cookiesOk);
-
     const handleClick = () => {
-        useIsOk(true);
-        localStorage.setItem('cookiesOk', cookiesOk)
+        localStorage.setItem('cookiesOk', true);
     }
-
-    // console.log(localStorage.getItem('cookiesOk'))
 
     return(
     <div>

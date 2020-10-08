@@ -44,4 +44,3 @@ export const registerNop = (registerNop) => ({
 export const register = () => ({
     type: REGISTER_USER,
 });
-

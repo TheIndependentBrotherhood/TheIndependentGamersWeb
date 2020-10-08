@@ -30,14 +30,25 @@ import Error404 from '../Error404';
 
 const App = ({ loading, logInCheck, changeFieldLoading }) => {
 
-  const cookiesOk = localStorage.getItem('cookiesOk');
+  const [cookiesOk, setCookiesOk] = useState(false);
+
+  const checkCookies = () => {
+
+    let cookies = localStorage.getItem('cookiesOk');
+
+    if(cookies === 'false'){
+      return setCookiesOk(false)
+    }
+    return setCookiesOk(true);
+  };
 
   const CheckLogin = () => {
     changeFieldLoading(true, 'loading');
     logInCheck();
-  }
+  };
 
   useEffect(() => {
+    checkCookies();
     CheckLogin();
   }, []);
 
@@ -84,7 +95,7 @@ const App = ({ loading, logInCheck, changeFieldLoading }) => {
             </Route>
           </Switch>
           <Footer />
-          {cookiesOk && <Cookies />}
+          {!cookiesOk && <Cookies />}
         </ScrollToTop>
       </Router>
   );

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { NavLink, Redirect } from "react-router-dom";
-import {login} from "../UserFunctions.js"
 
  // ==== CSS ==== //
 

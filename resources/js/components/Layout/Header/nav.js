@@ -20,6 +20,7 @@ const Nav = ({isLogged, changeField, name}) => {
     }
 
     const handleLoggout = (evt) => {
+        localStorage.setItem('cookiesOk', false);
         localStorage.removeItem('saveEmail');
         localStorage.removeItem('savePassword');
         changeField(false, "isLogged");
