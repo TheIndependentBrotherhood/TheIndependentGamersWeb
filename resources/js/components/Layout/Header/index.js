@@ -27,7 +27,7 @@ const Header = ({ isLogged, changeField, name }) => {
       <div className="header-content">
 				<div className="header-imgtitle">
 
-						<img className="header-img" id="logo" src="https://theindependentgamers.fr/images/logo.png" alt="logo" />
+						<img className="header-img" id="logo" src="https://www.theindependentgamers.fr/images/logo.png" alt="logo" />
 
 						<h1 className="header-title">
 								The Independent Gamers

@@ -4,7 +4,7 @@ const api = axios.create({
   headers: {
     'Accept': 'application/vnd.twitchtv.v5+json',
     'Client-ID': 'i47r11huc1dxwlf1sx2pfhimfo10ey',
-    'Authorization': 'Bearer 81adc5w99e23eo5b6k9ldndu5ua0ii'
+    'Authorization': 'Bearer yw7d4xoovwwewn5uwj9of3woc6o2pz'
   },
 });
 

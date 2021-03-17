@@ -31,7 +31,7 @@ const Twitch = () => {
     };
 
     const handleClicksh0otertv = (evt) => {
-        setNameLive("sh0otertv")
+        setNameLive("COLONELPGM")
     };
 
     const handleClickDespe = (evt) => {
@@ -67,7 +67,7 @@ const Twitch = () => {
   };
 
   const fetchSeb = () => {
-    api.get('https://api.twitch.tv/helix/users?login=sh0otertv')
+    api.get('https://api.twitch.tv/helix/users?login=COLONELPGM')
       .then((response) => {
         //console.log(response)
         setSeb(response.data.data);
