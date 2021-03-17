@@ -20,9 +20,9 @@ const Footer = () => (
 
                 <ul className="mention-ul">
 
-                        <li>Identité du propriétaire : Brandon SIMON-VERMOT</li>
+                        <li>Identité du propriétaire : Guillaume Sanchez</li>
                         <li>Numéro de SIRET :</li>
-                        <li>adresse mail : minicanzargames@gmail.com</li>
+                        <li>adresse mail : sanchez.guillaume116@gmail.com</li>
                         <li>site web : <NavLink to="/" >theindependentgamers.fr</NavLink></li>
                 
                 </ul>
@@ -31,9 +31,9 @@ const Footer = () => (
 
                 <ul className="mention-ul">
 
-                    <li>Hébergeur : Scaleway</li>
-                    <li>Siège social : 8 rue de la Ville l’Evêque, 75008 Paris FRANCE</li>
-                    <li>site web : <Link to="https://www.scaleway.com" target="_blank">www.scaleway.com</Link></li>
+                    <li>Hébergeur : OVHcloud</li>
+                    <li>Siège social : 19 Place Françoise Dorin, 75017 Paris FRANCE</li>
+                    <li>site web : <Link to="https://www.ovh.com" target="_blank">www.ovh.com</Link></li>
 
                 </ul>
 
@@ -44,7 +44,7 @@ const Footer = () => (
                 </p>
 
                 <p>
-                    Brandon SIMON-VERMOT met en œuvre tous les moyens dont il dispose, pour assurer une information fiable et une mise à jour fiable de ses sites internet. Toutefois, des erreurs ou omissions peuvent survenir. L’internaute devra donc s’assurer de l’exactitude des informations et signaler toutes modifications du site qu’il jugerait utile. Le propriétaire n’est en aucun cas responsable de l’utilisation faite de ces informations, et de tout préjudice direct ou indirect pouvant en découler.
+                    Guillaume Sanchez met en œuvre tous les moyens dont il dispose, pour assurer une information fiable et une mise à jour fiable de ses sites internet. Toutefois, des erreurs ou omissions peuvent survenir. L’internaute devra donc s’assurer de l’exactitude des informations et signaler toutes modifications du site qu’il jugerait utile. Le propriétaire n’est en aucun cas responsable de l’utilisation faite de ces informations, et de tout préjudice direct ou indirect pouvant en découler.
                 </p>
 
                 <h3 id="cookies">Cookie</h3>
@@ -56,15 +56,15 @@ const Footer = () => (
                 <h3>Liens hypertextes</h3>
 
                 <p>
-                    Les sites internet peuvent offrir des liens vers d’autres sites internet ou d’autres ressources disponibles sur internet. Brandon SIMON-VERMOT ne dispose d’aucun moyen pour contrôler les sites en connexion avec ses sites internet, ne répond pas de la disponibilité de tels sites et sources externes, ni ne la garantit. Il ne peut être tenue pour responsable de tout dommage, de quelque nature que ce soit, résultant du contenu de ces sites ou sources externes, et notamment des informations, produits ou services qu’ils proposent, ou de tout usage qui peut être fait de ces éléments. Les risques liés à cette utilisation incombent pleinement à l’internaute, qui doit se conformer à leurs conditions d’utilisation.
+                    Les sites internet peuvent offrir des liens vers d’autres sites internet ou d’autres ressources disponibles sur internet. Guillaume Sanchez ne dispose d’aucun moyen pour contrôler les sites en connexion avec ses sites internet, ne répond pas de la disponibilité de tels sites et sources externes, ni ne la garantit. Il ne peut être tenue pour responsable de tout dommage, de quelque nature que ce soit, résultant du contenu de ces sites ou sources externes, et notamment des informations, produits ou services qu’ils proposent, ou de tout usage qui peut être fait de ces éléments. Les risques liés à cette utilisation incombent pleinement à l’internaute, qui doit se conformer à leurs conditions d’utilisation.
                 </p>
 
                 <p>
-                    Les utilisateurs, les abonnés et les visiteurs des sites internet ne peuvent pas mettre en place un hyperlien en direction de ce site sans l’autorisation expresse et préalable de Brandon SIMON-VERMOT.
+                    Les utilisateurs, les abonnés et les visiteurs des sites internet ne peuvent pas mettre en place un hyperlien en direction de ce site sans l’autorisation expresse et préalable de Guillaume Sanchez.
                 </p>
 
                 <p>
-                    Dans l’hypothèse où un utilisateur ou visiteur souhaiterait mettre en place un lien hypertexte en direction d’un des sites internet de Brandon SIMON-VERMOT, il lui appartiendra d’adresser un email accessible sur le site afin de formuler sa demande de mise en plce d’un hyperlien. Brandon SIMON-VERMOT se réserve le droit d’accepter ou de refuser un hyperlien sans avoir à en justifier sa décision.
+                    Dans l’hypothèse où un utilisateur ou visiteur souhaiterait mettre en place un lien hypertexte en direction d’un des sites internet de Guillaume Sanchez, il lui appartiendra d’adresser un email accessible sur le site afin de formuler sa demande de mise en plce d’un hyperlien. Guillaume Sanchez se réserve le droit d’accepter ou de refuser un hyperlien sans avoir à en justifier sa décision.
                 </p>
 
                 <h3>Services fournis</h3>
@@ -74,7 +74,7 @@ const Footer = () => (
                 </p>
 
                 <p>
-                    Brandon SIMON-VERMOT s’efforce de fournir sur le site <NavLink to="/">theindependentgamers.fr</NavLink> des informations aussi précises que possible. Les renseignements figurant sur le site <NavLink to="/" >theindependentgamers.fr</NavLink> ne sont pas exhaustifs et les photos non contractuelles. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne. Par ailleurs, toutes les informations indiquées sur le site <NavLink to="/">theindependentgamers.fr</NavLink> sont données à titre indicatif, et sont susceptibles de changer ou d’évoluer sans préavis.
+                    Guillaume Sanchez s’efforce de fournir sur le site <NavLink to="/">theindependentgamers.fr</NavLink> des informations aussi précises que possible. Les renseignements figurant sur le site <NavLink to="/" >theindependentgamers.fr</NavLink> ne sont pas exhaustifs et les photos non contractuelles. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne. Par ailleurs, toutes les informations indiquées sur le site <NavLink to="/">theindependentgamers.fr</NavLink> sont données à titre indicatif, et sont susceptibles de changer ou d’évoluer sans préavis.
                 </p>
 
                 <h3>Limitation contractuelles sur les données</h3>
@@ -88,7 +88,7 @@ const Footer = () => (
                 </p>
 
                 <p>
-                    Les liens hypertextes mis en place dans le cadre du présent site internet en direction d’autres ressources présentes sur le réseau internet ne sauraient engager la responsabilité de Brandon SIMON-VERMOT.
+                    Les liens hypertextes mis en place dans le cadre du présent site internet en direction d’autres ressources présentes sur le réseau internet ne sauraient engager la responsabilité de Guillaume Sanchez.
                 </p>
 
                 <h3>Propriété intellectuelle</h3>
@@ -98,7 +98,7 @@ const Footer = () => (
                 </p>
 
                 <p>
-                    Toute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces différents éléments est strictement interdite sans l’accord exprès par écrit de Brandon SIMON-VERMOT. Cette représentation ou reproduction, par quelque procédé que ce soit, constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle. Le non-respect de cette interdiction constitue une contrefaçon pouvant engager la responsabilité civile et pénale du contrefacteur. En outre, les propriétaires des Contenus copiés pourraient intenter une action en justice à votre encontre.
+                    Toute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces différents éléments est strictement interdite sans l’accord exprès par écrit de Guillaume Sanchez. Cette représentation ou reproduction, par quelque procédé que ce soit, constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle. Le non-respect de cette interdiction constitue une contrefaçon pouvant engager la responsabilité civile et pénale du contrefacteur. En outre, les propriétaires des Contenus copiés pourraient intenter une action en justice à votre encontre.
                 </p>
 
                 <h3>Litiges</h3>
