@@ -1,0 +1,19 @@
+.footer{
+    background-color: #61dafb;
+    padding: 1rem;
+    text-align: center;
+    .footer-link{
+
+        color: #0a1519;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: underline;
+        }
+
+        .footer-logo{
+            margin-left: 0.3rem;
+            width: 50px;
+        }
+    }
+}
