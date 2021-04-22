@@ -38,6 +38,10 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: { msg: 'Le password ne peut pas être vide'}
       }
     },
+    isAdmin: {
+      type: DataTypes.BOOLEAN,
+      allowNul: false
+    },
   }, {
     sequelize,
     tableName: 'users',

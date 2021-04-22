@@ -6,22 +6,20 @@ const router = express.Router();
 // Controller
 
 const membreCtrl = require('../controllers/membre');
-const homeController = require('../controllers/upload')
 
 // Middleware
 
-// const auth = require('../middleware/auth');
-const multer = require('../middleware/multer-config');
+const auth = require('../middleware/auth');
+const multer = require('../middleware/multer-membre');
 
 // Routes
 
-router.post('/membre', multer.single("file"), membreCtrl.createMembre);
-router.get('/membre', homeController.getHome);
-// router.get('/membre', membreCtrl.findMembreList);
+router.post('/membre', auth.adminRequest, multer, membreCtrl.createMembre);
+router.get('/membre', membreCtrl.findMembreList);
 router.get('/membre/membre', membreCtrl.findMembre);
 router.get('/membre/staff', membreCtrl.findStaff);
 router.get('/membre/admin', membreCtrl.findAdmin);
-router.put('/membre/:id', multer.single("file"), membreCtrl.updateMembre);
-router.delete('/membre/:id', multer.single("file"), membreCtrl.deleteMembre);
+router.put('/membre/:id', auth.adminRequest, multer, membreCtrl.updateMembre);
+router.delete('/membre/:id', auth.adminRequest, multer, membreCtrl.deleteMembre);
 
 module.exports = router;

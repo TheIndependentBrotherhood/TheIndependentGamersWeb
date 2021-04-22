@@ -7,54 +7,49 @@ const asyncLib = require('async');
 const fs = require('fs');
 const multer = require('multer');
 
-exports.createJeu = async  (req, res) => {
+exports.createJeu = async (req, res) => {
   try {
-    // console.log(req.file);
 
     let nameSend = req.body.name;
-    let pictureSend = `http://localhost:3000/images/membres/${req.file.filename}`;
-    let roleSend = req.body.role;
+    let pictureSend = `${req.protocol}://${req.get('host')}/images/membres/${req.file.filename}`;
+    let decriptionSend = req.body.description;
 
     if (req.file == undefined) {
       return res.send(`You must select a file.`);
     }
 
-    models.Membre.create({
+    models.Jeu.create({
       name: nameSend,
       picture: pictureSend,
-      role: roleSend,
+      description: decriptionSend,
       isActive: true
+    }).then((jeu) => {
+      const message = 'Le jeu a bien été ajouté.'
+      res.status(201).json({ message, data: jeu })
     })
-
-    models.Image.create({
-      type: req.file.mimetype,
-      name: req.file.originalname,
-      data: fs.readFileSync(
-        "http://localhost:3000/images/membres/" + req.file.filename
-      ),
-    }).then((image) => {
-      fs.writeFileSync(
-        "http://localhost:3000/images/tmp/" + image.name,
-        image.data
-      );
-
-      return res.send(`File has been uploaded.`);
-    });
+    .catch(error => {
+      const message = 'Le jeu n\'a pas pu être ajouté. Réessayer dans quelques instant.'
+      res.status(500).json({ message, data: error})
+    })
   } catch (error) {
     console.log(error);
-    return res.send(`Error when trying upload images: ${error}`);
+    return res.send(`Une erreur est survenue lors de l'ajout du jeu: ${error}`);
   }
 };
 
 exports.findJeuList = (req, res, next) => {
 
-  models.Membre.findAll()
-  .then(membres => {
-    const message = 'La liste de tous les membres à bien été récupérée.'
-    res.status(200).json({ message, data: membres })
+  models.Jeu.findAll({
+    where:{
+      isActive: true
+    }
+  })
+  .then(jeux => {
+    const message = 'La liste de tous les jeux à bien été récupérée.'
+    res.status(200).json({ message, data: jeux })
   })
   .catch(error => {
-    const message = 'La liste de tout les membres n\'a pas pu être récupérée. Réessayer dans quelques instant.'
+    const message = 'La liste de tout les jeux n\'a pas pu être récupérée. Réessayer dans quelques instant.'
     res.status(500).json({ message, data: error})
   })
 
@@ -62,17 +57,19 @@ exports.findJeuList = (req, res, next) => {
 
 exports.findJeu = (req, res, next) => {
 
-  models.Membre.findAll({
+  const id = req.params.id
+
+  models.Jeu.findAll({
     where:{
-      role: "membre"
+      id: id
     }
   })
   .then(membres => {
-    const message = 'La liste des membres à bien été récupérée.'
-    res.status(400).json({ message, data: membres })
+    const message = 'Le jeu à bien été récupérée.'
+    res.status(200).json({ message, data: membres })
   })
   .catch(error => {
-    const message = 'La liste des membres n\'a pas pu être récupérée. Réessayer dans quelques instant.'
+    const message = 'Le jeu n\'a pas pu être récupérée. Réessayer dans quelques instant.'
     res.status(500).json({ message, data: error})
   })
 
@@ -82,21 +79,21 @@ exports.updateJeu = (req, res, next) => {
 
     const id = req.params.id
 
-    models.Membre.update(req.body, {
+    models.Jeu.update(req.body, {
       where: { id: id }
     })
     .then(_ => {
-      models.Membre.findByPk(id).then(membre => {
-        const message = `Le membre ${membre.name} a bien été modifié.`
+      models.Jeu.findByPk(id).then(membre => {
+        const message = `Le Jeu ${membre.name} a bien été modifié.`
         res.status(201).json({message, data: membre })
       })
       .catch(error => {
-        const message = 'Le membre n\'a pas pu être modifié. Réessayer dans quelques instant.'
+        const message = 'Le Jeu n\'a pas pu être modifié. Réessayer dans quelques instant.'
         res.status(500).json({ message, data: error})
       })
     })
     .catch(error => {
-      const message = 'Le membres n\a pas pu être modifié.'
+      const message = 'Le Jeu n\a pas pu être modifié.'
       res.status(500).json({ message, data: error})
     })
 
@@ -106,17 +103,17 @@ exports.deleteJeu = (req, res, next) => {
 
   const id = req.params.id
 
-  models.Membre.findByPk(req.params.id).then(membre => {
-    const membreDeleted = membre;
-    models.Membre.destroy({
+  models.Jeu.findByPk(req.params.id).then(membre => {
+    const jeuDeleted = membre;
+    models.Jeu.destroy({
       where: { id: membre.id }
     })
     .then(_ => {
-      const message = `Le membre ${membreDeleted.name} avec l'identifiant n°${membreDeleted.id} a bien été supprimé.`
-      res.json({message, data: membreDeleted })
+      const message = `Le Jeu ${jeuDeleted.name} avec l'identifiant n°${jeuDeleted.id} a bien été supprimé.`
+      res.json({message, data: jeuDeleted })
     })
     .catch(error => {
-      const message = 'Le membre n\'as pas pu être supprimé'
+      const message = 'Le Jeu n\'as pas pu être supprimé'
       res.status(500).json({ message, data: error})
     })
   })

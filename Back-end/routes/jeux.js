@@ -6,19 +6,18 @@ const router = express.Router();
 // Controller
 
 const jeuxCtrl = require('../controllers/jeu');
-const homeController = require('../controllers/upload')
 
 // Middleware
 
-// const auth = require('../middleware/auth');
-const multer = require('../middleware/multer-config');
+const auth = require('../middleware/auth');
+const multer = require('../middleware/multer-jeu');
 
 // Routes
 
-router.post('/jeux', multer.single("file"), jeuxCtrl.createJeu);
+router.post('/jeux', auth.adminRequest, multer, jeuxCtrl.createJeu);
 router.get('/jeux', jeuxCtrl.findJeuList);
 router.get('/jeux/:id', jeuxCtrl.findJeu);
-router.put('/jeux/:id', multer.single("file"), jeuxCtrl.updateJeu);
-router.delete('/jeux/:id', jeuxCtrl.deleteJeu);
+router.put('/jeux/:id', auth.adminRequest, multer, jeuxCtrl.updateJeu);
+router.delete('/jeux/:id', auth.adminRequest, jeuxCtrl.deleteJeu);
 
 module.exports = router;

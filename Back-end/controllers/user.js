@@ -162,19 +162,20 @@ exports.getUserProfile = (req, res, next) => {
     let userId = jwtUtils.getUserId(headerAuth);
 
     if (userId < 0)
-      return res.status(400).json({ 'error': 'wrong token' });
+      return res.status(400).json({ 'error': 'Mauvais Token' });
 
     models.User.findOne({
-      attributes: [ 'id', 'email', 'name', 'image' ],
+      attributes: [ 'id', 'email', 'name'],
       where: { id: userId }
     }).then(function(user) {
       if (user) {
         res.status(201).json(user);
       } else {
-        res.status(404).json({ 'error': 'user not found' });
+        res.status(404).json({ 'error': 'utilisateur introuvable' });
       }
     }).catch(function(err) {
-      res.status(500).json({ 'error': 'cannot fetch user' });
+        console.log(err)
+      res.status(500).json({ 'error': 'impossible d\'afficher l\'utilisateur' });
     });
 };
 
@@ -183,25 +184,28 @@ exports.updateUserProfile = (req, res, next) => {
 let headerAuth = req.headers['authorization'];
 let userId = jwtUtils.getUserId(headerAuth);
 
-// Params
-let image = `${req.protocol}://${req.get('host')}/images/${req.file.filename}`;
+console.log(req.body.name);
+console.log(req.body.email);
+console.log(req.body.password);
 
 asyncLib.waterfall([
     (done) => {
         models.User.findOne({
-        attributes: ['id', 'image'],
+        attributes: ['id'],
         where: { id: userId }
         }).then( (userFound) => {
             done(null, userFound);
         })
         .catch( (err) => {
+            console.log(err)
             return res.status(500).json({ 'error': 'unable to verify user' });
         });
     },
     (userFound, done) => {
         if(userFound) {
         userFound.update({
-            image: (image ? image : userFound.image)
+            email: req.body.email,
+            name: req.body.name
         }).then( () => {
             done(userFound);
         }).catch( (err) => {

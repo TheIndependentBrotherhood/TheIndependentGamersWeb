@@ -8,6 +8,7 @@ const path = require('path');
 
 const userRoutes = require('./routes/users');
 const membreRoutes = require('./routes/membres');
+const jeuRoutes = require('./routes/jeux');
 
 const app = express();
 
@@ -29,5 +30,6 @@ app.get('/', async(req, res) => {
 
 app.use('/api/auth', userRoutes);
 app.use('/api', membreRoutes);
+app.use('/api', jeuRoutes);
 
 module.exports = app;
