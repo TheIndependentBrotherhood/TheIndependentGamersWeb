@@ -1,0 +1,29 @@
+.mention{
+  margin-top: 4rem;
+  background: transparent !important;
+  color: white;
+
+  .mention-title{
+      padding: 1rem;
+      border-bottom: 1px white solid;
+  }
+  
+  & li{
+      list-style: none;
+  }
+  
+  & a{
+      color: #ce4710;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .mention{
+      text-align: center;
+
+      .mention-ul{
+          text-align: left;
+      }
+  }
+
+}

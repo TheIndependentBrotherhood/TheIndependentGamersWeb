@@ -2,13 +2,16 @@ import { connect } from 'react-redux';
 
 import Login from '../../components/Login';
 
-import { logIn, changeField } from '../../actions/auth'
+import { logIn, changeField } from '../../actions/user'
+
+import { changeFieldLoading } from '../../actions/loading'
 
 const mapStateToProps = (state) => ({
   // nom de la prop à remplir: donnée à récupérer dans le state
-  email: state.auth.listProjet,
-  password: state.auth.listProjet,
-  isLogged: state.auth.isLogged,
+  loginemail: state.user.loginemail,
+  loginpassword: state.user.loginpassword,
+  isLogged: state.user.isLogged,
+  loading: state.loading.loading,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -16,9 +19,12 @@ const mapDispatchToProps = (dispatch) => ({
   changeField: (value, name) => {
     dispatch(changeField(value, name));
   },
+  changeFieldLoading: (value, name) => {
+    dispatch(changeFieldLoading(value, name));
+  },
   logIn: () => {
     dispatch(logIn());
-  },
+  }
 });
 
 export default connect(

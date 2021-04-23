@@ -1,0 +1,99 @@
+.newcandidature{
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+
+    .newcandidature-container{
+
+        background-color: #212529;
+        border: 1px solid white;
+        padding: 0;
+
+        .newcandidature-head{
+
+            border-bottom: 1px solid white;
+
+            .newcandidature-header{
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .newcandidature-img{
+                    height: 128px;
+                    width: 95.703px;
+                    margin-left: 2rem; 
+                    margin-right: 2rem; 
+                }
+
+                .newcandidature-title-sm{
+                    color: white;
+                    display: none;
+                }
+    
+                .newcandidature-title{
+                    color: white;
+                }
+            }
+        }
+
+        .newcandidature-content{
+
+            padding: 2rem;
+            color: white;
+
+            & p{
+                font-size: 1.5rem;
+            }
+
+            & a{
+                &:hover{
+                    color: #ce4710;
+                }
+            }
+
+            .newcandidature-textarea{
+                margin: 1rem;
+            }
+
+            .newcandidature-send{
+
+                text-align: center;
+
+                .newcandidature-input{
+                    input{
+                        margin-left: 0.6rem;
+                    }
+                }
+
+                button{
+                    font-size: 1.5rem;
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 518px) {
+    .newcandidature{
+    
+        .newcandidature-container{
+    
+            .newcandidature-head{
+    
+                .newcandidature-header{
+    
+        
+                    .newcandidature-title-sm{
+                        display: block;
+                    }
+
+                    .newcandidature-title{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

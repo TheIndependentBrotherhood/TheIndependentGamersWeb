@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import projetReducer from './projet';
-import authReducer from './auth';
+import userReducer from './user';
+import loadingReducer from './loading';
+import jeuxReducer from './jeux';
 
 const rootReducer = combineReducers({
-    projet: projetReducer,
-    auth: authReducer,
+    user: userReducer,
+    loading: loadingReducer,
+    jeux: jeuxReducer,
 });
 
 export default rootReducer;

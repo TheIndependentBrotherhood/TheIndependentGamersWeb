@@ -1,19 +1,9 @@
 .footer{
-    background-color: #61dafb;
-    padding: 1rem;
-    text-align: center;
-    .footer-link{
-
-        color: #0a1519;
-        text-decoration: none;
-
+    color: white;
+    & a{
+        color: white;
         &:hover{
-            text-decoration: underline;
-        }
-
-        .footer-logo{
-            margin-left: 0.3rem;
-            width: 50px;
+            color:#ce4710;
         }
     }
 }

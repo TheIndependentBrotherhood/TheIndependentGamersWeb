@@ -1,0 +1,158 @@
+.register{
+
+    margin-top: 3rem !important;
+    margin-bottom: 3rem;
+    color: white;
+
+    .register-nav{
+        font-size: 2rem;
+        margin: auto 2rem;
+        text-align: center;
+        .register-nav-link{
+            padding: 2rem;
+
+            &:hover{
+                color: #ce9c10;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .register-content{
+
+        padding-top: 3rem !important;
+        padding-bottom: 3rem;
+        width: 35rem;
+        margin: 2rem auto 2rem auto;
+        background-color: rgba(88, 46, 32, 0.5) !important;;
+
+        .register-title{
+            text-align: center;
+        }
+
+        .register-form{
+
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .register-form-input{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                & input{
+                    width: 20rem;
+                }
+                
+            }
+
+            .register-form-checkbox{
+                label{
+                    margin-left: 0.8rem;
+                }
+                a:hover{
+                    color: #ce9c10;
+                    text-decoration: none;
+                }
+            }
+
+            .register-form-button{
+                margin-top: 2rem;
+                width: 10rem;
+                border-radius: 30px;
+                color: white;
+                background-color: #ce4710;
+            }
+        }
+
+        .register-send-nop{
+
+            margin: 2rem auto 0 auto;
+            width: 90%;
+            background-color: rgba(207, 95, 95, 0.479);
+            text-align: center;
+            border-radius: 5px;
+    
+            & p{
+                padding: 15px;
+            }
+        }
+
+        .register-send-ok{
+            margin: 2rem auto 0 auto;
+            width: 90%;
+            background-color: #50922769;
+            text-align: center;
+            border-radius: 5px;
+    
+            & p{
+                padding: 15px;
+            }
+
+            & a:hover{
+                color: #ce9c10;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .register{
+
+        margin-top: 3rem !important;
+        margin-bottom: 3rem;
+        color: white;
+    
+        .register-nav{
+            font-size: 1.5rem;
+            margin: auto 0;
+            text-align: center;
+            .register-nav-link{
+                padding: 0.5rem;
+            }
+        }
+    
+        .register-content{
+            width: 100%;
+            background-color: rgba(88, 46, 32, 0.5) !important;
+    
+            .register-title{
+                text-align: center;
+            }
+    
+            .register-form{
+    
+                margin-top: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+    
+                .register-form-input{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+    
+                    & input{
+                        width: 100%;
+                    }
+                    
+                }
+    
+                .register-form-button{
+                    margin-top: 2rem;
+                    width: 10rem;
+                    border-radius: 30px;
+                    color: white;
+                    background-color: #ce4710;
+                }
+            }
+        }
+    }
+}

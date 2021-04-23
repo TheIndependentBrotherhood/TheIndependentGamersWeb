@@ -1,0 +1,179 @@
+.recrutement{
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+
+    .recrutement-container{
+
+        padding: 0 !important;
+        background-color: #212529;
+        border: 1px solid white;
+
+        .recrutement-head{
+
+            border: 1px solid white;
+
+            .recrutement-header{
+
+                border-bottom: 1px solid white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #212529;
+
+                .recrutement-img{
+                    height: 128px;
+                    width: 95.703px;
+                    margin-left: 2rem; 
+                    margin-right: 2rem; 
+                }
+
+                .recrutement-title-sm{
+                    color: white;
+                    display: none;
+                }
+    
+                .recrutement-title{
+                    color: white;
+                }
+            }
+
+            .recrutement-before{
+                text-align: center;
+                padding-top: 2rem;
+
+                & a{
+                    color: white;
+
+                    &:hover{
+                        text-decoration: none;
+                        color: #ce461086;
+                    }
+                }
+            }
+
+            .recrutement-new{
+
+                padding: 2rem;
+                text-align: center;
+
+                .recrutement-new-link{
+                    background-color: #ce461086;
+                    color: white;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    padding: 0.5rem !important;
+                    text-decoration: none;
+                    font-size: 2rem;
+                    
+                }
+            }
+        }
+
+        .recrutement-content{
+            color: white;
+            background-color: #212529;
+            border: solid 1px white;
+
+            .recrutement-table{
+                width: 100%;
+
+                thead{
+
+                    tr{
+
+                        border: solid 1px white;
+
+                        th{
+                            text-align: center;
+                            font-size: 2rem;
+                            border: solid 1px white;
+                        }
+
+                    }
+                }
+
+                tbody{
+
+                    tr{
+
+                        border: solid 1px white;
+
+                        th{
+                            border: solid 1px white;
+                            text-align: center;
+                            font-size: 1.5rem;
+                            padding: 0rem;
+                        }
+
+                        td{
+                            border: solid 1px white;
+                            text-align: left;
+                            font-size: 1.5rem;
+                            padding-left: 1rem;
+                        }
+
+                        .td-status-new{
+                            color: yellow;
+                        }
+
+                        .td-status-wait{
+                            color: #ce461086;
+                        }
+
+                        .td-status-accept{
+                            color: green ;
+                        }
+
+                        .td-status-refuse{
+                            color: red;
+                        }
+
+                        .td-auteur{
+                            text-align: center;
+                            padding: 0;
+                        }
+                    }
+
+                }
+            }
+
+            .recrutement-card{
+                display: flex;
+                align-items: center;
+                border: 1px solid white;
+                background-color: #212529;
+                color: white;
+                font-size: 1.5rem;
+
+                .recrutement-card-items{
+                    border: 1px solid white;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 518px) {
+    .recrutement{
+    
+        .recrutement-container{
+    
+            .recrutement-head{
+    
+                .recrutement-header{
+    
+        
+                    .recrutement-title-sm{
+                        display: block;
+                    }
+
+                    .recrutement-title{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

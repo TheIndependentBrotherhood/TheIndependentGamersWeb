@@ -2,24 +2,26 @@ import { createStore, applyMiddleware } from 'redux';
 import { devToolsEnhancer } from 'redux-devtools-extension';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-import projetMiddleware from '../middlewares/projet';
-import authMiddleware from '../middlewares/auth';
+import userMiddleware from '../middlewares/userMiddleware';
+import listMiddleware from '../middlewares/listMiddleware';
 
 import reducer from '../reducers';
 
+// on combine devTools avec les middlewares
 const enhancers = composeWithDevTools(
-    applyMiddleware(
-      // ... add more middlewares
-      projetMiddleware,
-      authMiddleware
-    ),
+  applyMiddleware(
+    userMiddleware,
+    listMiddleware,
+    // ... add more middlewares
+  ),
 );
 
+
 const store = createStore(
-    // reducer
-    reducer,
-    // enhancer
-    enhancers,
+  // reducer
+  reducer,
+  // enhancer
+  enhancers,
 );
-  
-  export default store;
+
+export default store;

@@ -1,41 +1,78 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { NavLink, Redirect } from 'react-router-dom';
-import './login.scss';
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { NavLink, Redirect } from "react-router-dom";
 
-const Home = ({ changeField, logIn, email, password, isLogged }) => {
+ // ==== CSS ==== //
 
-  const handleEmail = (evt) => {
-    changeField(evt.target.value, "email");
-  };
+ import './login.scss'
 
-  const handlePassword = (evt) => {
-    changeField(evt.target.value, "password");
-  };
+const Login = ({ changeFieldLoading, loginemail, loginpassword, isLogged, logIn, changeField}) => { 
 
-  const submitLogIn = (evt) => {
-    evt.preventDefault();
-    logIn();
-  } 
+    const [checkbox, setCheckbox] = useState(null);
 
-  return (
-    <main className="Exemple">
-      <div className="Exemple-content">
-        <form onSubmit={submitLogIn} action="" method="post">
-          <div className="form-group">
-            <small id="emailHelp" className="form-text text-muted">Back-Office guillaume-sanchez.fr</small>
-            <label htmlFor="exampleInputEmail1">Adresse Email</label>
-            <input onChange={handleEmail} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-          </div>
-          <div className="form-group">
-            <label htmlFor="exampleInputPassword1">Mot de Passe</label>
-            <input onChange={handlePassword} type="password" className="form-control" id="exampleInputPassword1" />
-          </div>
-          <button type="submit" className="btn btn-primary">Connexion</button>
-        </form>
-      </div>
-    </main>
-  );
-}
+    const onChangeCheckbox = (evt) => {
+        setCheckbox(true);
+        localStorage.setItem('saveEmail', loginemail);
+        localStorage.setItem('savePassword', loginpassword);
+        if(checkbox === true){
+            setCheckbox(false);
+            localStorage.removeItem('saveEmail');
+            localStorage.removeItem('savePassword');
+        }
+    }
 
-export default Home;
+    const submitLogin = (evt) => {
+        evt.preventDefault();
+        changeFieldLoading(true, 'loading');
+        logIn();
+    }
+
+    const onChangeEmail = (evt) => {
+        if (checkbox === true) {
+            changeField(evt.target.value, "loginemail");
+            localStorage.setItem('saveEmail', loginemail);
+        }
+        changeField(evt.target.value, "loginemail");
+    };
+
+    const onChangePassword = (evt) => {
+        if (checkbox === true) {
+            changeField(evt.target.value, "loginpassword");
+            localStorage.setItem('savePassword', loginpassword);
+        }
+        changeField(evt.target.value, "loginpassword");
+    };
+    
+    return(
+        <main className="login container">
+            <nav className="login-nav">
+                <NavLink className="login-nav-link" to="/connexion">Connexion</NavLink>
+                <span>/</span>
+                <NavLink className="login-nav-link" to="/inscription">Inscription</NavLink>
+            </nav>
+            <div className="login-content">
+                <h1 className="login-title">Connexion</h1>
+                <form onSubmit={submitLogin} className="login-form" action="" method="post">
+                    <div className="login-form-input form-group">
+                        <label htmlFor="exampleInputEmail1">Email</label>
+                        <input onChange={onChangeEmail} type="email" value={loginemail} />
+                    </div>
+                    <div className="login-form-input form-group">
+                        <label htmlFor="exampleInputPassword1">Mot de Passe</label>
+                        <input onChange={onChangePassword} type="password" value={loginpassword} />
+                    </div>
+                    <div className="login-form-checkbox">
+                        <input onChange={onChangeCheckbox} type="checkbox" id="scales" name="scales" />
+                        <label htmlFor="scales">Restez connecté</label>
+                    </div>
+                    <button className="login-form-button" type="submit">Se Connecter</button>
+                </form>
+                {isLogged && (
+                    <Redirect push to="/" />
+                )}
+            </div>
+        </main>
+    );
+};
+
+export default Login;

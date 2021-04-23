@@ -1,38 +1,57 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { NavLink, Redirect } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { NavLink, Link } from "react-router-dom";
 
-import './header.scss';
+ // ==== CSS ==== //
 
-const Header = ({ isLogged, token, changeField }) => {
+import './header.scss'
+  // ==== Components ==== //
 
-    const [redirect, useRedirect] = useState(false);
+import Nav from './nav'
+import Discord from './discord'
 
-    const hundleLogout = () => {
-        changeField("", "token");
-        changeField(false, "isLogged");
-    }
+const Header = ({ isLogged, changeField, name }) => {
 
-  return (
-    <header className="header">
-        <nav className="navbar navbar-expand-lg navbar navbar-light header-nav">
-            <NavLink className="navbar-brand" to="/">Back-Office</NavLink>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
-                    <li className="nav-item active deconnexion">
-                        <NavLink className="nav-link" to="/new">Nouveau<span className="sr-only">(current)</span></NavLink>
-                    </li>
-                    <li className="nav-item active deconnexion">
-                        <NavLink onClick={hundleLogout} className="nav-link" to="/">Déconnexion <span className="sr-only">(current)</span></NavLink>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+	const handleClick = (evt) => {
+		const discordFocus = document.getElementById('discord')
+		if (discordFocus.className === "discord--Frame__invalide") {
+			return discordFocus.className = "discord--Frame__valide";
+		}
+		return discordFocus.className = "discord--Frame__invalide"
+	};
+
+	return(
+	<header className="header">
+
+	  
+      <div className="header-content">
+				<div className="header-imgtitle">
+
+						<img className="header-img" id="logo" src="https://www.theindependentgamers.fr/images/logo.png" alt="logo" />
+
+						<h1 className="header-title">
+								The Independent Gamers
+						</h1>
+
+				</div>
+
+				<div className="header-navicon">
+
+						<a onClick={handleClick} ><i className="fab fa-discord"></i></a>
+
+						<a href="https://www.facebook.com/theindependentgamers" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square"></i></a>
+
+						<a href="https://www.youtube.com/channel/UC1qQ_J-7e9WGjwo9FzbHkHg" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
+
+						<Link to="/twitch"><i className="fab fa-twitch"></i></Link>
+
+				</div>
+			</div>
+			<Nav isLogged={isLogged} changeField={changeField} name={name} />
+			<Discord />
+	</header>
   );
-}
+};
 
 export default Header;
+ 
