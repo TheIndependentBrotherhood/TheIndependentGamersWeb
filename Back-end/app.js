@@ -11,7 +11,8 @@ const models = require('./models');
 const userRoutes = require('./routes/users');
 const membreRoutes = require('./routes/membres');
 const jeuRoutes = require('./routes/jeux');
-const PostRoutes= require('./routes/posts');
+const postRoutes= require('./routes/posts');
+const messageRoutes= require('./routes/messages');
 
 const app = express();
 
@@ -31,9 +32,10 @@ app.get('/', async(req, res) => {
     res.status(200).send("Hello World")
 })
 
-app.use('/api', PostRoutes);
 app.use('/api/auth', userRoutes);
 app.use('/api', membreRoutes);
 app.use('/api', jeuRoutes);
+app.use('/api', postRoutes);
+app.use('/api', messageRoutes);
 
 module.exports = app;

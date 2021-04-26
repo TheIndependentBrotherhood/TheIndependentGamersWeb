@@ -43,6 +43,7 @@ exports.findPostList = (req, res, next) => {
     include: [{
         model: models.User,
         attributes: [ 'id', 'name'],
+        model: models.Message,
     }]
   })
   .then(posts => {
@@ -68,6 +69,7 @@ exports.findPost = (req, res, next) => {
     include: [{
         model: models.User,
         attributes: [ 'id', 'name'],
+        model: models.message,
     }]
   })
   .then(membres => {
@@ -114,8 +116,11 @@ exports.deletePost = (req, res, next) => {
     models.Post.destroy({
       where: { id: post.id }
     })
+    models.Message.destroy({
+      where: { postId: post.id }
+    })
     .then(_ => {
-      const message = `Le Post "${postDeleted.title}" avec l'identifiant n°${postDeleted.id} a bien été supprimé.`
+      const message = `Le Post "${postDeleted.title}" et ses messages lié, avec l'identifiant n°${postDeleted.id} a bien été supprimé.`
       res.json({message, data: postDeleted })
     })
     .catch(error => {
