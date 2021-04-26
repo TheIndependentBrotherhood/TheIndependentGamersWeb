@@ -37,14 +37,15 @@ exports.userRequest  = (req, res, next) => {
     const token = req.headers.authorization.split(' ')[1];
     const decodedToken = jwt.verify(token, JWT_SIGN_SECRET);
     const userId = decodedToken.userId;
-    if(req.body.userId && req.body.userId !== userId) {
+    console.log(req.body);
+    if(req.body.userId && Number(req.body.userId) !== userId) {
       throw 'Invalid user Id';
     } else {
       next();
     }
-  } catch {
+  } catch(err) {
     res.status(401).json({
-      error: new Error('Invalid request!')
+      error: (err + ', Invalid request!')
     })
   }
 }
@@ -56,7 +57,7 @@ exports.adminRequest = (req, res, next) => {
     const userId = decodedToken.userId;
     const userIsAdmin = decodedToken.isAdmin
     console.log(userIsAdmin);
-    if(req.body.userId && req.body.userId !== userId) {
+    if(req.body.userId && Number(req.body.userId) !== userId) {
       throw 'Invalid user Id';
     } else if(userIsAdmin == true){
       next();
@@ -65,9 +66,9 @@ exports.adminRequest = (req, res, next) => {
         error: ('Vous n\'êtes pas administrateur')
       })
     }
-  } catch {
+  } catch(err) {
     res.status(401).json({
-      error: new Error('Invalid request!')
+      error: (err + ', Invalid request!')
     })
   }
 }
