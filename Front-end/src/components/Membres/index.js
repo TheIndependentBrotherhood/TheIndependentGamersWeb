@@ -38,7 +38,7 @@ const Membres = () => {
           <div className="col col-lg-3">
             {Admins.map((admin) => (
               <div key={admin.id} className="p-2 text-center">
-                <img className="rounded-circle img--membre" src={`https://theindependentgamers.fr/images/membre/${admin.picture}.png`} alt="" />
+                <img className="rounded-circle img--membre" src={`https://www.theindependentgamers.fr/images/membre/${admin.picture}.png`} alt="" />
                 <h2 className="pb-2 text-primary">{admin.name}</h2>
               </div>
             ))}
@@ -47,7 +47,7 @@ const Membres = () => {
           <div className="col-lg-6 d-flex flex-warp row m-auto">
             {Membres.map((membre) => (
               <div key={membre.id} className="p-2 col col-lg-4 text-center">
-                <img className="rounded-circle img--membre" src={`https://theindependentgamers.fr/images/membre/${membre.picture}.png`} alt="" />
+                <img className="rounded-circle img--membre" src={`https://www.theindependentgamers.fr/images/membre/${membre.picture}.png`} alt="" />
                 <h2 className="pb-2 text-primary">{membre.name}</h2>
               </div>
             ))}
@@ -56,7 +56,7 @@ const Membres = () => {
           <div className="col col-lg-3">
             {Staffs.map((staff) => (
               <div key={staff.id} className="p-2 text-center">
-                <img className="rounded-circle img--membre" src={`https://theindependentgamers.fr/images/membre/${staff.picture}.png`} alt="" />
+                <img className="rounded-circle img--membre" src={`https://www.theindependentgamers.fr/images/membre/${staff.picture}.png`} alt="" />
                 <h2 className="pb-2 text-primary">{staff.name}</h2>
               </div>
             ))}  

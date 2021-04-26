@@ -5,40 +5,32 @@
     .toread-container{
 
         padding: 0 !important;
-        border: solid 1px white;
-        background-color: #212529;
 
         .toread-head{
-            border-bottom: solid 1px white;
 
             .toread-header{
 
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #212529;
 
                 .toread-img{
                     height: 128px;
                     width: 95.703px;
-                    margin-left: 2rem; 
-                    margin-right: 2rem; 
+                    margin-left: 1rem; 
+                    margin-right: 1rem; 
                 }
 
                 .toread-title{
-                    color: white;
-                    font-family: 'Yanone Kaffeesatz', sans-serif;
-                }
-
-                .toread-title-sm{
-                    color: white;
-                    display: none;
+                    margin-bottom: 0 !important;
+                    font-family: Raleway, Helvetica, Arial, sans-serif;
+                    text-align: center;
+                    font-size: 2rem;
                 }
             }
         }
 
         .toread-content{
-            color: white;
             padding: 1rem;
 
             .toread-new{
@@ -48,8 +40,6 @@
 
                 .toread-new-link{
                     
-                    background-color: #ce461086;
-                    color: white;
                     cursor: pointer;
                     border-radius: 10px;
                     padding: 0.5rem;
@@ -57,17 +47,11 @@
                     font-size: 2rem;
 
                     &:hover{
-                        font-size: 2.3rem;
+                        color: #ce4710;
+                        text-decoration: underline;
                     }
                     
                 }
-            }
-
-            h2{
-                font-size: 3rem;
-                padding: 1rem;
-                border-bottom: solid 1px white;
-                color: #ce4710;
             }
 
             h3{
@@ -78,12 +62,6 @@
 
             p{
                 font-size: 1.2rem;
-            }
-
-            ul{
-                li{
-                    list-style: none;
-                }
             }
         }
     }

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const fetchMembreList = (Membres) => {
-    axios.get('https://theindependentgamers.fr/api/membre/membre')
+    axios.get('https://www.theindependentgamers.fr/api/membre/membre')
       .then((response) => {
         // console.log(response.data)
         Membres(response.data);
@@ -15,7 +15,7 @@ export const fetchMembreList = (Membres) => {
   };
 
 export const fetchStaffsList = (Staffs) => {
-    axios.get('https://theindependentgamers.fr/api/membre/staff')
+    axios.get('https://www.theindependentgamers.fr/api/membre/staff')
       .then((response) => {
         // console.log(response.data)
         Staffs(response.data);
@@ -29,7 +29,7 @@ export const fetchStaffsList = (Staffs) => {
   };
 
 export const fetchAdminsList = (Admins) => {
-    axios.get('https://theindependentgamers.fr/api/membre/admin')
+    axios.get('https://www.theindependentgamers.fr/api/membre/admin')
       .then((response) => {
         // console.log(response.data)
         Admins(response.data);

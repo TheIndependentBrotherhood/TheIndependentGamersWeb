@@ -1,9 +1,39 @@
 .footer{
+
+    background-color: #212529;
     color: white;
-    & a{
-        color: white;
-        &:hover{
-            color:#ce4710;
+
+    .discord--Frame__valide{
+        position: absolute;
+        bottom: 85px;
+        right: 80px;
+    }
+
+    .discord--Frame__invalide{
+        display: none;
+    }
+
+            
+    .header-navicon a{
+        margin: 1rem;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+
+        .fa-discord{
+            color: #7289da;
+        }
+
+        .fa-facebook-square{
+            color: #3a559f;
+        }
+
+        .fa-youtube{
+            color: #ff0000;
+        }
+
+        .fa-twitch{
+            color: #9147ff;
         }
     }
 }

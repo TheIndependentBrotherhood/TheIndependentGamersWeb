@@ -44,10 +44,10 @@ const Login = ({ changeFieldLoading, loginemail, loginpassword, isLogged, logIn,
     };
     
     return(
-        <main className="login container">
+        <main className="login">
             <nav className="login-nav">
                 <NavLink className="login-nav-link" to="/connexion">Connexion</NavLink>
-                <span>/</span>
+                <span>|</span>
                 <NavLink className="login-nav-link" to="/inscription">Inscription</NavLink>
             </nav>
             <div className="login-content">
@@ -65,7 +65,9 @@ const Login = ({ changeFieldLoading, loginemail, loginpassword, isLogged, logIn,
                         <input onChange={onChangeCheckbox} type="checkbox" id="scales" name="scales" />
                         <label htmlFor="scales">Restez connecté</label>
                     </div>
-                    <button className="login-form-button" type="submit">Se Connecter</button>
+                    <div className="login-form-button_div">
+                        <button className="login-form-button" type="submit"><i className="fas fa-power-off"></i></button>
+                    </div>
                 </form>
                 {isLogged && (
                     <Redirect push to="/" />

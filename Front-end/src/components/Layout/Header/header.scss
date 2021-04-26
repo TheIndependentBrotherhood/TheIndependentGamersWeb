@@ -1,131 +1,115 @@
 
 
 .header{
-
-    .discord--Frame__valide{
-        position: absolute;
-        top: 85px;
-        right: 80px;
-    }
-
-    .discord--Frame__invalide{
-        display: none;
-    }
+    padding: 0.5rem;
+    background-color: #212529;
+    align-items: center;
 
     .header-content{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
 
-        .header-imgtitle{
-            color: white;
+        display: flex;
+
+        .header-img{
+
             display: flex;
             align-items: center;
-            margin-left: 2rem; 
-            margin-right: 2rem; 
+            margin-left: 1rem; 
+            margin-right: 1rem;
+
+            #logo{
+                height: 4rem;
+            }
         }
+
+        .header-nav{
+
+            align-self: center;
+            width: 100%;
+
+            .nav-content{
+                background-color: #212529 !important;
+                padding: 0 !important;
         
-        .header-navicon a{
-            margin: 1rem;
-            justify-content: center;
-            font-size: 2rem;
-
-            .fa-discord{
-                color: #7289da;
-            }
-
-            .fa-facebook-square{
-                color: #3a559f;
-            }
-
-            .fa-youtube{
-                color: #ff0000;
-            }
-
-            .fa-twitch{
-                color: #9147ff;
-            }
-        }
-    
-        #logo{
-            height: 128px;
-            width: 95.703px;
-            margin-left: 2rem; 
-            margin-right: 2rem; 
-        }
-    }
-
-    .nav-content{
-        background-color: rgba(88, 46, 32, 0.5) !important;
-
-        .navbar-toggler{
-            color: white;
-            border: 2px solid white ;
-            border-radius: 10px;
-        }   
-
-        .fa-bars{
-        color: white;
-        }
-
-        .nav-title{
-            display: none;
-            color: white !important;
-            text-align: center;
-            font-family: 'Yanone Kaffeesatz', sans-serif;
-            font-size: 1.5rem;
-        }
+                .navbar-toggler{
+                    color: white;
+                    border: 2px solid white ;
+                    border-radius: 10px;
+                }   
         
-        .navbar-toggler-icon{
-            color: white;
-        }
+                .fa-bars{
+                color: white;
+                }
         
-        .nav-link, .nav-item{
-            color:white !important;
-            font-weight:800 !important;
-            &:hover , &:hover{
-                color:rgba(255,255,255,.4) !important;
+                .nav-title{
+                    display: none;
+                    color: white !important;
+                    text-align: center;
+                    font-family: 'Yanone Kaffeesatz', sans-serif;
+                    font-size: 1.5rem;
+                }
+                
+                .navbar-toggler-icon{
+                    color: white;
+                }
+                
+                .nav-link, .nav-item{
+                    color:white !important;
+                    font-weight:800 !important;
+                    &:hover , &:hover{
+                        color:goldenrod !important;
+                    }
+                }
+        
+                .nav-login{
+                    align-self: center;
+                    background-color: #ce461086;
+                    cursor: pointer;
+                    border-radius: 0 30px 0 30px;
+                    position: absolute;
+                    right: 2rem;
+                    padding: 0.4rem !important;
+
+                    &:hover {
+                        background-color:goldenrod !important;
+                    }
+
+                    & a:hover{
+                        color:white !important;
+                    }
+                }
+        
+        
+        
+                .nav-logged{
+        
+                    .btn.focus, .btn:focus {
+                        outline: 0;
+                        box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0);
+                    }
+        
+                    .dropdown-item.active, .dropdown-item:active{
+                        background-color: #ce4610ef;
+                    }
+        
+                    & button {
+                        color:white !important;
+                        font-weight:800 !important;
+                        background-color: rgba(255, 255, 255, 0);
+                    }
+                    cursor: pointer;
+                    border-radius: 10px;
+                    position: absolute;
+                    right: 2rem;
+                    padding: 0 !important;
+        
+                    .dropdown-menu{
+                        right: 0%;
+                        left: auto !important;
+                    }
+                }
             }
         }
 
-        .nav-login{
-            background-color: #ce461086;
-            cursor: pointer;
-            border-radius: 10px;
-            position: absolute;
-            right: 2rem;
-            padding: 0 !important;
-        }
-
-
-
-        .nav-logged{
-
-            .btn.focus, .btn:focus {
-                outline: 0;
-                box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0);
-            }
-
-            .dropdown-item.active, .dropdown-item:active{
-                background-color: #ce4610d7;
-            }
-
-            & button {
-                color:white !important;
-                font-weight:800 !important;
-                background-color: rgba(255, 255, 255, 0);
-            }
-            cursor: pointer;
-            border-radius: 10px;
-            position: absolute;
-            right: 2rem;
-            padding: 0 !important;
-
-            .dropdown-menu{
-                right: 0%;
-                left: auto !important;
-            }
-        }
     }
 }
 
@@ -137,17 +121,10 @@
         text-align: center;
         margin: 0;
 
-        .discord--Frame__valide{
-            position: relative;
-            top: 0px;
-            right: 0;
-            width: 100%;
-        }
-
         .header-content{
             display: block;
             justify-content: center;
-            .header-imgtitle{
+            .header-img{
                 margin: 0 !important;
                 color: white !important;
 
@@ -164,33 +141,46 @@
         }
 
         .nav-content{
+
+            justify-content: center !important;
+            align-items: center;
             
             .nav-title{
-                display: initial !important;
+                display: block !important;
+                margin-left: 0.5rem;
+                padding: 0 !important;
+                margin-right: 0;
             }
 
-            .nav-login{
-                background-color: #ce461086;
-                cursor: pointer;
-                border-radius: 10px;
-                position: relative;
-                right: 0;
-                padding: 0 !important;
-            }
+            .navbar-collapse{
 
-            .nav-logged{
-                cursor: pointer;
-                border-radius: 10px;
-                position: relative;
-                right: 0;
-                padding: 0 !important;
-    
-                .dropdown-menu{
-                    position: relative !important;
-                    right: auto !important;
-                    left: auto !important;
-                    text-align: center;
-                    transform: translate(0px, 0px) !important;
+                .navbar-nav{
+
+                    .nav-login{
+                        background-color: #ce461086;
+                        cursor: pointer;
+                        border-radius: 0 30px 0 30px;
+                        position: relative;
+                        right: 0;
+                        padding: 0.4rem !important;
+                    }
+        
+                    .nav-logged{
+                        cursor: pointer;
+                        border-radius: 10px;
+                        position: relative;
+                        right: 0;
+                        padding: 0 !important;
+            
+                        .dropdown-menu{
+                            position: relative !important;
+                            right: auto !important;
+                            left: auto !important;
+                            text-align: center;
+                            transform: translate(0px, 0px) !important;
+                        }
+                    }
+
                 }
             }
         }

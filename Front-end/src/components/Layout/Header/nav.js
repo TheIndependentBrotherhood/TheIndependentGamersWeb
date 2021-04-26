@@ -45,30 +45,30 @@ const Nav = ({isLogged, changeField, name}) => {
             <a className="navbar-brand nav-title" href="">The Independent Gamers</a>
 
             <div className="collapse navbar-collapse" id="navshow">
-                <div className="navbar-nav">
-                    <ul className="navbar-nav ml-1">
 
-                        <li className="nav-item px-lg-4">
+                    <ul className="navbar-nav">
+
+                        <li className="nav-item px-lg-2">
                             <NavLink onClick={handleclickonlink} className="nav-link text-uppercase text-expanded" to="/">home</NavLink>
                         </li>
 
-                        <li className="nav-item px-lg-4">
+                        <li className="nav-item px-lg-2">
                             <NavLink onClick={handleclickonlink} className="nav-link text-uppercase text-expanded" to="/jeux">Jeux</NavLink>
                         </li>
 
-                        <li className="nav-item px-lg-4">
+                        <li className="nav-item px-lg-2">
                             <NavLink onClick={handleclickonlink} className="nav-link text-uppercase text-expanded" to="/membres">Membres</NavLink>
                         </li>
 
-                        <li className="nav-item px-lg-4">
+                        <li className="nav-item px-lg-2">
                             <NavLink onClick={handleclickonlink} className="nav-link text-uppercase text-expanded" to="/twitch">Twitch</NavLink>
                         </li>
 
-                        <li className="nav-item px-lg-4">
+                        <li className="nav-item px-lg-2">
                             <NavLink onClick={handleclickonlink} className="nav-link text-uppercase text-expanded" to="/events">Events</NavLink>
                         </li>
 
-                        <li className="nav-item px-lg-4">
+                        <li className="nav-item px-lg-2">
                             <NavLink onClick={handleclickonlink} className="nav-link text-uppercase text-expanded" to="/recrutement">Recrutements</NavLink>
                         </li>
 
@@ -92,7 +92,6 @@ const Nav = ({isLogged, changeField, name}) => {
                     )}
                     </ul>
                 </div>
-            </div>
         </nav>
     );
 };

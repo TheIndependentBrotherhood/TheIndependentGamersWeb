@@ -2,7 +2,7 @@ body{
     min-height: 100%;
     position: relative;
     font-family: Raleway, Helvetica, Arial, sans-serif;
-    background:linear-gradient(rgba(47,23,15,.65),rgba(47,23,15,.65)),url(https://www.theindependentgamers.fr/images/bg.png);
+    background-color: #f8f9fa;
     background-attachment:fixed;
     background-position:center;
     background-size:cover;
@@ -10,12 +10,4 @@ body{
 
 h1{
     font-family: 'Yanone Kaffeesatz', sans-serif;
-}
-
-h2,h3,h4,h5,h6{
-    font-family:Raleway
-} 
-
-p{
-    line-height:1.75
 }

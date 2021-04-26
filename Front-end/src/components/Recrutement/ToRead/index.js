@@ -15,8 +15,7 @@ const Recrutement = () => {
 
                     <div className="toread-header">
                         <img className="toread-img" id="logo" src="https://www.theindependentgamers.fr/images/logo.png" alt="logo" />
-                        <h2 className="toread-title">Intégrer les Independent Gamers</h2>
-                        <h2 className="toread-title-sm">Intégrer les TIG</h2>
+                        <h1 className="toread-title">Intégrer les Independent Gamers</h1>
                     </div>
 
                 </div>

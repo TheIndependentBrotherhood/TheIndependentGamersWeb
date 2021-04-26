@@ -1,69 +1,63 @@
 .recrutement{
     margin-top: 5rem;
     margin-bottom: 10rem;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
 
     .recrutement-container{
 
         padding: 0 !important;
-        background-color: #212529;
-        border: 1px solid white;
+        display: flex;
 
         .recrutement-head{
 
-            border: 1px solid white;
+            width: 33%;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
 
             .recrutement-header{
 
-                border-bottom: 1px solid white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #212529;
+                text-align: center;
 
                 .recrutement-img{
                     height: 128px;
                     width: 95.703px;
-                    margin-left: 2rem; 
-                    margin-right: 2rem; 
-                }
+                    margin: auto;                }
 
                 .recrutement-title-sm{
-                    color: white;
                     display: none;
+                    font-family: Raleway, Helvetica, Arial, sans-serif;
                 }
     
                 .recrutement-title{
-                    color: white;
+                    text-align: center;
+                    font-family: Raleway, Helvetica, Arial, sans-serif;
                 }
             }
 
             .recrutement-before{
                 text-align: center;
                 padding-top: 2rem;
+                margin: auto 1rem;
+                 & h3{
+                    font-size: 1.5rem;
+                 }
 
                 & a{
-                    color: white;
-
-                    &:hover{
-                        text-decoration: none;
-                        color: #ce461086;
-                    }
+                    color: #b23f21;
                 }
             }
 
             .recrutement-new{
-
-                padding: 2rem;
+                
+                margin-top: 2rem;
                 text-align: center;
 
                 .recrutement-new-link{
-                    background-color: #ce461086;
-                    color: white;
-                    cursor: pointer;
+                    color: #b23f21;
                     border-radius: 10px;
-                    padding: 0.5rem !important;
-                    text-decoration: none;
                     font-size: 2rem;
                     
                 }
@@ -71,108 +65,127 @@
         }
 
         .recrutement-content{
-            color: white;
-            background-color: #212529;
-            border: solid 1px white;
+            margin-left: 33%;
+            width: 66%;
 
-            .recrutement-table{
-                width: 100%;
+            .recrutement-article{
 
-                thead{
+                display: flex;
+                margin: 2rem;
+                padding: 1rem;
+                //height: 150px;
+                border-bottom: 2px solid black;
 
-                    tr{
+                .recrutement-article_header{
+                    width: 25% !important;
+                    margin-left: 2rem;
 
-                        border: solid 1px white;
+                    .recrutement-article_header_author{
+                        font-weight: 700;
+                        margin: 0 1rem !important;
+                        font-size: 1.8rem;
+                        color: #b23f21;
+                    }
 
-                        th{
-                            text-align: center;
-                            font-size: 2rem;
-                            border: solid 1px white;
-                        }
+                    .recrutement-article_header_status{
+                        margin: 0 1rem !important;
+                        font-size: 1.5rem;
+                    }
 
+                    .recrutement-article_header_date{
+                        margin: 0 1rem !important;
+                        font-size: 0.8rem;
                     }
                 }
 
-                tbody{
+                .recrutement-article_content{
 
-                    tr{
-
-                        border: solid 1px white;
-
-                        th{
-                            border: solid 1px white;
-                            text-align: center;
-                            font-size: 1.5rem;
-                            padding: 0rem;
-                        }
-
-                        td{
-                            border: solid 1px white;
-                            text-align: left;
-                            font-size: 1.5rem;
-                            padding-left: 1rem;
-                        }
-
-                        .td-status-new{
-                            color: yellow;
-                        }
-
-                        .td-status-wait{
-                            color: #ce461086;
-                        }
-
-                        .td-status-accept{
-                            color: green ;
-                        }
-
-                        .td-status-refuse{
-                            color: red;
-                        }
-
-                        .td-auteur{
-                            text-align: center;
-                            padding: 0;
-                        }
+                    h4{
+                        font-weight: 700;
+                        color: #b23f21;
                     }
 
+                    width: 65%;
+                    overflow:hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .recrutement-article_readMore{
+                    width: 15%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
 
-            .recrutement-card{
-                display: flex;
-                align-items: center;
-                border: 1px solid white;
-                background-color: #212529;
-                color: white;
-                font-size: 1.5rem;
+        }
+    }
+}
 
-                .recrutement-card-items{
-                    border: 1px solid white;
-                    font-size: 2rem;
-                }
+@media only screen and (max-width: 991px) {
+    .recrutement{
+    
+        .recrutement-container{
+
+            flex-direction: column;
+    
+            .recrutement-head{
+    
+                width: 100%;
+                position: relative;
+            }
+    
+            .recrutement-content{
+                margin-left: 0;
+                width: 100%;
             }
         }
     }
 }
 
-@media only screen and (max-width: 518px) {
+@media only screen and (max-width: 770px) {
     .recrutement{
     
         .recrutement-container{
     
-            .recrutement-head{
+            .recrutement-content{
+                margin-left: 0;
+                width: 100%;
     
-                .recrutement-header{
-    
-        
-                    .recrutement-title-sm{
-                        display: block;
-                    }
+                .recrutement-article{
 
-                    .recrutement-title{
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    margin: 1rem;
+    
+                    .recrutement-article_header{
+                        
                         display: none;
+    
+                    }
+    
+                    .recrutement-article_content{
+    
+                        h4{
+                            font-weight: 700;
+                            color: #b23f21;
+                        }
+    
+                        width: 65%;
+                        overflow:hidden;
+                        text-overflow: ellipsis;
+                    }
+    
+                    .recrutement-article_readMore{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
                 }
+    
             }
         }
     }
