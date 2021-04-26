@@ -8,21 +8,25 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      userId: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      },
+      title: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      picture: {
+      status: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      role: {
+      content: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
       },
       isActive: {
-        type: Sequelize.BOOLEAN,
-        allowNul: false
+        type :Sequelize.BOOLEAN,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,

@@ -166,7 +166,7 @@ exports.getUserProfile = (req, res, next) => {
 
     models.User.findOne({
       attributes: [ 'id', 'email', 'name'],
-      where: { id: userId }
+      where: { id: userId },
     }).then(function(user) {
       if (user) {
         res.status(201).json(user);
