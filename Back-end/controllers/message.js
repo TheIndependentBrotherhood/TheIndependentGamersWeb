@@ -16,6 +16,8 @@ exports.createMessage = async (req, res) => {
 
     const post = await models.Post.findOne({ where: { id: postId}})
 
+    console.log(req.body)
+
     models.Message.create({
       content,
       userId: user.id,

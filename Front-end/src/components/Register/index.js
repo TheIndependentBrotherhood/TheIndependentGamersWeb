@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
 
  // ==== CSS ==== //
@@ -76,13 +75,13 @@ const Register = ({ name, registeremail, registerpassword, register, changeField
         if( password === confirm_password && email === confirm_email && checkbox === false ){
             register();
         }
-        else if(password === confirm_password && email === confirm_email && checkbox != false ){
+        else if(password === confirm_password && email === confirm_email && checkbox !== false ){
             setCheckbox(true);
         }
-        else if(password != confirm_password && email === confirm_email && checkbox === false ){
+        else if(password !== confirm_password && email === confirm_email && checkbox === false ){
             setPasswordCheck(true);
         }
-        else if(password === confirm_password && email != confirm_email && checkbox === false ){
+        else if(password === confirm_password && email !== confirm_email && checkbox === false ){
             setEmailCheck(true);
         }
     };

@@ -14,16 +14,16 @@ const loginMiddleware = (store) => (next) => (action) => {
       const { loginemail, loginpassword } = store.getState().user;
 
       axios
-      .post('https://theindependentgamers.fr/api/login', {
+      .post('http://localhost:3000/api/auth/login', {
         email: loginemail,
         password: loginpassword,
       },{
           headers: {'Content-Type': 'application/JSON'}
       })
       .then((response) => {
-        store.dispatch(saveUser(response.data.token, response.data.name, response.data.email, response.data.role, response.data.api_token, true));
+        store.dispatch(saveUser(response.data.userId, response.data.token, response.data.name, response.data.email, response.data.role, response.data.isAdmin, true));
         store.dispatch(changeFieldLoading(false, 'loading'));
-        // console.log(response);
+        localStorage.setItem('token', response.data.token);
       })
       .catch((error) => {
         console.log(error);
@@ -39,7 +39,7 @@ const loginMiddleware = (store) => (next) => (action) => {
       const { name, registeremail, registerpassword } = store.getState().user;
 
       axios
-      .post('https://theindependentgamers.fr/api/register', {
+      .post('http://localhost:3000/api/auth/signup', {
         name: name,
         email: registeremail,
         password: registerpassword,
@@ -61,20 +61,17 @@ const loginMiddleware = (store) => (next) => (action) => {
 
     case LOG_IN_CHECK: {
 
-      const checkemail = localStorage.getItem('saveEmail');
-      const checkpassword = localStorage.getItem('savePassword');
+      const token = localStorage.getItem('token');
 
       axios
-      .post('https://theindependentgamers.fr/api/login', {
-        email: checkemail,
-        password: checkpassword,
+      .post('http://localhost:3000/api/auth/logincheck', {
+        token: token,
       },{
           headers: {'Content-Type': 'application/JSON'}
       })
       .then((response) => {
-        store.dispatch(saveUser(response.data.token, response.data.name, response.data.email, response.data.role, response.data.api_token, true));
+        store.dispatch(saveUser(response.data.userId, token, response.data.name, response.data.email, response.data.role, response.data.isAdmin, true));
         store.dispatch(changeFieldLoading(false, 'loading'));
-        // console.log(response.data.token);
       })
       .catch((error) => {
         console.log(error);

@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { NavLink } from "react-router-dom";
 import ReactTwitchEmbedVideo from 'react-twitch-embed-video'
 
  // ==== CSS ==== //

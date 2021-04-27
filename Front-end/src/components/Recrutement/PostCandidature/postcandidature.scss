@@ -5,140 +5,87 @@
 
     .postcandidature-container{
 
-        padding: 0 !important;
-        background-color: #212529;
-        border: 1px solid white;
+        .postcandidature-header{
 
-        .postcandidature-head{
 
-            border: 1px solid white;
+            padding: 2rem !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px black solid;
 
-            .postcandidature-header{
+            .postcandidature-img{
+                height: 128px;
+                margin-right: 2rem; 
+            }
 
-                border-bottom: 1px solid white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #212529;
+            .postcandidature-title{
 
-                .postcandidature-img{
-                    height: 128px;
-                    width: 95.703px;
-                    margin-left: 2rem; 
-                    margin-right: 2rem; 
-                }
-
-                .postcandidature-title-sm{
-                    color: white;
-                    display: none;
-                }
-    
-                .postcandidature-title{
-                    color: white;
-                }
             }
         }
 
+        .postcandidature-retour{
+            font-size: 2rem;
+        }
+
+
         .postcandidature-content{
-            color: white;
-            background-color: #212529;
-            border: solid 1px white;
 
-            .postcandidature-table{
-                width: 100%;
+            margin-top: 2rem;
 
-                thead{
+            h2{
+                text-align: center;
+                font-size: 3rem;
+            }
 
-                    tr{
+            .postcandidature-content-header{
 
-                        border: solid 1px white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
 
-                        th{
-                            text-align: center;
-                            font-size: 2rem;
-                            border: solid 1px white;
-                        }
+                .postcandidature-content-info{
 
+                    .postcandidature-content-status{
+                        text-transform: uppercase;
+                        font-size: 2rem;
                     }
+
+                    .postcandidature-content-author{
+                        font-size: 2.5rem;
+                    }
+
                 }
 
-                tbody{
-
-                    tr{
-
-                        border: solid 1px white;
-
-                        th{
-                            border: solid 1px white;
-                            text-align: center;
-                            font-size: 1.5rem;
-                            padding: 0rem;
-                        }
-
-                        td{
-                            border: solid 1px white;
-                            text-align: left;
-                            font-size: 1.5rem;
-                            padding-left: 1rem;
-                        }
-
-                        .td-status-new{
-                            color: yellow;
-                        }
-
-                        .td-status-wait{
-                            color: #ce461086;
-                        }
-
-                        .td-status-accept{
-                            color: green ;
-                        }
-
-                        .td-status-refuse{
-                            color: red;
-                        }
-
-                        .td-auteur{
-                            text-align: center;
-                            padding: 0;
-                        }
-
-                        .td-title{
-                            text-align: center;
-                            padding: 0;
-                        }
-                    }
-
+                .postcandidature-content-date{
+                    font-size: 2rem;
                 }
             }
 
             .postcandidature-response{
                 padding: 1rem;
                 font-size: 1.5rem;
-                border: solid 1px white;
             }
 
             .postcandidature-reponse{
 
                 padding: 2rem;
                 text-align: center;
-                border-bottom: solid 1px white;
 
                 .postcandidature-reponse-link{
-                    background-color: #ce461086;
-                    color: white;
                     cursor: pointer;
                     border-radius: 10px;
                     padding: 0.5rem !important;
                     text-decoration: none;
                     font-size: 2rem;
-                    
                 }
             }
 
             .postcandidature-coment{
                 padding: 1rem;
-                border: solid 1px white;
+                border: 2px solid black;
+                margin: 2rem;
 
                 .postcandidature-coment-auteur{
                     text-align: left;

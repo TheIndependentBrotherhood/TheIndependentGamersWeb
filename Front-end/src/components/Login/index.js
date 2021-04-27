@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from 'react';
 import { NavLink, Redirect } from "react-router-dom";
 
  // ==== CSS ==== //
@@ -12,12 +11,8 @@ const Login = ({ changeFieldLoading, loginemail, loginpassword, isLogged, logIn,
 
     const onChangeCheckbox = (evt) => {
         setCheckbox(true);
-        localStorage.setItem('saveEmail', loginemail);
-        localStorage.setItem('savePassword', loginpassword);
         if(checkbox === true){
             setCheckbox(false);
-            localStorage.removeItem('saveEmail');
-            localStorage.removeItem('savePassword');
         }
     }
 

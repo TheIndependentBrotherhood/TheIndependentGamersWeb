@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { NavLink, Redirect } from "react-router-dom";
+import React from 'react';
+import { NavLink } from "react-router-dom";
 
 import './toread.scss'
 
@@ -89,11 +88,3 @@ const Recrutement = () => {
 };
 
 export default Recrutement;
-
-/*
-
-            {!isLogged && (
-                <Redirect push to="/" />
-            )}
-
-*/

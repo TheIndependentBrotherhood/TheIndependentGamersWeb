@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { NavLink } from "react-router-dom";
 
 const Discord = () => (
     <div className="discord--Frame__invalide" id="discord">

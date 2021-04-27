@@ -12,6 +12,8 @@ exports.createPost = async (req, res) => {
 
     const { userId, title, status, content } = req.body
 
+    console.log(req.body);
+
     const user = await models.User.findOne({ where: { id: userId}})
 
     models.Post.create({
@@ -41,9 +43,18 @@ exports.findPostList = (req, res, next) => {
       isActive: true
     },
     include: [{
+      model: models.User,
+      attributes: [ 'id', 'name'],
+    },
+    {
+      model: models.Message,
+      where: {isActive: true},
+      attributes: [ 'id', 'content', 'createdAt' ],
+      include: [{
         model: models.User,
         attributes: [ 'id', 'name'],
-        model: models.Message,
+      }],
+      required: false,
     }]
   })
   .then(posts => {

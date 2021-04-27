@@ -8,16 +8,17 @@ import {
   const initialState = {
       registerNop: false,
       registerOk: false,
+      id: '',
       name: '',
       email: '',
       password: '',
       role: '',
-      api_token: null,
       loginemail: '',
       loginpassword: '',
       registeremail: '',
       registerpassword: '',
       isLogged: false,
+      isAdmin: false,
       token: null,
     };
     
@@ -33,11 +34,12 @@ import {
         case SAVE_USER:
           return {
             ...state,
+            id: action.id,
             token: action.token,
             name: action.name,
             email: action.email,
             role: action.role,
-            api_token: action.api_token,
+            isAdmin: action.isAdmin,
             isLogged: action.isLogged,
         };
   

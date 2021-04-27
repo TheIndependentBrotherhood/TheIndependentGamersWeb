@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import axios from 'axios';
 
 // ==== API ==== //
 
-import {fetchMembreList, fetchStaffsList, fetchAdminsList, fetchFirstPlanet} from './api.membre.js';
+import {fetchMembreList, fetchStaffsList, fetchAdminsList} from './api.membre.js';
 
  // ==== CSS ==== //
 
@@ -15,7 +13,6 @@ const Membres = () => {
   const [Membres, setMembres] = useState([]);
   const [Staffs, setStaffs] = useState([]);
   const [Admins, setAdmins] = useState([]);
-  const [Planet, setPlanet] = useState([]);
 
   useEffect(() => {
     fetchMembreList(setMembres);
@@ -30,7 +27,7 @@ const Membres = () => {
       <div className="m-3 p-5">
 
         <h1 className="p-5 site-heading text-center d-block">
-          <span className="site-heading-upper text-white mb-3">Les Membres</span>
+          <span className="site-heading-upper mb-3">Les Membres</span>
         </h1>
     
         <div className="d-flex row">

@@ -145,9 +145,11 @@ exports.login = (req, res, next) => {
     ], (userFound) => {
         if(userFound) {
             return res.status(200).json({
-                'Userid': userFound.id,
+                'userId': userFound.id,
                 'name': userFound.name,
-                'token': jwtUtils.generateTokenForUser(userFound)
+                'email': userFound.email,
+                'token': jwtUtils.generateTokenForUser(userFound),
+                'isAdmin' : userFound.isAdmin,
             });
         }
         else {
@@ -156,13 +158,38 @@ exports.login = (req, res, next) => {
     });
 };
 
+exports.checkIsLogin = (req, res, next) => {
+
+    const {token} = req.body
+
+    let userId = jwtUtils.getUserId(token);
+
+    if (userId < 0)
+        return res.status(400).json({ 'error': 'Mauvais Token' });
+
+    models.User.findOne({
+        attributes: [ 'id', 'email', 'name', 'isAdmin'],
+        where: { id: userId },
+    }).then(function(user) {
+        if (user) {
+        res.status(201).json(user);
+        } else {
+        res.status(404).json({ 'error': 'utilisateur introuvable' });
+        }
+    }).catch(function(err) {
+        console.log(err)
+        res.status(500).json({ 'error': 'impossible d\'afficher l\'utilisateur' });
+    });
+
+};
+
 exports.getUserProfile = (req, res, next) => {
     // Getting auth header
     let headerAuth = req.headers['authorization'];
     let userId = jwtUtils.getUserId(headerAuth);
 
     if (userId < 0)
-      return res.status(400).json({ 'error': 'Mauvais Token' });
+        return res.status(400).json({ 'error': 'Mauvais Token' });
 
     models.User.findOne({
       attributes: [ 'id', 'email', 'name'],

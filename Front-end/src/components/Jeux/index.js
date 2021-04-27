@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-
-// import {card} from './card';
+import React from 'react';
 
  // ==== CSS ==== //
 import './jeux.scss';
 
 const Jeux = ({ listJeux }) => {
-
-    /* useEffect(() => {
-        card();
-      }, []); */
     
     return(
 

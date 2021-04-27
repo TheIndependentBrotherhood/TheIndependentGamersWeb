@@ -2,8 +2,6 @@ import { connect } from 'react-redux';
 
 import Jeux from '../../components/Jeux';
 
-import { fetchListJeux } from '../../actions/list'
-
 const mapStateToProps = (state) => ({
   // nom de la prop à remplir: donnée à récupérer dans le state
   listJeux: state.jeux.listJeux,

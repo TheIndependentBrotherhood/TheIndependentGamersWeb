@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 
-import Profil from '../../components/Profil';
+import NewCandidature from '../../../components/Recrutement/NewCandidature';
 
-import { changeField } from '../../actions/user'
+import { addNewPost, changeField } from '../../../actions/recrutement'
 
 const mapStateToProps = (state) => ({
   // nom de la prop à remplir: donnée à récupérer dans le state
-  name: state.user.name,
-  email: state.user.email,
+  newPostTitle: state.recrutement.newPostTitle,
+  newPostContent: state.recrutement.newPostContent,
   isLogged: state.user.isLogged,
 });
 
@@ -16,9 +16,12 @@ const mapDispatchToProps = (dispatch) => ({
   changeField: (value, name) => {
     dispatch(changeField(value, name));
   },
+  addNewPost: () => {
+      dispatch(addNewPost());
+  },
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Profil);
+)(NewCandidature);

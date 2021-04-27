@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { NavLink, Redirect } from "react-router-dom";
+import React from 'react';
+import { NavLink } from "react-router-dom";
 import { Dropdown } from 'react-bootstrap';
 
 const Nav = ({isLogged, changeField, name}) => {
@@ -21,8 +20,7 @@ const Nav = ({isLogged, changeField, name}) => {
 
     const handleLoggout = (evt) => {
         localStorage.setItem('cookiesOk', false);
-        localStorage.removeItem('saveEmail');
-        localStorage.removeItem('savePassword');
+        localStorage.removeItem('token');
         changeField(false, "isLogged");
         changeField('', "loginemail");
         changeField('', "loginpassword");
@@ -32,7 +30,8 @@ const Nav = ({isLogged, changeField, name}) => {
         changeField('', "name");
         changeField('', "email");
         changeField('', "role");
-        changeField(null, "api_token");
+        changeField(null, "id");
+        changeField(false, "isAdmin")
     };
 
     return(

@@ -1,9 +1,9 @@
 import { createStore, applyMiddleware } from 'redux';
-import { devToolsEnhancer } from 'redux-devtools-extension';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import userMiddleware from '../middlewares/userMiddleware';
 import listMiddleware from '../middlewares/listMiddleware';
+import recrutementMiddleware from '../middlewares/recrutementMiddleware';
 
 import reducer from '../reducers';
 
@@ -12,6 +12,7 @@ const enhancers = composeWithDevTools(
   applyMiddleware(
     userMiddleware,
     listMiddleware,
+    recrutementMiddleware,
     // ... add more middlewares
   ),
 );

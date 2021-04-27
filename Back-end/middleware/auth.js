@@ -11,7 +11,7 @@ exports.generateTokenForUser = function(userData) {
   },
   JWT_SIGN_SECRET,
   {
-    expiresIn: '1h'
+    expiresIn: '24h'
   })
 }
 

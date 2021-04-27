@@ -7,7 +7,7 @@ const listMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case FETCH_LIST_JEUX: {
 
-      axios.get('http://localhost:8000/api/jeux')
+      axios.get('http://localhost:3000/api/jeux')
       .then((response) => {
         store.dispatch(saveListJeux(response.data));
         // console.log(response);

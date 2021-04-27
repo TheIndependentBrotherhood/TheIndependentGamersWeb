@@ -21,13 +21,14 @@ export const logInCheck = (loading) => ({
     loading,
 });
 
-export const saveUser = (token, name, email, role, api_token, isLogged) => ({
+export const saveUser = (id, token, name, email, role, isAdmin, isLogged) => ({
     type: SAVE_USER,
+    id,
     token,
     name,
     email,
     role,
-    api_token,
+    isAdmin,
     isLogged,
 });
 
