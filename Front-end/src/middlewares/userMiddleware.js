@@ -70,7 +70,7 @@ const loginMiddleware = (store) => (next) => (action) => {
           headers: {'Content-Type': 'application/JSON'}
       })
       .then((response) => {
-        store.dispatch(saveUser(response.data.userId, token, response.data.name, response.data.email, response.data.role, response.data.isAdmin, true));
+        store.dispatch(saveUser(response.data.id, token, response.data.name, response.data.email, response.data.role, response.data.isAdmin, true));
         store.dispatch(changeFieldLoading(false, 'loading'));
       })
       .catch((error) => {

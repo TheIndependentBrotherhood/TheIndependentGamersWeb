@@ -9,6 +9,8 @@ const mapStateToProps = (state) => ({
   newPostTitle: state.recrutement.newPostTitle,
   newPostContent: state.recrutement.newPostContent,
   isLogged: state.user.isLogged,
+  newPostNop: state.recrutement.newPostNop,
+  newPostOk: state.recrutement.newPostOk
 });
 
 const mapDispatchToProps = (dispatch) => ({

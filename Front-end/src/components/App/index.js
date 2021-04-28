@@ -16,6 +16,7 @@ import Loader from '../Loader';
 import Header from '../../containers/Layout/Header';
 import Footer from '../Layout/Footer';
 import Home from '../Home';
+import Event from '../Event';
 import Jeux from '../../containers/Jeux';
 import Membres from '../Membres';
 import Twitch from '../Twitch';
@@ -61,55 +62,57 @@ const App = ({ fetchListJeux, loading, logInCheck, changeFieldLoading, fetchPost
   return (
       <Router>
         <ScrollToTop>
-          {loading && (
-            <Loader />
-          )}
-              <Header />
-                <Switch>
-                  <Route  path="/" exact>
-                    <Home />
-                  </Route>
-                  <Route  path="/jeux">
-                    <Jeux />
-                  </Route>
-                  <Route  path="/membres">
-                    <Membres />
-                  </Route>
-                  <Route  path="/twitch">
-                    <Twitch />
-                  </Route>
-                  <Route  path="/events">
-                    <Traveau />
-                  </Route>
-                  <Route  path="/recrutement">
-                    <Recrutement />
-                  </Route>
-                  <Route  path="/recrutement-a-lire">
-                    <ToRead />
-                  </Route>
-                  <Route  path="/nouvelle-candidature">
-                    <NewCandidature />
-                  </Route>
-                  <Route  path="/candidature/:slug">
-                    <PostCandidature />
-                  </Route>
-                  <Route  path="/connexion">
-                    <Login />
-                  </Route>
-                  <Route  path="/inscription">
-                    <Register />
-                  </Route>
-                  <Route  path="/profil">
-                    <Profil />
-                  </Route>
-                  <Route  path="/mentions-legales">
-                    <Mentions />
-                  </Route>
-                  <Route path="*">
-                    <Error404 />
-                  </Route>
-                </Switch>
-              <Footer />
+          {loading && (<Loader />)}
+          {!loading && (
+              <>
+                <Header />
+                  <Switch>
+                    <Route  path="/" exact>
+                      <Home />
+                    </Route>
+                    <Route  path="/jeux">
+                      <Jeux />
+                    </Route>
+                    <Route  path="/membres">
+                      <Membres />
+                    </Route>
+                    <Route  path="/twitch">
+                      <Twitch />
+                    </Route>
+                    <Route  path="/events">
+                      <Event />
+                    </Route>
+                    <Route  path="/recrutement">
+                      <Recrutement />
+                    </Route>
+                    <Route  path="/recrutement-a-lire">
+                      <ToRead />
+                    </Route>
+                    <Route  path="/nouvelle-candidature">
+                      <NewCandidature />
+                    </Route>
+                    <Route  path="/candidature/:slug">
+                      <PostCandidature />
+                    </Route>
+                    <Route  path="/connexion">
+                      <Login />
+                    </Route>
+                    <Route  path="/inscription">
+                      <Register />
+                    </Route>
+                    <Route  path="/profil">
+                      <Profil />
+                    </Route>
+                    <Route  path="/mentions-legales">
+                      <Mentions />
+                    </Route>
+                    <Route path="*">
+                      <Error404 />
+                    </Route>
+                  </Switch>
+                <Footer />
+              </>
+              )}
             {!cookiesOk && <Cookies />}
         </ScrollToTop>
       </Router>

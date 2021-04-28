@@ -17,7 +17,6 @@ const Recrutement = ({ listPost, isAdmin, changeField }) => {
                     <div className="recrutement-header">
                         <img className="recrutement-img" id="logo" src="https://www.theindependentgamers.fr/images/logo.png" alt="logo" />
                         <h1 className="recrutement-title">Intégrer les Independent Gamers</h1>
-                        <h1 className="recrutement-title-sm">Intégrer les TIG</h1>
                     </div>
 
                     <div className="recrutement-before">

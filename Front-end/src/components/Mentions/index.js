@@ -5,7 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 
 import './mentions.scss'
 
-const Footer = () => (
+const Mentions = () => (
         <main className="mention container">
             <div className="no-warp">
 
@@ -131,4 +131,4 @@ const Footer = () => (
         </main>
 );
 
-export default Footer;
+export default Mentions;

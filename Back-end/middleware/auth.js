@@ -37,11 +37,14 @@ exports.userRequest  = (req, res, next) => {
     const token = req.headers.authorization.split(' ')[1];
     const decodedToken = jwt.verify(token, JWT_SIGN_SECRET);
     const userId = decodedToken.userId;
+    const userIsAdmin = decodedToken.isAdmin
     console.log(req.body);
     if(req.body.userId && Number(req.body.userId) !== userId) {
       throw 'Invalid user Id';
-    } else {
+    } else if(userIsAdmin == true){
       next();
+    } else {
+      next()
     }
   } catch(err) {
     res.status(401).json({

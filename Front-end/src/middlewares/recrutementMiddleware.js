@@ -2,7 +2,16 @@
 // import api from 'src/api';
 import axios from 'axios';
 
-import { ADD_NEW_POST, ADD_NEW_MESSAGE, FETCH_POST_LIST, FETCH_MESSAGE_LIST, saveMessageList, savePostList } from '../actions/recrutement';
+import { 
+  ADD_NEW_POST,
+  ADD_NEW_MESSAGE,
+  FETCH_POST_LIST,
+  FETCH_MESSAGE_LIST,
+  saveMessageList,
+  savePostList,
+  newPostOk,
+  newPostNop
+} from '../actions/recrutement';
 
 import { changeFieldLoading } from '../actions/loading';
 
@@ -13,6 +22,8 @@ const recrutementMiddleware = (store) => (next) => (action) => {
 
       const { newPostTitle, newPostContent,  } = store.getState().recrutement;
       const { token, id } = store.getState().user;
+
+      const newPostContentBR = newPostContent.replace('\s', '\n')
 
       axios
       .post('http://localhost:3000/api/posts', {
@@ -28,11 +39,19 @@ const recrutementMiddleware = (store) => (next) => (action) => {
       })
       .then((response) => {
         store.dispatch(changeFieldLoading(false, 'loading'));
-        console.log(response);
+        store.dispatch(newPostOk(true));
+        axios.get('http://localhost:3000/api/posts')
+        .then((response) => {
+          store.dispatch(savePostList(response.data.data));
+        })
+        .catch((error) => {
+          console.log(error);
+        })
       })
       .catch((error) => {
         console.log(error);
         store.dispatch(changeFieldLoading(false, 'loading'));
+        store.dispatch(newPostNop(true));
       })
 
       next(action);
@@ -72,6 +91,13 @@ const recrutementMiddleware = (store) => (next) => (action) => {
       .then((response) => {
         store.dispatch(changeFieldLoading(false, 'loading'));
         console.log(response);
+        axios.get('http://localhost:3000/api/posts')
+        .then((response) => {
+          store.dispatch(savePostList(response.data.data));
+        })
+        .catch((error) => {
+          console.log(error);
+        })
       })
       .catch((error) => {
         console.log(error);

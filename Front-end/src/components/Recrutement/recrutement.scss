@@ -25,11 +25,6 @@
                     height: 128px;
                     width: 95.703px;
                     margin: auto;                }
-
-                .recrutement-title-sm{
-                    display: none;
-                    font-family: Raleway, Helvetica, Arial, sans-serif;
-                }
     
                 .recrutement-title{
                     text-align: center;
@@ -46,7 +41,7 @@
                  }
 
                 & a{
-                    color: #b23f21;
+                    color: #b23e21 !important;
                 }
             }
 
@@ -102,7 +97,7 @@
 
                     h4{
                         font-weight: 700;
-                        color: #b23f21;
+                        color: #b23e21;
                     }
 
                     width: 65%;

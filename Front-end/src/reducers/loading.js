@@ -1,7 +1,8 @@
 import {CHANGE_FIELD_LOADING} from '../actions/loading';
+import { SAVE_USER } from '../actions/user'
   
   const initialState = {
-      loading: false,
+      loading: true,
     };
     
     const userReducer = (state = initialState, action = {}) => {
@@ -12,6 +13,12 @@ import {CHANGE_FIELD_LOADING} from '../actions/loading';
           ...state,
           [action.identifier]: action.newValue,
         };
+
+        case SAVE_USER:
+        return {
+          ...state,
+          loading: false,
+        }
   
         default: return state;
       }

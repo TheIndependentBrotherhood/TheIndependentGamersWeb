@@ -5,6 +5,8 @@ export const FETCH_POST_LIST = 'FETCH_POST_LIST';
 export const ADD_NEW_MESSAGE = 'ADD_NEW_MESSAGE';
 export const SAVE_MESSAGE_LIST = 'SAVE_MESSAGE_LIST'
 export const FETCH_MESSAGE_LIST = 'FETCH_MESSAGE_LIST';
+export const NEW_POST_OK = 'NEW_POST_OK';
+export const NEW_POST_NOP = 'NEW_POST_NOP';
 
 
 export const changeField = (newValue, identifier) => ({
@@ -37,4 +39,14 @@ export const saveMessageList = (listMessage) => ({
 
 export const addNewMessage = () => ({
     type: ADD_NEW_MESSAGE,
+});
+
+export const newPostOk = (newPostOk) => ({
+    type: NEW_POST_OK,
+    newPostOk,
+});
+
+export const newPostNop = (newPostNop) => ({
+    type: NEW_POST_NOP,
+    newPostNop,
 });

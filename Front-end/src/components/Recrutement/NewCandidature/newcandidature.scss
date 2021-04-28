@@ -1,38 +1,52 @@
 .newcandidature{
-    margin-top: 5rem;
+    margin-top: 6rem;
     margin-bottom: 10rem;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 
     .newcandidature-container{
 
-        background-color: #212529;
-        border: 1px solid white;
         padding: 0;
 
         .newcandidature-head{
 
-            border-bottom: 1px solid white;
+            border-bottom: 2px solid black;
 
             .newcandidature-header{
 
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                margin: 1rem 2rem;
+                text-align: center;
 
                 .newcandidature-img{
                     height: 128px;
                     width: 95.703px;
-                    margin-left: 2rem; 
                     margin-right: 2rem; 
                 }
+            }
+        }
 
-                .newcandidature-title-sm{
-                    color: white;
-                    display: none;
-                }
-    
-                .newcandidature-title{
-                    color: white;
+        .newcandidatureOk{
+            margin: 2rem auto 20rem auto;
+            text-align: center;
+
+            .newcandidatureOk-h2{
+                font-size: 2rem;
+            }
+
+            .newcandidatureOk-p{
+
+                font-size: 1.5rem;
+
+                .newcandidatureOk-p-link{
+
+                    color: #ce4710;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+
                 }
             }
         }
@@ -40,10 +54,10 @@
         .newcandidature-content{
 
             padding: 2rem;
-            color: white;
 
             & p{
                 font-size: 1.5rem;
+                padding: 1rem;
             }
 
             & a{
@@ -53,7 +67,20 @@
             }
 
             .newcandidature-textarea{
+                display: flex;
                 margin: 1rem;
+
+                .emoji-mart{
+                
+                    @media only screen and (max-width: 767px){
+                        width: 100% !important;
+                    }
+                }
+    
+                @media only screen and (max-width: 767px){
+                    display: block;
+                    margin: 0;
+                }
             }
 
             .newcandidature-send{
@@ -71,27 +98,29 @@
                 }
 
             }
-        }
-    }
-}
 
-@media only screen and (max-width: 518px) {
-    .newcandidature{
-    
-        .newcandidature-container{
-    
-            .newcandidature-head{
-    
-                .newcandidature-header{
-    
-        
-                    .newcandidature-title-sm{
-                        display: block;
-                    }
+            .ReCAPTCHA{
 
-                    .newcandidature-title{
-                        display: none;
-                    }
+                margin: 2rem 1rem;
+                text-align: center;
+
+                @media only screen and (max-width: 767px){
+                    width: 100% !important;
+                    margin: 0;
+                }
+
+                .newcandidatureNop{
+                    background-color: rgb(214, 130, 130);
+                    text-align: center;
+                    margin: 1rem;
+                }
+
+                .contact-send-input{
+                    background-color: #ce4710;
+                    color: white;
+                    font-size: 1.5rem;
+                    padding: 0.5rem 1rem;
+                    border-radius: 50px;
                 }
             }
         }

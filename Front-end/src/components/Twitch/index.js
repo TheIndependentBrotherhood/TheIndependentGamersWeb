@@ -65,7 +65,7 @@ const Twitch = () => {
   };
 
   const fetchSeb = () => {
-    api.get('https://api.twitch.tv/helix/users?login=sh0otertv')
+    api.get('https://api.twitch.tv/helix/users?login=COLONELPGM')
       .then((response) => {
         //console.log(response)
         setSeb(response.data.data);

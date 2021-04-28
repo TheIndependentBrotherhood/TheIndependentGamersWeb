@@ -13,6 +13,7 @@ const mapStateToProps = (state) => ({
   listMessage: state.recrutement.listMessage,
   isLogged: state.user.isLogged,
   newMessageContent: state.recrutement.newMessageContent,
+  userName: state.user.name,
 });
 
 const mapDispatchToProps = (dispatch) => ({
