@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
 import userReducer from './user';
 import loadingReducer from './loading';
-import jeuxReducer from './jeux';
+import listReducer from './list';
 import recrutementReducer from './recrutement'
 
 const rootReducer = combineReducers({
     user: userReducer,
     loading: loadingReducer,
-    jeux: jeuxReducer,
+    list: listReducer,
     recrutement: recrutementReducer,
 });
 

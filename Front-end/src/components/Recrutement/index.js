@@ -3,6 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 
 import {GetFormattedDate, contCaracter, slugifyTitle} from "../../utils"
 
+import logo from '../../assets/images/logo.png'
+
 import './recrutement.scss'
 
 const Recrutement = ({ listPost, isAdmin, changeField }) => {
@@ -15,7 +17,7 @@ const Recrutement = ({ listPost, isAdmin, changeField }) => {
                 <div className="recrutement-head">
 
                     <div className="recrutement-header">
-                        <img className="recrutement-img" id="logo" src="https://www.theindependentgamers.fr/images/logo.png" alt="logo" />
+                        <img className="recrutement-img" id="logo" src={logo} alt="logo" />
                         <h1 className="recrutement-title">Intégrer les Independent Gamers</h1>
                     </div>
 

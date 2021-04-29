@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 
+import logo from '../../../assets/images/logo.png'
+
 import './toread.scss'
 
 const Recrutement = () => {
@@ -13,7 +15,7 @@ const Recrutement = () => {
                 <div className="toread-head">
 
                     <div className="toread-header">
-                        <img className="toread-img" id="logo" src="https://www.theindependentgamers.fr/images/logo.png" alt="logo" />
+                        <img className="toread-img" id="logo" src={logo} alt="logo" />
                         <h1 className="toread-title">Intégrer les Independent Gamers</h1>
                     </div>
 

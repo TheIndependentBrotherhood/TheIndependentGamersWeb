@@ -18,7 +18,8 @@ import Footer from '../Layout/Footer';
 import Home from '../Home';
 import Event from '../Event';
 import Jeux from '../../containers/Jeux';
-import Membres from '../Membres';
+import Membres from '../../containers/Membres';
+import MembresGestion from '../../containers/Membres/MembresGestion';
 import Twitch from '../Twitch';
 import Login from '../../containers/Login';
 import Register from '../../containers/Register';
@@ -32,7 +33,7 @@ import Cookies from '../CookiesBar';
 import Traveau from '../Traveau';
 import Error404 from '../Error404';
 
-const App = ({ fetchListJeux, loading, logInCheck, changeFieldLoading, fetchPostList, fetchMessageList }) => {
+const App = ({ fetchListJeux, loading, logInCheck, changeFieldLoading, fetchPostList, fetchMessageList, fetchListMembres }) => {
 
   const [cookiesOk, setCookiesOk] = useState(false);
 
@@ -52,6 +53,7 @@ const App = ({ fetchListJeux, loading, logInCheck, changeFieldLoading, fetchPost
   };
 
   useEffect(() => {
+    fetchListMembres();
     fetchPostList();
     fetchMessageList();
     CheckLogin();
@@ -75,6 +77,9 @@ const App = ({ fetchListJeux, loading, logInCheck, changeFieldLoading, fetchPost
                     </Route>
                     <Route  path="/membres">
                       <Membres />
+                    </Route>
+                    <Route path="/membres/gestion">
+                      <MembresGestion />
                     </Route>
                     <Route  path="/twitch">
                       <Twitch />

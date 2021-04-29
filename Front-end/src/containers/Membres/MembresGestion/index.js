@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 
-import Jeux from '../../components/Jeux';
+import Membres from '../../../components/Membres/MembresGestion';
 
 const mapStateToProps = (state) => ({
   // nom de la prop à remplir: donnée à récupérer dans le state
-  listJeux: state.list.listJeux,
+  listMembres: state.list.listMembres,
+  isAdmin: state.user.isAdmin,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -14,4 +15,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Jeux);
+)(Membres);

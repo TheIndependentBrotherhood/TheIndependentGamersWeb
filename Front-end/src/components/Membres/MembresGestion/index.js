@@ -1,21 +1,13 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+
 
 // ==== CSS ==== //
- import logo from '../../assets/images/logo.png'
- import './membres.scss'
 
-const Membres = ({ listMembres, isAdmin }) => {
+const MembresGestion = ({ listMembres, isAdmin }) => {
 
   return(
     
     <main className="container membre">
-
-
-        <div className="membre-head">
-          <img className="membre-img" id="logo" src={logo} alt="logo" />
-          <h1 className="membre-title">Les Membres des The Independent Gamers</h1>
-        </div>
     
         <div className="membre-content">
           <div className="membre-card">
@@ -27,14 +19,10 @@ const Membres = ({ listMembres, isAdmin }) => {
               </div>
             ))}
           </div>
-
-          {isAdmin && (<Link to="/membres/gestion">Géré</Link>)}
-
-
         </div>
     
     </main>
   );
 };
 
-export default Membres;
+export default MembresGestion;

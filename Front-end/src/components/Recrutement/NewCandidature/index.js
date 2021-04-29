@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Redirect } from "react-router-dom";
 import ReCAPTCHA from 'react-google-recaptcha';
+import logo from '../../../assets/images/logo.png'
 
 import 'emoji-mart/css/emoji-mart.css'
 import { Picker } from 'emoji-mart'
@@ -63,7 +64,7 @@ const NewCandidature = ( {isLogged, newPostTitle, newPostContent, changeField, a
                 <div className="newcandidature-head">
 
                     <div className="newcandidature-header">
-                        <img className="newcandidature-img" id="logo" src="https://www.theindependentgamers.fr/images/logo.png" alt="logo" />
+                        <img className="newcandidature-img" id="logo" src={logo} alt="logo" />
                         <h1 className="newcandidature-title">Intégrer les Independent Gamers</h1>
                     </div>
 

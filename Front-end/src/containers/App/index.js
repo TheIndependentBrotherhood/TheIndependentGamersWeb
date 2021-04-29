@@ -4,7 +4,7 @@ import App from '../../components/App';
 
 import { logInCheck } from '../../actions/user'
 
-import { fetchListJeux } from '../../actions/list'
+import { fetchListJeux, fetchListMembres } from '../../actions/list'
 
 import { changeFieldLoading } from '../../actions/loading'
 
@@ -23,6 +23,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   changeFieldLoading: (value, name) => {
     dispatch(changeFieldLoading(value, name));
+  },
+  fetchListMembres: () => {
+    dispatch(fetchListMembres());
   },
   fetchListJeux: () => {
     dispatch(fetchListJeux());
