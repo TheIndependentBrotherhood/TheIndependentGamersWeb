@@ -48,7 +48,7 @@ const Nav = ({isLogged, changeField, name}) => {
                     <ul className="navbar-nav">
 
                         <li className="nav-item px-lg-2">
-                            <NavLink onClick={handleclickonlink} className="nav-link text-uppercase text-expanded" to="/">home</NavLink>
+                            <NavLink onClick={handleclickonlink} className="nav-link text-uppercase text-expanded" to="/">Accueil</NavLink>
                         </li>
 
                         <li className="nav-item px-lg-2">
@@ -64,7 +64,7 @@ const Nav = ({isLogged, changeField, name}) => {
                         </li>
 
                         <li className="nav-item px-lg-2">
-                            <NavLink onClick={handleclickonlink} className="nav-link text-uppercase text-expanded" to="/events">Events</NavLink>
+                            <NavLink onClick={handleclickonlink} className="nav-link text-uppercase text-expanded" to="/events">Evenements</NavLink>
                         </li>
 
                         <li className="nav-item px-lg-2">
