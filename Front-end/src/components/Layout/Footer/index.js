@@ -5,6 +5,7 @@ import Discord from './discord'
 
  // ==== CSS ==== //
 
+ import logo from '../../../assets/images/logo.png'
  import './footer.scss'
 
 const Footer = () => {
@@ -20,20 +21,40 @@ const Footer = () => {
   return(
     
     <footer className="footer text-faded text-center py-5">
-      <div className="container">
-        <div className="header-navicon">
+      <div className="container footer-content">
 
-          <a onClick={handleClick} ><i className="fab fa-discord"></i></a>
+        <div className="footer-head">
 
-          <a href="https://www.facebook.com/theindependentgamers" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square"></i></a>
-
-          <a href="https://www.youtube.com/channel/UC1qQ_J-7e9WGjwo9FzbHkHg" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
-
-          <Link to="/twitch"><i className="fab fa-twitch"></i></Link>
+          <h3 className="footer-title">The Independent Gamers</h3>
+          <h3 className="footer-title-under">New generation of soldiers</h3>
 
         </div>
+
+        <div className="footer-info">
+
+          <div className="footer-copyright">
+            <img className="footer-logo" src={logo} alt="logo The Independent Gamers"/>
+
+            <p className="footer-copyright-p">Tous droits réservés &copy; The Independent Gamers - 2021</p>
+          </div>
+
+          <div className="header-navicon">
+
+            <a onClick={handleClick} ><i className="fab fa-discord"></i></a>
+
+            <a href="https://www.facebook.com/theindependentgamers" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square"></i></a>
+
+            <a href="https://www.youtube.com/channel/UC1qQ_J-7e9WGjwo9FzbHkHg" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
+
+            <Link to="/twitch"><i className="fab fa-twitch"></i></Link>
+
+          </div>
+
+        </div>
+
         <NavLink to="/mentions-legales">Mentions Légales</NavLink>
-        <p className="m-b-3 small">Tous droits réservés &copy; The Independent Gamers 2020 - 2021</p>
+        <NavLink to="/mentions-legales">Contact</NavLink>
+
       </div>
       <Discord />
     </footer>

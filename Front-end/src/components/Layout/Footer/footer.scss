@@ -1,39 +1,138 @@
 .footer{
 
+    background: url('../../../assets/images/footer.png') transparent center no-repeat;
     background-color: #212529;
-    color: white;
+    color: #f8f9fa;
+    height: 500px;
+
+    .footer-content{
+
+        .footer-head{
+
+            text-align: left;
+            margin-top: 4rem;
+            margin-bottom: 10rem;
+
+            .footer-title{
+
+                font-family: 'Yanone Kaffeesatz', sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+
+            }
+
+            .footer-title-under{
+
+                font-family: 'Yanone Kaffeesatz', sans-serif;
+                font-size: 3rem;
+                font-weight: 700;
+                text-transform: uppercase;
+
+            }
+
+        }
+
+        .footer-info{
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+
+            .footer-copyright{
+
+                display: flex;
+                align-items: center;
+                
+                .footer-logo{
+                    height: 4rem;
+                    margin-right: 1rem;
+                }
+
+                .footer-copyright-p{
+                    margin :0 !important;
+                }
+            }
+
+            .header-navicon a{
+                margin: 1rem;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+        
+                .fa-discord{
+                    color: #f8f9fa;
+                }
+        
+                .fa-facebook-square{
+                    color: #f8f9fa;
+                }
+        
+                .fa-youtube{
+                    color: #f8f9fa;
+                }
+        
+                .fa-twitch{
+                    color: #f8f9fa;
+                }
+            }
+        }
+
+    }
+        
+    & a{
+        color: #f8f9fa;
+        margin: 0.8rem;
+    }
 
     .discord--Frame__valide{
         position: absolute;
         bottom: 85px;
-        right: 80px;
+        right: 640px;
     }
 
     .discord--Frame__invalide{
         display: none;
     }
+}
 
-            
-    .header-navicon a{
-        margin: 1rem;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
+@media only screen and (max-width: 991px) {
+ 
+    .footer{
+    
+        .footer-content{
+    
+            .footer-head{
 
-        .fa-discord{
-            color: #7289da;
+                margin-bottom: 8rem;
+    
+            }
+    
+            .footer-info{
+    
+                display: block;
+                margin-bottom: 0;
+    
+                .footer-copyright{
+    
+                    display: block;
+                }
+            }
+    
         }
+    }
+}
 
-        .fa-facebook-square{
-            color: #3a559f;
-        }
+@media only screen and (max-width: 461px) {
+    .footer{
+    
+        .footer-content{
+    
+            .footer-head{
 
-        .fa-youtube{
-            color: #ff0000;
-        }
-
-        .fa-twitch{
-            color: #9147ff;
+                margin-bottom: 2rem;
+    
+            }
         }
     }
 }

@@ -27,10 +27,9 @@ app.use(bodyParser.json());
 
 app.use('/images/membres', express.static(path.join(__dirname, 'images/membres')));
 
-app.get('/', async(req, res) => {
-    
-    res.status(200).send("Hello World")
-})
+app.get('/', function(req, res){
+    res.redirect('https://www.theindependentgamers.fr/');
+  });
 
 app.use('/api/auth', userRoutes);
 app.use('/api', membreRoutes);
