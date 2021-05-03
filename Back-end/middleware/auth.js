@@ -71,7 +71,7 @@ exports.adminRequest = (req, res, next) => {
     }
   } catch(err) {
     res.status(401).json({
-      error: (err + ', Invalid request!')
+      error: (err + ', Invalid request! ta mere')
     })
   }
 }

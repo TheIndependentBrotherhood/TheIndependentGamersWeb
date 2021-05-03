@@ -1,25 +1,101 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+// components
+
+import ListMembreGestion from './ListMembreGestion'
+import AddMembre from './AddMembre'
+import EditMembre from './EditMembre'
+import Error404 from '../../Error404';
 
 
 // ==== CSS ==== //
 
-const MembresGestion = ({ listMembres, isAdmin }) => {
+const MembresGestion = ({ 
+  updateMembre,
+  changeField,
+  listMembres,
+  isAdmin,
+  token,
+  fetchListMembres,
+  deleteMembre,
+ }) => {
+
+  const [add, setAdd] = useState(false);
+  const [edit, setEdit] = useState(false);
+  const [membreSelect, setMembreSelect] = useState([]);
+
+  const handleAdd = (evt) => {
+    evt.preventDefault();
+    setAdd(true);
+  }
+
+  const handleEdit = (membre, evt) => {
+    evt.preventDefault();
+    setEdit(true);
+    setMembreSelect(membre)
+    changeField(membre.id, "membresIdUpdate");
+    changeField(membre.name, "membreNameUpdate");
+    changeField(membre.role, "membreRoleUpdate");
+    if(membre.isActive){
+      changeField(1, "membresIsActiveUpdate");
+    } else {
+      changeField(0, "membresIsActiveUpdate");
+    }
+    
+  }
+
+  const handleBack = (evt) => {
+    evt.preventDefault();
+    setAdd(false);
+    setEdit(false);
+  }
+
+  const hundleDeleteMembreId = (membre, evt) => {
+    evt.preventDefault();
+    changeField(membre.id, 'idMembreDelete')
+  }
+
+  const hundleDeleteMembre = (evt) => {
+    evt.preventDefault();
+    deleteMembre();
+  }
 
   return(
     
-    <main className="container membre">
-    
-        <div className="membre-content">
-          <div className="membre-card">
-            {listMembres.map((membre) => (
-              <div key={membre.id} className="membre-card-content">
-                <img className="membre-card-img" src={membre.picture} alt="" />
-                <p className="membre-card-role">{membre.role}</p>
-                <h2 className="membre-card-name">{membre.name}</h2>
-              </div>
-            ))}
-          </div>
-        </div>
+    <main className="container membreGestion mt-5 mb-5">
+
+      {!isAdmin && <Error404 />}
+
+      {isAdmin && (<>
+
+        {!add && !edit && (
+          <ListMembreGestion 
+            handleEdit={handleEdit}
+            handleAdd={handleAdd}
+            listMembres={listMembres}
+            hundleDeleteMembre={hundleDeleteMembre}
+            hundleDeleteMembreId={hundleDeleteMembreId}
+          />
+        )}
+
+        {add && (
+          <AddMembre 
+            handleBack={handleBack}
+            token={token}
+            fetchListMembres={fetchListMembres}
+          />
+        )}
+
+        {edit && (
+          <EditMembre 
+            updateMembre={updateMembre}
+            changeField={changeField}
+            membreSelect={membreSelect}
+            handleBack={handleBack}
+          />
+        )}
+
+      </>)}
     
     </main>
   );

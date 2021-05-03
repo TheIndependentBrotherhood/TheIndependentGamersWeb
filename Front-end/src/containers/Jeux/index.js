@@ -5,6 +5,7 @@ import Jeux from '../../components/Jeux';
 const mapStateToProps = (state) => ({
   // nom de la prop à remplir: donnée à récupérer dans le state
   listJeux: state.list.listJeux,
+  isAdmin: state.user.isAdmin,
 });
 
 const mapDispatchToProps = (dispatch) => ({

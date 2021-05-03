@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
  import logo from '../../assets/images/logo.png'
  import './membres.scss'
 
-const Membres = ({ listMembres, isAdmin }) => {
+const Membres = ({ listMembres, isAdmin}) => {
 
   return(
     
@@ -28,7 +28,7 @@ const Membres = ({ listMembres, isAdmin }) => {
             ))}
           </div>
 
-          {isAdmin && (<Link to="/membres/gestion">Géré</Link>)}
+          {isAdmin && (<Link to="/gestion-membres">Géré</Link>)}
 
 
         </div>

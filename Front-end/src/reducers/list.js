@@ -1,8 +1,20 @@
-import { SAVE_LIST_JEUX, SAVE_LIST_MEMBRES } from '../actions/list'; 
+import { SAVE_LIST_JEUX, SAVE_LIST_MEMBRES, CHANGE_FIELD_LIST } from '../actions/list'; 
 
   const initialState = {
+      //Jeux
       listJeux: [],
+      jeuNameUpdate: '',
+      jeuDescriptionUpdate: '',
+      jeuIdUpdate: '',
+      jeuIsActiveUpdate: '',
+      idJeuDelete: '',
+      // Membres
       listMembres: [],
+      membreNameUpdate: '',
+      membreRoleUpdate: '',
+      membresIdUpdate: '',
+      membresIsActiveUpdate: '',
+      idMembreDelete: '',
     };
     
     const listReducer = (state = initialState, action = {}) => {
@@ -18,7 +30,13 @@ import { SAVE_LIST_JEUX, SAVE_LIST_MEMBRES } from '../actions/list';
           return {
             ...state,
             listMembres: action.listMembres,
-      };
+        };
+
+        case CHANGE_FIELD_LIST:
+          return {
+            ...state,
+            [action.identifier]: action.newValue,
+        };
   
         default: return state;
       }

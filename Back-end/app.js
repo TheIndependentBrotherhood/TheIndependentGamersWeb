@@ -26,6 +26,7 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 
 app.use('/images/membres', express.static(path.join(__dirname, 'images/membres')));
+app.use('/images/jeux', express.static(path.join(__dirname, 'images/jeux')));
 
 app.get('/', function(req, res){
     res.redirect('https://www.theindependentgamers.fr/');

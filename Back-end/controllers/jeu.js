@@ -10,8 +10,11 @@ const multer = require('multer');
 exports.createJeu = async (req, res) => {
   try {
 
+
+    console.log(req.body, req.file)
+
     let nameSend = req.body.name;
-    let pictureSend = `${req.protocol}://${req.get('host')}/images/membres/${req.file.filename}`;
+    let pictureSend = `${req.protocol}://${req.get('host')}/images/jeux/${req.file.filename}`;
     let decriptionSend = req.body.description;
 
     if (req.file == undefined) {

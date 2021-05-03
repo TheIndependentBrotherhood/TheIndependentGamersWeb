@@ -10,6 +10,8 @@ const multer = require('multer');
 exports.createMembre = async (req, res) => {
   try {
 
+    console.log(req.body, req.file)
+
     let nameSend = req.body.name;
     let pictureSend = `${req.protocol}://${req.get('host')}/images/membres/${req.file.filename}`;
     let roleSend = req.body.role;
@@ -112,6 +114,9 @@ exports.findAdmin = (req, res, next) => {
 exports.updateMembre = (req, res, next) => {
 
     const id = req.params.id
+
+    console.log(req.body)
+    console.log(req.headers)
 
     models.Membre.update(req.body, {
       where: { id: id }

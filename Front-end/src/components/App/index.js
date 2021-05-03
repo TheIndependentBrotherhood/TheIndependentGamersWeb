@@ -18,6 +18,7 @@ import Footer from '../Layout/Footer';
 import Home from '../Home';
 import Event from '../Event';
 import Jeux from '../../containers/Jeux';
+import JeuxGestion from '../../containers/Jeux/JeuxGestion';
 import Membres from '../../containers/Membres';
 import MembresGestion from '../../containers/Membres/MembresGestion';
 import Twitch from '../Twitch';
@@ -75,10 +76,13 @@ const App = ({ fetchListJeux, loading, logInCheck, changeFieldLoading, fetchPost
                     <Route  path="/jeux">
                       <Jeux />
                     </Route>
+                    <Route path="/gestion-jeux">
+                      <JeuxGestion />
+                    </Route>
                     <Route  path="/membres">
                       <Membres />
                     </Route>
-                    <Route path="/membres/gestion">
+                    <Route path="/gestion-membres">
                       <MembresGestion />
                     </Route>
                     <Route  path="/twitch">

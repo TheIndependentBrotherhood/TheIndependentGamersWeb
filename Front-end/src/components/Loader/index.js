@@ -2,11 +2,12 @@ import React from 'react';
 
  // ==== CSS ==== //
 
- import './loader.scss'
+import logo from '../../assets/images/logo.png'
+import './loader.scss'
 
 const Footer = () => (
     
-    <div className="lds-circle"><img src="https://www.theindependentgamers.fr/images/logo.png" alt="loader" /></div>
+    <div className="lds-circle"><img src={logo} alt="loader" /></div>
 );
 
 export default Footer;

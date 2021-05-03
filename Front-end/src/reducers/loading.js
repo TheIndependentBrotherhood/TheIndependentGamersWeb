@@ -1,6 +1,6 @@
 import {CHANGE_FIELD_LOADING} from '../actions/loading';
 import { SAVE_USER } from '../actions/user'
-  
+
   const initialState = {
       loading: true,
     };
