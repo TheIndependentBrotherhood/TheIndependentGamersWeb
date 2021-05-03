@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "nk",
-    "password": "bonjour0116",
+    "username": "tia",
+    "password": "LesTIGsontlesplusfortetlateamaétécrééele080913",
     "database": "theindependenthome",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -18,6 +18,6 @@
     "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mariadb"
   }
 }
