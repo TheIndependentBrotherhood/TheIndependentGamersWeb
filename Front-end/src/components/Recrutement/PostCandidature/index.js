@@ -125,7 +125,7 @@ const PostCandidature = ({ listPost, loadingRecrutement, isLogged, newMessageCon
                         </div>
                         <ReCAPTCHA
                         className="ReCAPTCHA"
-                        sitekey="6Let7vEUAAAAAEyvmRWIQ-j8FN8jszkaXToHR2UB"
+                        sitekey="6LfjpMQaAAAAAMKjj6AMdXPS201KPGXem8oW0foD"
                         onChange={handleReCAPTCHA}
                         >
                         {contentOk && (
