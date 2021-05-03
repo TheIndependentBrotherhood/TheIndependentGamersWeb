@@ -14,7 +14,7 @@ exports.createJeu = async (req, res) => {
     console.log(req.body, req.file)
 
     let nameSend = req.body.name;
-    let pictureSend = `${req.protocol}://${req.get('host')}/images/jeux/${req.file.filename}`;
+    let pictureSend = `https://api.theindependentgamers.fr/images/jeux/${req.file.filename}`;
     let decriptionSend = req.body.description;
 
     if (req.file == undefined) {

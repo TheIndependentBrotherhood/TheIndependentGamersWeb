@@ -13,7 +13,7 @@ exports.createMembre = async (req, res) => {
     console.log(req.body, req.file)
 
     let nameSend = req.body.name;
-    let pictureSend = `${req.protocol}://${req.get('host')}/images/membres/${req.file.filename}`;
+    let pictureSend = `https://api.theindependentgamers.fr/images/membres/${req.file.filename}`;
     let roleSend = req.body.role;
 
     models.Membre.create({
