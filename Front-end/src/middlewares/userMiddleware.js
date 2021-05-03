@@ -6,6 +6,9 @@ import { LOG_IN, LOG_IN_CHECK, REGISTER_USER, saveUser, registerOk, registerNop 
 
 import { changeFieldLoading } from '../actions/loading';
 
+const prod = "https://api.theindependentgamers.fr";
+const develop = "http://localhost:3000"
+
 const loginMiddleware = (store) => (next) => (action) => {
   // console.log('on a intercepté une action dans le middleware: ', action);
   switch (action.type) {
@@ -14,7 +17,7 @@ const loginMiddleware = (store) => (next) => (action) => {
       const { loginemail, loginpassword } = store.getState().user;
 
       axios
-      .post('http://localhost:3000/api/auth/login', {
+      .post(`${prod}/api/auth/login`, {
         email: loginemail,
         password: loginpassword,
       },{
@@ -39,7 +42,7 @@ const loginMiddleware = (store) => (next) => (action) => {
       const { name, registeremail, registerpassword } = store.getState().user;
 
       axios
-      .post('http://localhost:3000/api/auth/signup', {
+      .post(`${prod}/api/auth/signup`, {
         name: name,
         email: registeremail,
         password: registerpassword,
@@ -64,7 +67,7 @@ const loginMiddleware = (store) => (next) => (action) => {
       const token = localStorage.getItem('token');
 
       axios
-      .post('http://localhost:3000/api/auth/logincheck', {
+      .post(`${prod}/api/auth/logincheck`, {
         token: token,
       },{
           headers: {'Content-Type': 'application/JSON'}

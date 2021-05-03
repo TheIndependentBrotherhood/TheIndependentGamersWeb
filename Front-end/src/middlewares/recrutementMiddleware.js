@@ -15,6 +15,9 @@ import {
 
 import { changeFieldLoading } from '../actions/loading';
 
+const prod = "https://api.theindependentgamers.fr";
+const develop = "http://localhost:3000"
+
 const recrutementMiddleware = (store) => (next) => (action) => {
   // console.log('on a intercepté une action dans le middleware: ', action);
   switch (action.type) {
@@ -26,7 +29,7 @@ const recrutementMiddleware = (store) => (next) => (action) => {
       const newPostContentBR = newPostContent.replace('\s', '\n')
 
       axios
-      .post('http://localhost:3000/api/posts', {
+      .post(`${prod}/api/posts`, {
         title: newPostTitle,
         status: 'nouveau',
         content: newPostContent,
@@ -40,7 +43,7 @@ const recrutementMiddleware = (store) => (next) => (action) => {
       .then((response) => {
         store.dispatch(changeFieldLoading(false, 'loading'));
         store.dispatch(newPostOk(true));
-        axios.get('http://localhost:3000/api/posts')
+        axios.get(`${prod}/api/posts`)
         .then((response) => {
           store.dispatch(savePostList(response.data.data));
         })
@@ -60,7 +63,7 @@ const recrutementMiddleware = (store) => (next) => (action) => {
 
     case FETCH_POST_LIST: {
 
-      axios.get('http://localhost:3000/api/posts')
+      axios.get(`${prod}/api/posts`)
       .then((response) => {
         store.dispatch(savePostList(response.data.data));
       })
@@ -78,7 +81,7 @@ const recrutementMiddleware = (store) => (next) => (action) => {
       const { token, id } = store.getState().user;
 
       axios
-      .post('http://localhost:3000/api/messages', {
+      .post(`${prod}/api/messages`, {
         content: newMessageContent,
         userId: id,
         postId: postFocusId,
@@ -91,7 +94,7 @@ const recrutementMiddleware = (store) => (next) => (action) => {
       .then((response) => {
         store.dispatch(changeFieldLoading(false, 'loading'));
         console.log(response);
-        axios.get('http://localhost:3000/api/posts')
+        axios.get(`${prod}/api/posts`)
         .then((response) => {
           store.dispatch(savePostList(response.data.data));
         })
@@ -110,7 +113,7 @@ const recrutementMiddleware = (store) => (next) => (action) => {
 
     case FETCH_MESSAGE_LIST: {
 
-      axios.get('http://localhost:3000/api/messages/')
+      axios.get(`${prod}/api/messages/`)
       .then((response) => {
         store.dispatch(saveMessageList(response.data.data));
       })

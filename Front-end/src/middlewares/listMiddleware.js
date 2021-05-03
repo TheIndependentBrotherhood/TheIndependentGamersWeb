@@ -11,6 +11,9 @@ import {
   DELETE_MEMBRE,
 } from '../actions/list.js';
 
+const prod = "https://api.theindependentgamers.fr";
+const develop = "http://localhost:3000"
+
 const listMiddleware = (store) => (next) => (action) => {
   
   
@@ -19,7 +22,7 @@ const listMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case FETCH_LIST_JEUX: {
 
-      axios.get('http://localhost:3000/api/jeux')
+      axios.get(`${prod}/api/jeux`)
       .then((response) => {
         store.dispatch(saveListJeux(response.data.data));
         // console.log(response);
@@ -38,7 +41,7 @@ const listMiddleware = (store) => (next) => (action) => {
       const { token } = store.getState().user;
 
       axios
-      .put(`http://localhost:3000/api/jeux/${jeuIdUpdate}`, {
+      .put(`${prod}/api/jeux/${jeuIdUpdate}`, {
         name: jeuNameUpdate,
         description: jeuDescriptionUpdate,
         isActive: jeuIsActiveUpdate,
@@ -49,7 +52,7 @@ const listMiddleware = (store) => (next) => (action) => {
         }
       })
       .then((response) => {
-        axios.get('http://localhost:3000/api/jeux')
+        axios.get(`${prod}/api/jeux`)
         .then((response) => {
           store.dispatch(saveListJeux(response.data.data));
           // console.log(response);
@@ -73,14 +76,14 @@ const listMiddleware = (store) => (next) => (action) => {
       const { idJeuDelete } = store.getState().list;
 
       axios
-      .delete(`http://localhost:3000/api/jeux/${idJeuDelete}`, {
+      .delete(`${prod}/api/jeux/${idJeuDelete}`, {
         headers: {
           'Content-Type': 'application/JSON',
           'authorization': `Bearer ${token}`,
         }
       })
       .then((response) => {
-        axios.get('http://localhost:3000/api/jeux')
+        axios.get(`${prod}/api/jeux`)
         .then((response) => {
           store.dispatch(saveListJeux(response.data.data));
           // console.log(response);
@@ -102,7 +105,7 @@ const listMiddleware = (store) => (next) => (action) => {
 
     case FETCH_LIST_MEMBRES: {
 
-      axios.get('http://localhost:3000/api/membre')
+      axios.get(`${prod}/api/membre`)
       .then((response) => {
         store.dispatch(saveListMembres(response.data.data));
         // console.log(response);
@@ -121,7 +124,7 @@ const listMiddleware = (store) => (next) => (action) => {
       const { token } = store.getState().user;
 
       axios
-      .put(`http://localhost:3000/api/membre/${membresIdUpdate}`, {
+      .put(`${prod}/api/membre/${membresIdUpdate}`, {
         name: membreNameUpdate,
         role: membreRoleUpdate,
         isActive: membresIsActiveUpdate,
@@ -132,7 +135,7 @@ const listMiddleware = (store) => (next) => (action) => {
         }
       })
       .then((response) => {
-        axios.get('http://localhost:3000/api/membre')
+        axios.get(`${prod}/api/membre`)
         .then((response) => {
           store.dispatch(saveListMembres(response.data.data));
           // console.log(response);
@@ -156,14 +159,14 @@ const listMiddleware = (store) => (next) => (action) => {
       const { idMembreDelete } = store.getState().list;
 
       axios
-      .delete(`http://localhost:3000/api/membre/${idMembreDelete}`, {
+      .delete(`${prod}/api/membre/${idMembreDelete}`, {
         headers: {
           'Content-Type': 'application/JSON',
           'authorization': `Bearer ${token}`,
         }
       })
       .then((response) => {
-        axios.get('http://localhost:3000/api/membre')
+        axios.get(`${prod}/api/membre`)
         .then((response) => {
           store.dispatch(saveListMembres(response.data.data));
           // console.log(response);

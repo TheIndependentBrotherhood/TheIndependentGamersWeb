@@ -59,7 +59,7 @@ exports.adminRequest = (req, res, next) => {
     const decodedToken = jwt.verify(token, JWT_SIGN_SECRET);
     const userId = decodedToken.userId;
     const userIsAdmin = decodedToken.isAdmin
-    console.log(userIsAdmin);
+    // console.log(userIsAdmin);
     if(req.body.userId && Number(req.body.userId) !== userId) {
       throw 'Invalid user Id';
     } else if(userIsAdmin == true){

@@ -7,6 +7,9 @@ const AddJeu = ({
     fetchListJeux,
 }) => {
 
+    const prod = "https://api.theindependentgamers.fr";
+    const develop = "http://localhost:3000"
+
     const [name, setName] = useState('')
     const [description, setDescription] = useState('membre')
     const [imagePreviewUrl, setimagePreviewUrl] = useState('')
@@ -60,7 +63,7 @@ const AddJeu = ({
         formdata.append('image', image);
         formdata.append('isActive', isActive);
 
-        api.post('http://localhost:3000/api/jeux', formdata)
+        api.post(`${prod}/api/jeux`, formdata)
         .then((response) => {
             fetchListJeux();
             handleBack(evt)
