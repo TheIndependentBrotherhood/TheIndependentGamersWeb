@@ -1,131 +1,183 @@
 .login{
 
-  margin: 5rem auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 320px;
-  border-radius: 30px 30px 50px 50px;
-  border: 3px solid #212529;
+    background-color: #f8f9fa;
+    margin: 5rem;
 
-  .login-nav{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 30px 30px 50px 50px;
-      padding: 2rem;
-      background-color: #212529;
-      width: 320px;
+  .login-total{
 
-      & span{
-          color: white;
-          margin: auto 1rem;
-          font-size: 2rem;
-      }
-      .login-nav-link{
-        font-size: 1.3rem;
-          &:hover{
-              color: #ce9c10;
-              text-decoration: none;
-          }
-      }
-  }
+    margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    border-radius: 30px 30px 50px 50px;
+    
 
-  .login-content{
+    .login-1{
 
-      width: 100%;
-
-      & h1{
-        text-transform: uppercase!important;
-        font-weight: 700 !important;
-      }
-
-      .login-title{
-          margin-top: 2rem;
-          text-align: center;
-      }
-
-      .login-form{
-
-          margin-top: 2rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-
-          .login-form-input{
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-direction: column;
-
-              & input{
-                  border-radius: 10px;
-                  width: 100%;
-                  border: 1px black solid;
-              }
-              
-          }
-
-          .login-form-checkbox{
-              margin-bottom: 2rem;
-              label{
-                  margin-left: 0.5rem;
-              }
-              a:hover{
-                  color: #ce9c10;
-                  text-decoration: none;
-              }
-          }
-
-          .login-form-button_div{
-
-            background-color: #212529;
+        background-color: #212529;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem;
+        border-radius: 30px 0px 0px 50px;
+    
+        .login-nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
             width: 320px;
-            text-align: center;
-            border-radius: 30px 30px 50px 50px;
-
-
-            .login-form-button{
-                border: none;
-                line-height: normal;
-                margin: 2rem;
-                padding: 1rem;
-                border-radius: 50px;
-                background-color: #ce4710;
-  
-                .fa-power-off{
-                    color: white;
+      
+            & span{
+                color: #f8f9fa;
+                margin: auto 1rem;
+                font-size: 2rem;
+            }
+            .login-nav-link{
+              font-size: 1.3rem;
+                &:hover{
+                    color: #ce9c10;
+                    text-decoration: none;
                 }
             }
-
-          }
-      }
-  }
-}
-
-@media only screen and (max-width: 319px) {
-    .login{
-        width: 100%;
-        margin: 0;
-      
-        .login-nav{
-            width: 100%;
         }
       
         .login-content{
       
             width: 100%;
+            color: #f8f9fa;
+      
+            & h1{
+              text-transform: uppercase!important;
+              font-weight: 700 !important;
+            }
+      
+            .login-title{
+                margin-top: 2rem;
+                text-align: center;
+            }
       
             .login-form{
       
+                margin-top: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+      
+                .login-form-input{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+      
+                    & input{
+                        border-radius: 10px;
+                        width: 100%;
+                        border: 1px black solid;
+                    }
+                    
+                }
+      
+                .login-form-checkbox{
+                    margin-bottom: 2rem;
+                    label{
+                        margin-left: 0.5rem;
+                    }
+                    a:hover{
+                        color: #ce9c10;
+                        text-decoration: none;
+                    }
+                }
       
                 .login-form-button_div{
-
-                  width: 100%;
+      
+                    background-color: #212529;
+                    width: 320px;
+                    text-align: center;
+                    border-radius: 30px 30px 50px 50px;
+      
+      
+                  .login-form-button{
+                      border: none;
+                      line-height: normal;
+                      margin: 2rem;
+                      padding: 1rem;
+                      border-radius: 50px;
+                      background-color: #ce4710;
+        
+                        .fa-power-off{
+                            color: #f8f9fa;
+                        }
+                    }
       
                 }
             }
         }
-      }
+    
+        }
+     
+    .login-2{
+
+        background-color: #212529;
+        border-radius: 0px 30px 50px 0px;
+    
+    }
+  }
+
+}
+
+@media only screen and (max-width: 830px) {
+    .login{
+        width: 100%;
+        margin: 0;
+
+        .login-total{
+
+            .login-1{
+                border-radius: 30px 30px 50px 50px;
+            }
+
+            .login-2{
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 319px) {
+    .login{
+        .login-total{
+
+            .login-1{
+
+                width: 100%;
+                margin: 0;
+                padding:0px !important;
+
+                .login-nav{
+                    width: 100%;
+                }
+              
+                .login-content{
+              
+                    width: 100%;
+              
+                    .login-form{
+              
+              
+                        .login-form-button_div{
+        
+                          width: 100%;
+              
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
 }

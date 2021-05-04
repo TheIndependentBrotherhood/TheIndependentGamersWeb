@@ -1,111 +1,137 @@
 .register{
 
-    margin: 5rem auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 320px;
-    border-radius: 30px 30px 50px 50px;
-    border: 3px solid #212529;
-  
-    .register-nav{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 30px 30px 50px 50px;
-        padding: 2rem;
-        background-color: #212529;
-        width: 320px;
-  
-        & span{
-            color: white;
-            margin: auto 1rem;
-            font-size: 2rem;
-        }
-        .register-nav-link{
-          font-size: 1.3rem;
-            &:hover{
-                color: #ce9c10;
-                text-decoration: none;
-            }
-        }
-    }
-  
-    .register-content{
-  
-        width: 100%;
-  
-        & h1{
-          text-transform: uppercase!important;
-          font-weight: 700 !important;
-        }
-  
-        .register-title{
-            margin-top: 2rem;
-            text-align: center;
-        }
-  
-        .register-form{
-  
-            margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-  
-            .register-form-input{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-  
-                & input{
-                    border-radius: 10px;
-                    width: 100%;
-                    border: 1px black solid;
-                }
-                
-            }
-  
-            .register-form-checkbox{
+    background-color: #f8f9fa;
+    margin: 5rem;
 
-                margin-bottom: 2rem;
-                
-                label{
-                    margin-left: 0.5rem;
-                    font-size: 0.8rem;
+    .register-total{
+
+        margin: 5rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        border-radius: 30px 30px 50px 50px;
+
+
+        .register-1{
+
+            background-color: #212529;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 2rem;
+            border-radius: 30px 0px 0px 50px;
+
+            .register-nav{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                width: 320px;
+          
+                & span{
+                    color: #f8f9fa;;
+                    margin: auto 1rem;
+                    font-size: 2rem;
                 }
-                a:hover{
-                    color: #ce9c10;
-                    text-decoration: none;
+                .register-nav-link{
+                  font-size: 1.3rem;
+                    &:hover{
+                        color: #ce9c10;
+                        text-decoration: none;
+                    }
                 }
             }
-  
-            .register-form-button_div{
-  
-              background-color: #212529;
-              width: 320px;
-              text-align: center;
-              border-radius: 30px 30px 50px 50px;
-  
-  
-              .register-form-button{
-                  border: none;
-                  line-height: normal;
-                  margin: 2rem;
-                  padding: 1rem;
-                  border-radius: 50px;
-                  background-color: #ce4710;
-    
-                  .fa-play-circle{
-                      color: white;
-                  }
-              }
-  
+          
+            .register-content{
+          
+                width: 100%;
+                color: #f8f9fa;
+          
+                & h1{
+                  text-transform: uppercase!important;
+                  font-weight: 700 !important;
+                }
+          
+                .register-title{
+                    margin-top: 2rem;
+                    text-align: center;
+                }
+          
+                .register-form{
+          
+                    margin-top: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+          
+                    .register-form-input{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+          
+                        & input{
+                            border-radius: 10px;
+                            width: 100%;
+                            border: 1px black solid;
+                        }
+                        
+                    }
+          
+                    .register-form-checkbox{
+        
+                        margin-bottom: 2rem;
+                        
+                        label{
+                            margin-left: 0.5rem;
+                            font-size: 0.8rem;
+                        }
+                        a:hover{
+                            color: #ce9c10;
+                            text-decoration: none;
+                        }
+                    }
+          
+                    .register-form-button_div{
+          
+                      background-color: #212529;
+                      width: 320px;
+                      text-align: center;
+                      border-radius: 30px 30px 50px 50px;
+          
+          
+                      .register-form-button{
+                          border: none;
+                          line-height: normal;
+                          margin: 2rem;
+                          padding: 1rem;
+                          border-radius: 50px;
+                          background-color: #ce4710;
+            
+                          .fa-play-circle{
+                              color: #f8f9fa;
+                          }
+                      }
+          
+                    }
+                }
             }
+
         }
-    }
-  }
+
+        .register-2{
+
+            display: flex;
+            align-items: flex-end;
+            height: 845px;
+            background-color: #212529;
+            border-radius: 0px 30px 50px 0px;
+            
+        }
+    }  
+}
 
 .registerCheck{
     width: 50%;
@@ -140,33 +166,60 @@
         }
     }
 }
-  
-  @media only screen and (max-width: 319px) {
-      .register{
-          width: 100%;
-          margin: 0;
-        
-          .register-nav{
-              width: 100%;
-          }
-        
-          .register-content{
-        
-              width: 100%;
-        
-              .register-form{
-        
-        
-                  .register-form-button_div{
-  
-                    width: 100%;
-        
-                  }
-              }
-          }
+
+@media only screen and (max-width: 830px) {
+    .register{
+        width: 100%;
+        margin: 0;
+
+        .register-total{
+
+            .register-1{
+                border-radius: 30px 30px 50px 50px;
+            }
+
+            .register-2{
+                display: none;
+            }
         }
+    }
+}
+
+@media only screen and (max-width: 319px) {
+    .register{
+        .register-total{
+
+            .register-1{
+
+                width: 100%;
+                margin: 0;
+                padding:0px !important;
+
+                .register-nav{
+                    width: 100%;
+                }
+              
+                .register-content{
+              
+                    width: 100%;
+              
+                    .register-form{
+              
+              
+                        .register-form-button_div{
+        
+                          width: 100%;
+              
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
 
     .registerCheck{
         width: 100%;
     }
-  }
+}

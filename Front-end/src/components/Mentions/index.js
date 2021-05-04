@@ -19,9 +19,9 @@ const Mentions = () => (
 
                 <ul className="mention-ul">
 
-                        <li>Identité du propriétaire : Brandon SIMON-VERMOT</li>
+                        <li>Identité du propriétaire : Guillaume Sanchez</li>
                         <li>Numéro de SIRET :</li>
-                        <li>adresse mail : minicanzargames@gmail.com</li>
+                        <li>adresse mail : sanchez.guillaume116@gmail.com</li>
                         <li>site web : <NavLink to="/" >theindependentgamers.fr</NavLink></li>
                 
                 </ul>
@@ -30,9 +30,9 @@ const Mentions = () => (
 
                 <ul className="mention-ul">
 
-                    <li>Hébergeur : Scaleway</li>
-                    <li>Siège social : 8 rue de la Ville l’Evêque, 75008 Paris FRANCE</li>
-                    <li>site web : <Link to="https://www.scaleway.com" target="_blank">www.scaleway.com</Link></li>
+                    <li>Hébergeur : OVH</li>
+                    <li>Siège social : 2 rue Kellermann, 59100 Roubaix France</li>
+                    <li>site web : <a href="https://www.ovh.com/fr/" target="_blank">www.ovh.com</a></li>
 
                 </ul>
 
@@ -79,7 +79,7 @@ const Mentions = () => (
                 <h3>Limitation contractuelles sur les données</h3>
 
                 <p>
-                    Les informations contenues sur ce site sont aussi précises et le site remis à jour à différentes périodes de l’année, mais peut toutefois contenir des inexactitudes ou des omissions. Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de bien vouloir le signaler par email, à l’adresse minicanzargames@gmail.com, en décrivant le problème de la manìère la plus précise possible (page posant problème, type d’ordinateur et de navigateur utilisé,…).
+                    Les informations contenues sur ce site sont aussi précises et le site remis à jour à différentes périodes de l’année, mais peut toutefois contenir des inexactitudes ou des omissions. Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de bien vouloir le signaler par email, à l’adresse sanchez.guillaume116@gmail.com, en décrivant le problème de la manìère la plus précise possible (page posant problème, type d’ordinateur et de navigateur utilisé,…).
                 </p>
 
                 <p>

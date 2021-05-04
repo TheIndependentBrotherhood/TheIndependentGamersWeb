@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 
  // ==== CSS ==== //
 
- import './register.scss'
+import './register.scss'
+import decort from '../../assets/images/decort.png'
 
 const Register = ({ name, registeremail, registerpassword, register, changeField, registerOk, registerNop }) => { 
 
@@ -89,43 +90,54 @@ const Register = ({ name, registeremail, registerpassword, register, changeField
     
     return(
         <> 
-            <main className="register container">
-                <nav className="register-nav">
-                    <NavLink className="register-nav-link" to="/connexion">Connexion</NavLink>
-                    <span>|</span>
-                    <NavLink className="register-nav-link" to="/inscription">Inscription</NavLink>
-                </nav>
-                <div className="register-content">
-                    <h1 className="register-title">Inscription</h1>
-                    <form onSubmit={submitregister} className="register-form" action="" method="post">
-                        <div className="register-form-input form-group">
-                            <label>Pseudo</label>
-                            <input onChange={onChangeName} type="text" value={name} />
+            <main className="register">
+                <div className="register-total">
+                    <div className="register-1">
+
+                        <nav className="register-nav">
+                            <NavLink className="register-nav-link" to="/connexion">Connexion</NavLink>
+                            <span>|</span>
+                            <NavLink className="register-nav-link" to="/inscription">Inscription</NavLink>
+                        </nav>
+                        <div className="register-content">
+                            <h1 className="register-title">Inscription</h1>
+                            <form onSubmit={submitregister} className="register-form" action="" method="post">
+                                <div className="register-form-input form-group">
+                                    <label>Pseudo</label>
+                                    <input onChange={onChangeName} type="text" value={name} />
+                                </div>
+                                <div className="register-form-input form-group">
+                                    <label>Email</label>
+                                    <input onChange={onChangeEmail} id="field-email" type="email" value={registeremail} />
+                                </div>
+                                <div className="register-form-input form-group">
+                                    <label>Confirmé l'Email</label>
+                                    <input onChange={emailVerif} id="field-confirm_email" type="email" />
+                                </div>
+                                <div className="register-form-input form-group">
+                                    <label>Mot de Passe</label>
+                                    <input onChange={onChangePassword} id="field-password" type="password" value={registerpassword} />
+                                </div>
+                                <div className="register-form-input form-group">
+                                    <label>Confirmé le Mot de Passe</label>
+                                    <input onChange={passwordVerif} id="field-confirm_password" type="password" />
+                                </div>
+                                <div className="register-form-checkbox">
+                                    <input onChange={onChangeCheckbox} type="checkbox" id="scales" name="scales" />
+                                    <label htmlFor="scales">J'ai lu et j'accepte <a href="/mentions-legales#conditions">les conditions d'utilisation</a></label>
+                                </div>
+                                <div className="register-form-button_div">
+                                <button className="register-form-button" type="submit"><i class="fas fa-play-circle"></i></button>
+                                </div>
+                            </form>
+
                         </div>
-                        <div className="register-form-input form-group">
-                            <label>Email</label>
-                            <input onChange={onChangeEmail} id="field-email" type="email" value={registeremail} />
+                    </div>
+                    <div className="register-2">
+                        <div className="register-img-bg">
+                            <img src={decort} alt=""/>
                         </div>
-                        <div className="register-form-input form-group">
-                            <label>Confirmé l'Email</label>
-                            <input onChange={emailVerif} id="field-confirm_email" type="email" />
-                        </div>
-                        <div className="register-form-input form-group">
-                            <label>Mot de Passe</label>
-                            <input onChange={onChangePassword} id="field-password" type="password" value={registerpassword} />
-                        </div>
-                        <div className="register-form-input form-group">
-                            <label>Confirmé le Mot de Passe</label>
-                            <input onChange={passwordVerif} id="field-confirm_password" type="password" />
-                        </div>
-                        <div className="register-form-checkbox">
-                            <input onChange={onChangeCheckbox} type="checkbox" id="scales" name="scales" />
-                            <label htmlFor="scales">J'ai lu et j'accepte <a href="/mentions-legales#conditions">les conditions d'utilisation</a></label>
-                        </div>
-                        <div className="register-form-button_div">
-                        <button className="register-form-button" type="submit"><i class="fas fa-play-circle"></i></button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </main>
 

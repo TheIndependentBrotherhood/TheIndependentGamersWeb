@@ -29,7 +29,7 @@ const Twitch = () => {
     };
 
     const handleClicksh0otertv = (evt) => {
-        setNameLive("sh0otertv")
+        setNameLive("COLONELPGM")
     };
 
     const handleClickDespe = (evt) => {

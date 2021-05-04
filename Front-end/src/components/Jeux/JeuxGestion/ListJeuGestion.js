@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ListJeuGestion = ({ handleEdit, handleAdd, listJeux, hundleDeleteJeu, hundleDeleteJeuId }) => {
+const ListJeuGestion = ({ handleEdit, handleAdd, listJeux, hundleDeleteJeu, hundleDeleteJeuId, isActiveOrNot }) => {
 
     return (
         <div>
@@ -12,6 +12,7 @@ const ListJeuGestion = ({ handleEdit, handleAdd, listJeux, hundleDeleteJeu, hund
                       <th scope="col">#</th>
                       <th scope="col">Nom</th>
                       <th scope="col">Description</th>
+                      <th scope="col">Visible</th>
                       <th scope="col"></th>
                   </tr>
               </thead>
@@ -23,6 +24,7 @@ const ListJeuGestion = ({ handleEdit, handleAdd, listJeux, hundleDeleteJeu, hund
                     <th scope="row">{jeu.id}</th>
                     <td>{jeu.name}</td>
                     <td>{jeu.description}</td>
+                    <td>{isActiveOrNot(jeu.isActive)}</td>
                     <td className="text-right">
                         <button onClick={(evt) => handleEdit(jeu, evt)} className="btn btn-sm btn-warning">
                             <i className="fa fa-pencil-square-o" aria-hidden="true"></i>

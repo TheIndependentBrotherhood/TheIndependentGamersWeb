@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ListMembreGestion = ({ handleEdit, handleAdd, listMembres, hundleDeleteMembre, hundleDeleteMembreId }) => {
+const ListMembreGestion = ({ handleEdit, handleAdd, listMembres, hundleDeleteMembre, hundleDeleteMembreId, isActiveOrNot }) => {
 
     return (
         <div>
@@ -12,6 +12,7 @@ const ListMembreGestion = ({ handleEdit, handleAdd, listMembres, hundleDeleteMem
                       <th scope="col">#</th>
                       <th scope="col">Nom</th>
                       <th scope="col">role</th>
+                      <th scope="col">Visible</th>
                       <th scope="col"></th>
                   </tr>
               </thead>
@@ -23,6 +24,7 @@ const ListMembreGestion = ({ handleEdit, handleAdd, listMembres, hundleDeleteMem
                     <th scope="row">{membre.id}</th>
                     <td>{membre.name}</td>
                     <td>{membre.role}</td>
+                    <td>{isActiveOrNot(membre.isActive)}</td>
                     <td className="text-right">
                         <button onClick={(evt) => handleEdit(membre, evt)} className="btn btn-sm btn-warning">
                             <i className="fa fa-pencil-square-o" aria-hidden="true"></i>

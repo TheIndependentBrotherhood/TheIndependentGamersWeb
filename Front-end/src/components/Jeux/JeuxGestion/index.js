@@ -60,6 +60,13 @@ const JeuxGestion = ({
     deleteJeu();
   }
 
+  const isActiveOrNot = (isActive) =>{
+    if(isActive){
+      return '✅'
+    }
+    return '❌'
+  }
+
   return(
     
     <main className="container membreGestion mt-5 mb-5">
@@ -75,6 +82,7 @@ const JeuxGestion = ({
             listJeux={listJeux}
             hundleDeleteJeu={hundleDeleteJeu}
             hundleDeleteJeuId={hundleDeleteJeuId}
+            isActiveOrNot={isActiveOrNot}
           />
         )}
 
