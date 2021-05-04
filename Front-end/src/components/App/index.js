@@ -12,6 +12,7 @@ import './app.scss';
 
  // ==== Components ==== //
 
+import Test from '../Test';
 import Loader from '../Loader'; 
 import Header from '../../containers/Layout/Header';
 import Footer from '../Layout/Footer';
@@ -63,68 +64,68 @@ const App = ({ fetchListJeux, loading, logInCheck, changeFieldLoading, fetchPost
   }, []);
 
   return (
-      <Router>
-        <ScrollToTop>
-          {loading && (<Loader />)}
-          {!loading && (
-              <>
-                <Header />
-                  <Switch>
-                    <Route  path="/" exact>
-                      <Home />
-                    </Route>
-                    <Route  path="/jeux">
-                      <Jeux />
-                    </Route>
-                    <Route path="/gestion-jeux">
-                      <JeuxGestion />
-                    </Route>
-                    <Route  path="/membres">
-                      <Membres />
-                    </Route>
-                    <Route path="/gestion-membres">
-                      <MembresGestion />
-                    </Route>
-                    <Route  path="/twitch">
-                      <Twitch />
-                    </Route>
-                    <Route  path="/events">
-                      <Event />
-                    </Route>
-                    <Route  path="/recrutement">
-                      <Recrutement />
-                    </Route>
-                    <Route  path="/recrutement-a-lire">
-                      <ToRead />
-                    </Route>
-                    <Route  path="/nouvelle-candidature">
-                      <NewCandidature />
-                    </Route>
-                    <Route  path="/candidature/:slug">
-                      <PostCandidature />
-                    </Route>
-                    <Route  path="/connexion">
-                      <Login />
-                    </Route>
-                    <Route  path="/inscription">
-                      <Register />
-                    </Route>
-                    <Route  path="/profil">
-                      <Profil />
-                    </Route>
-                    <Route  path="/mentions-legales">
-                      <Mentions />
-                    </Route>
-                    <Route path="*">
-                      <Error404 />
-                    </Route>
-                  </Switch>
-                <Footer />
-              </>
-              )}
-            {!cookiesOk && <Cookies />}
-        </ScrollToTop>
-      </Router>
+    <Router>
+      <ScrollToTop>
+        {loading && (<Loader />)}
+        {!loading && (
+            <>
+              <Header />
+                <Switch>
+                  <Route  path="/" exact>
+                    <Home />
+                  </Route>
+                  <Route  path="/jeux">
+                    <Jeux />
+                  </Route>
+                  <Route path="/gestion-jeux">
+                    <JeuxGestion />
+                  </Route>
+                  <Route  path="/membres">
+                    <Membres />
+                  </Route>
+                  <Route path="/gestion-membres">
+                    <MembresGestion />
+                  </Route>
+                  <Route  path="/twitch">
+                    <Twitch />
+                  </Route>
+                  <Route  path="/events">
+                    <Event />
+                  </Route>
+                  <Route  path="/recrutement">
+                    <Recrutement />
+                  </Route>
+                  <Route  path="/recrutement-a-lire">
+                    <ToRead />
+                  </Route>
+                  <Route  path="/nouvelle-candidature">
+                    <NewCandidature />
+                  </Route>
+                  <Route  path="/candidature/:slug">
+                    <PostCandidature />
+                  </Route>
+                  <Route  path="/connexion">
+                    <Login />
+                  </Route>
+                  <Route  path="/inscription">
+                    <Register />
+                  </Route>
+                  <Route  path="/profil">
+                    <Profil />
+                  </Route>
+                  <Route  path="/mentions-legales">
+                    <Mentions />
+                  </Route>
+                  <Route path="*">
+                    <Error404 />
+                  </Route>
+                </Switch>
+              <Footer />
+            </>
+            )}
+          {!cookiesOk && <Cookies />}
+      </ScrollToTop>
+    </Router>
   );
 };
 

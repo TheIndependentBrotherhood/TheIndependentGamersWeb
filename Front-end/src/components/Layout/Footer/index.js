@@ -53,7 +53,6 @@ const Footer = () => {
         </div>
 
         <NavLink to="/mentions-legales">Mentions Légales</NavLink>
-        <NavLink to="/mentions-legales">Contact</NavLink>
 
       </div>
       <Discord />

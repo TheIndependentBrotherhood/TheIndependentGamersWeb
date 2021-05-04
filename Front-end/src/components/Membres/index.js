@@ -28,7 +28,7 @@ const Membres = ({ listMembres, isAdmin}) => {
             ))}
           </div>
 
-          {isAdmin && (<Link to="/gestion-membres">Géré</Link>)}
+          {isAdmin && (<Link to="/gestion-membres">Gérer</Link>)}
 
 
         </div>

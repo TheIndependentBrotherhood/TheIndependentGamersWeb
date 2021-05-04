@@ -26,6 +26,7 @@ export const GetFormattedDate = (date) => {
   const month = todayTime.getMonth()+1;
   const day = todayTime.getDate();
   const year = todayTime.getFullYear();
+
   return `${day}/${month}/${year}`;
 };
 

@@ -77,39 +77,3 @@
         }
     }
 }
-
-@media only screen and (max-width: 991px) {
-    @import "react-slideshow-image/dist/styles.css";
-
-
-.slide-content{
-
-    .slide-card-welcom{
-
-        .slide-card-welcom-head{
-
-            .slide-card-welcom-text{
-
-                p{
-
-                    a{
-                        box-shadow: none;
-                    }
-                }
-            }
-        }
-        
-        .slide-welcom-decort-reverse{
-
-            display: none;
-
-        }
-
-        .slide-welcom-decort{
-
-            display: none;
-                
-        }
-    }
-}
-}

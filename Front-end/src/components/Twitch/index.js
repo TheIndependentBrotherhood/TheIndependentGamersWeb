@@ -109,31 +109,31 @@ const Twitch = () => {
         <div className="twitch-container">
 
           {nkStream.map((nk) => (
-            <a key={nk.id} onClick={handleClickNkStreamTV} className="text-center choise">
+            <div key={nk.id} onClick={handleClickNkStreamTV} className="text-center choise">
                 <img className="text-center rounded-circle img--membre" src={nk.profile_image_url} alt="" />
                 <p className="text-card-twitch">{nk.display_name}</p>
-            </a>
+            </div>
           ))}
 
           {todiun.map((to) => (
-            <a key={to.id}onClick={handleClickTodiun} className="text-center choise">
+            <div key={to.id}onClick={handleClickTodiun} className="text-center choise">
                 <img className="text-center rounded-circle img--membre" src={to.profile_image_url} alt="" />
                 <p className="text-card-twitch">{to.display_name}</p>
-            </a>
+            </div>
           ))}
 
           {despe.map((de) => (
-            <a key={de.id} onClick={handleClickDespe} className="text-center choise">
+            <div key={de.id} onClick={handleClickDespe} className="text-center choise">
                 <img className="text-center rounded-circle img--membre" src={de.profile_image_url} alt="" />
                 <p className="text-card-twitch">{de.display_name}</p>
-            </a>
+            </div>
           ))}
 
           {seb.map((se) => (
-            <a key={se.id} onClick={handleClicksh0otertv} className="text-center choise">
+            <div key={se.id} onClick={handleClicksh0otertv} className="text-center choise">
                 <img className="text-center rounded-circle img--membre" src={se.profile_image_url} alt="" />
                 <p className="text-card-twitch">{se.display_name}</p>
-            </a>
+            </div>
           ))}
         </div>
 

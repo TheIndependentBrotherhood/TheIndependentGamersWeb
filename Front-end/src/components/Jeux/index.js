@@ -9,7 +9,7 @@ const Jeux = ({ listJeux, isAdmin }) => {
     
     return(
 
-        <main className="jeu">
+        <main className="jeu container">
 
             <div className="jeu-head">
                 <img className="jeu-img" id="logo" src={logo} alt="logo" />
@@ -26,7 +26,7 @@ const Jeux = ({ listJeux, isAdmin }) => {
                     ))}
                 </div>
 
-                {isAdmin && (<Link to="/gestion-jeux">Géré</Link>)}
+                {isAdmin && (<Link to="/gestion-jeux">Gérer</Link>)}
 
             </div>
 

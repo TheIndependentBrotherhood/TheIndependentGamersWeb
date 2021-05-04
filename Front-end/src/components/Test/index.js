@@ -2,9 +2,13 @@ import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import { NavLink }from 'react-router-dom';
 
+
+
+import image from '../../assets/images/footer.png'
+
  // ==== CSS ==== //
 
-import './home.scss'
+import './test.scss'
 
 import logo from '../../assets/images/logo.png';
 import merde from '../../assets/images/Sans-titre-1.png';
@@ -18,7 +22,7 @@ import twitchLol from '../../assets/images/twitch-lol.png';
 import twitchLolReverse from '../../assets/images/twitch-lol-reverse.png';
 
  const properties = {
-	duration: 6000,
+	duration: 8000,
 	transitionDuration: 1000,
 	infinite: true,
 	indicators: false,
