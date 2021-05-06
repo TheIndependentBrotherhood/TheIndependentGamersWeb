@@ -29,7 +29,7 @@ const loginMiddleware = (store) => (next) => (action) => {
         localStorage.setItem('token', response.data.token);
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
         store.dispatch(changeFieldLoading(false, 'loading'));
       })
 
@@ -77,7 +77,7 @@ const loginMiddleware = (store) => (next) => (action) => {
         store.dispatch(changeFieldLoading(false, 'loading'));
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
         store.dispatch(changeFieldLoading(false, 'loading'));
       })
 

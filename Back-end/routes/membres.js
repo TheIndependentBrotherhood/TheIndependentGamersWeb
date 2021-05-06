@@ -16,6 +16,7 @@ const multer = require('../middleware/multer-membre');
 
 router.post('/membre', auth.adminRequest, multer, membreCtrl.createMembre);
 router.get('/membre', membreCtrl.findMembreList);
+router.get('/membre/all', auth.adminRequest, membreCtrl.findAllMembreList);
 router.get('/membre/membre', membreCtrl.findMembre);
 router.get('/membre/staff', membreCtrl.findStaff);
 router.get('/membre/admin', membreCtrl.findAdmin);

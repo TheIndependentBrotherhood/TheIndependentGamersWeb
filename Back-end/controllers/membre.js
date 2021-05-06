@@ -54,6 +54,20 @@ exports.findMembreList = (req, res, next) => {
 
 };
 
+exports.findAllMembreList = (req, res, next) => {
+
+  models.Membre.findAll()
+  .then(membres => {
+    const message = 'La liste de tous les membres à bien été récupérée.'
+    res.status(200).json({ message, data: membres })
+  })
+  .catch(error => {
+    const message = 'La liste de tout les membres n\'a pas pu être récupérée. Réessayer dans quelques instant.'
+    res.status(500).json({ message, data: error})
+  })
+
+};
+
 exports.findMembre = (req, res, next) => {
 
   models.Membre.findAll({

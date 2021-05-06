@@ -16,6 +16,7 @@ const multer = require('../middleware/multer-jeu');
 
 router.post('/jeux', auth.adminRequest, multer, jeuxCtrl.createJeu);
 router.get('/jeux', jeuxCtrl.findJeuList);
+router.get('/jeux/all', auth.adminRequest, jeuxCtrl.findAllJeuList);
 router.get('/jeux/:id', jeuxCtrl.findJeu);
 router.put('/jeux/:id', auth.adminRequest, multer, jeuxCtrl.updateJeu);
 router.delete('/jeux/:id', auth.adminRequest, jeuxCtrl.deleteJeu);

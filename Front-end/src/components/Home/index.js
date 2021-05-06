@@ -2,6 +2,7 @@ import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import { NavLink }from 'react-router-dom';
 
+
  // ==== CSS ==== //
 
 import './home.scss'
@@ -25,7 +26,7 @@ import twitchLolReverse from '../../assets/images/twitch-lol-reverse.png';
 	arrows: false,
   }
 
- const Home = () => {
+ const Home = ( {listJeux, listMembres} ) => {
     return (
 
 		<>

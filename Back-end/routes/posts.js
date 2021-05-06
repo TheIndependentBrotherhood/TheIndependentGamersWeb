@@ -15,6 +15,7 @@ const auth = require('../middleware/auth');
 
 router.post('/posts', auth.userRequest, postCtrl.createPost);
 router.get('/posts', postCtrl.findPostList);
+router.get('/posts/all', auth.adminRequest, postCtrl.findAllPostList);
 router.get('/posts/:id', postCtrl.findPost);
 router.put('/posts/:id', auth.adminRequest, postCtrl.updatePost);
 router.delete('/posts/:id', auth.adminRequest, postCtrl.deletePost);

@@ -48,11 +48,11 @@ const recrutementMiddleware = (store) => (next) => (action) => {
           store.dispatch(savePostList(response.data.data));
         })
         .catch((error) => {
-          console.log(error);
+          //console.log(error);
         })
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
         store.dispatch(changeFieldLoading(false, 'loading'));
         store.dispatch(newPostNop(true));
       })
@@ -68,7 +68,7 @@ const recrutementMiddleware = (store) => (next) => (action) => {
         store.dispatch(savePostList(response.data.data));
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
       })
 
       next(action);
@@ -99,11 +99,11 @@ const recrutementMiddleware = (store) => (next) => (action) => {
           store.dispatch(savePostList(response.data.data));
         })
         .catch((error) => {
-          console.log(error);
+          //console.log(error);
         })
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
         store.dispatch(changeFieldLoading(false, 'loading'));
       })
 
@@ -118,7 +118,7 @@ const recrutementMiddleware = (store) => (next) => (action) => {
         store.dispatch(saveMessageList(response.data.data));
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
       })
 
       next(action);

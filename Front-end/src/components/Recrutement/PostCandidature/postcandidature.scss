@@ -119,8 +119,8 @@
             margin: 2rem 10rem;
             .emoji-mart{
                 
-                @media only screen and (max-width: 767px){
-                    width: 100% !important;
+                @media only screen and (max-width: 991px){
+                    display: none;
                 }
             }
 

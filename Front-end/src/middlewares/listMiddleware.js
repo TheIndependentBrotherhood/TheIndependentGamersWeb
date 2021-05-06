@@ -28,7 +28,7 @@ const listMiddleware = (store) => (next) => (action) => {
         // console.log(response);
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
       })
 
       next(action);
@@ -58,12 +58,12 @@ const listMiddleware = (store) => (next) => (action) => {
           // console.log(response);
         })
         .catch((error) => {
-          console.log(error);
+          //console.log(error);
         })
         //console.log(response);
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
       })
 
       next(action);
@@ -89,12 +89,12 @@ const listMiddleware = (store) => (next) => (action) => {
           // console.log(response);
         })
         .catch((error) => {
-          console.log(error);
+          //console.log(error);
         })
         //console.log(response);
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
       })
 
       next(action);
@@ -111,7 +111,7 @@ const listMiddleware = (store) => (next) => (action) => {
         // console.log(response);
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
       })
 
       next(action);
@@ -141,12 +141,12 @@ const listMiddleware = (store) => (next) => (action) => {
           // console.log(response);
         })
         .catch((error) => {
-          console.log(error);
+          //console.log(error);
         })
         //console.log(response);
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
       })
 
       next(action);
@@ -172,12 +172,12 @@ const listMiddleware = (store) => (next) => (action) => {
           // console.log(response);
         })
         .catch((error) => {
-          console.log(error);
+          //console.log(error);
         })
         //console.log(response);
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
       })
 
       next(action);

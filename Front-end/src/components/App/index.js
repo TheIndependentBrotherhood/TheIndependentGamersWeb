@@ -11,12 +11,11 @@ import ScrollToTop from 'react-router-scroll-top';
 import './app.scss';
 
  // ==== Components ==== //
-
-import Test from '../Test';
+ 
 import Loader from '../Loader'; 
 import Header from '../../containers/Layout/Header';
 import Footer from '../Layout/Footer';
-import Home from '../Home';
+import Home from '../../containers/Home';
 import Event from '../Event';
 import Jeux from '../../containers/Jeux';
 import JeuxGestion from '../../containers/Jeux/JeuxGestion';

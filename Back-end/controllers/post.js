@@ -6,6 +6,7 @@ const models = require('../models');
 const asyncLib = require('async');
 const fs = require('fs');
 const multer = require('multer');
+const sequelize = require('sequelize');
 
 exports.createPost = async (req, res) => {
   try {
@@ -42,6 +43,36 @@ exports.findPostList = (req, res, next) => {
     where:{
       isActive: true
     },
+    order: sequelize.literal('createdAt DESC'),
+    include: [{
+      model: models.User,
+      attributes: [ 'id', 'name'],
+    },
+    {
+      model: models.Message,
+      where: {isActive: true},
+      attributes: [ 'id', 'content', 'createdAt' ],
+      include: [{
+        model: models.User,
+        attributes: [ 'id', 'name'],
+      }],
+      required: false,
+    }]
+  })
+  .then(posts => {
+    const message = 'La liste des postes à bien été récupérée.'
+    res.status(200).json({ message, data: posts })
+  })
+  .catch(error => {
+    const message = 'La liste de tout les postes n\'a pas pu être récupérée. Réessayer dans quelques instant.'
+    res.status(500).json({ message, data: error})
+  })
+
+};
+
+exports.findAllPostList = (req, res, next) => {
+
+  models.Post.findAll({
     include: [{
       model: models.User,
       attributes: [ 'id', 'name'],

@@ -58,6 +58,20 @@ exports.findJeuList = (req, res, next) => {
 
 };
 
+exports.findAllJeuList = (req, res, next) => {
+
+  models.Jeu.findAll()
+  .then(jeux => {
+    const message = 'La liste de tous les jeux à bien été récupérée.'
+    res.status(200).json({ message, data: jeux })
+  })
+  .catch(error => {
+    const message = 'La liste de tout les jeux n\'a pas pu être récupérée. Réessayer dans quelques instant.'
+    res.status(500).json({ message, data: error})
+  })
+
+};
+
 exports.findJeu = (req, res, next) => {
 
   const id = req.params.id
