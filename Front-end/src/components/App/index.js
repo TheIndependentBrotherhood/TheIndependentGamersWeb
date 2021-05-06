@@ -28,6 +28,7 @@ import Recrutement from '../../containers/Recrutement';
 import ToRead from '../Recrutement/ToRead';
 import NewCandidature from '../../containers/Recrutement/NewCandidature';
 import PostCandidature from '../../containers/Recrutement/PostCandidature';
+import RecrutementGestion from '../../containers/Recrutement/RecrutementGestion';
 import Profil from '../../containers/Profil';
 import Mentions from '../Mentions';
 import Cookies from '../CookiesBar';
@@ -102,6 +103,9 @@ const App = ({ fetchListJeux, loading, logInCheck, changeFieldLoading, fetchPost
                   </Route>
                   <Route  path="/candidature/:slug">
                     <PostCandidature />
+                  </Route>
+                  <Route path="/gestion-posts">
+                    <RecrutementGestion />
                   </Route>
                   <Route  path="/connexion">
                     <Login />

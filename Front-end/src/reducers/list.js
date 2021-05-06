@@ -1,8 +1,9 @@
-import { SAVE_LIST_JEUX, SAVE_LIST_MEMBRES, CHANGE_FIELD_LIST } from '../actions/list'; 
+import { SAVE_LIST_JEUX, SAVE_LIST_ALL_JEUX, SAVE_LIST_MEMBRES, SAVE_LIST_ALL_MEMBRES, CHANGE_FIELD_LIST } from '../actions/list'; 
 
   const initialState = {
       //Jeux
       listJeux: [],
+      listAllJeux: [],
       jeuNameUpdate: '',
       jeuDescriptionUpdate: '',
       jeuIdUpdate: '',
@@ -10,6 +11,7 @@ import { SAVE_LIST_JEUX, SAVE_LIST_MEMBRES, CHANGE_FIELD_LIST } from '../actions
       idJeuDelete: '',
       // Membres
       listMembres: [],
+      listAllMembres: [],
       membreNameUpdate: '',
       membreRoleUpdate: '',
       membresIdUpdate: '',
@@ -26,10 +28,22 @@ import { SAVE_LIST_JEUX, SAVE_LIST_MEMBRES, CHANGE_FIELD_LIST } from '../actions
               listJeux: action.listJeux,
         };
 
+        case SAVE_LIST_ALL_JEUX:
+          return {
+            ...state,
+            listAllJeux: action.listAllJeux,
+        };
+
         case SAVE_LIST_MEMBRES:
           return {
             ...state,
             listMembres: action.listMembres,
+        };
+
+        case SAVE_LIST_ALL_MEMBRES:
+          return {
+            ...state,
+            listAllMembres: action.listAllMembres,
         };
 
         case CHANGE_FIELD_LIST:

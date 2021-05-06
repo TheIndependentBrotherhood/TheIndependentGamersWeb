@@ -87,6 +87,8 @@ const Register = ({ name, registeremail, registerpassword, register, changeField
         }
     };
 
+    document.title = `Inscription - The Independent Gamers`;
+
     
     return(
         <> 

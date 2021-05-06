@@ -2,11 +2,12 @@ import { connect } from 'react-redux';
 
 import Membres from '../../../components/Membres/MembresGestion';
 
-import { changeField, updateMembre, fetchListMembres, deleteMembre } from '../../../actions/list'
+import { changeField, updateMembre, fetchListMembres, fetchListAllMembres, deleteMembre } from '../../../actions/list'
 
 const mapStateToProps = (state) => ({
   // nom de la prop à remplir: donnée à récupérer dans le state
   listMembres: state.list.listMembres,
+  listAllMembres: state.list.listAllMembres,
   isAdmin: state.user.isAdmin,
   membreNameUpdate: state.list.membreNameUpdate,
   membreRoleUpdate: state.list.membreRoleUpdate,
@@ -28,6 +29,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   fetchListMembres: () => {
     dispatch(fetchListMembres());
+  },
+  fetchListAllMembres: () => {
+    dispatch(fetchListAllMembres());
   },
 });
 

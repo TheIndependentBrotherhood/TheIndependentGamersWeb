@@ -1,13 +1,15 @@
-/* eslint-disable camelcase */
-// import api from 'src/api';
 import axios from 'axios';
 
 import { 
   ADD_NEW_POST,
+  UPDATE_POST,
+  DELETE_MEMBRE,
   ADD_NEW_MESSAGE,
   FETCH_POST_LIST,
+  FETCH_ALL_POST_LIST,
   FETCH_MESSAGE_LIST,
   saveMessageList,
+  saveAllPostList,
   savePostList,
   newPostOk,
   newPostNop
@@ -26,12 +28,10 @@ const recrutementMiddleware = (store) => (next) => (action) => {
       const { newPostTitle, newPostContent,  } = store.getState().recrutement;
       const { token, id } = store.getState().user;
 
-      const newPostContentBR = newPostContent.replace('\s', '\n')
-
       axios
       .post(`${prod}/api/posts`, {
         title: newPostTitle,
-        status: 'nouveau',
+        status: 'Nouveau',
         content: newPostContent,
         userId: id,
       },{
@@ -69,6 +69,119 @@ const recrutementMiddleware = (store) => (next) => (action) => {
       })
       .catch((error) => {
         //console.log(error);
+      })
+
+      next(action);
+      break;
+    }
+
+    case FETCH_ALL_POST_LIST: {
+
+      const { token } = store.getState().user;
+
+      axios.get(`${prod}/api/posts/all`, {
+        headers: {
+          'authorization': `Bearer ${token}`,
+        }
+      })
+      .then((response) => {
+        store.dispatch(saveAllPostList(response.data.data));
+        //console.log(response.data.data)
+      })
+      .catch((error) => {
+        //console.log(error);
+      })
+
+      next(action);
+      break;
+    }
+
+    case UPDATE_POST: {
+
+      const { postUpdateId, postUpdateTitle, postUpdateStatus, postUpdateContent, postUpdateUserId, postUpdateIsActive } = store.getState().recrutement;
+      const { token } = store.getState().user;
+
+      axios
+      .put(`${prod}/api/posts/${postUpdateId}`, {
+        title: postUpdateTitle,
+        status: postUpdateStatus,
+        content: postUpdateContent,
+        isActive: postUpdateIsActive,
+        userId: postUpdateUserId,
+      },{
+          headers: {
+              'Content-Type': 'application/JSON',
+              'authorization': `Bearer ${token}`,
+          }
+      })
+      .then((response) => {
+        store.dispatch(changeFieldLoading(false, 'loading'));
+        axios.get(`${prod}/api/posts`)
+        .then((response) => {
+          store.dispatch(savePostList(response.data.data));
+        })
+        .catch((error) => {
+          //console.log(error);
+        })
+        axios.get(`${prod}/api/posts/all`, {
+          headers: {
+            'authorization': `Bearer ${token}`,
+          }
+        })
+        .then((response) => {
+          store.dispatch(saveAllPostList(response.data.data));
+          //console.log(response.data.data)
+        })
+        .catch((error) => {
+          //console.log(error);
+        })
+      })
+      .catch((error) => {
+        //console.log(error);
+        store.dispatch(changeFieldLoading(false, 'loading'));
+      })
+
+      next(action);
+      break;
+    }
+
+    case DELETE_MEMBRE: {
+
+      const { postDeletedId } = store.getState().recrutement;
+      const { token } = store.getState().user;
+
+      axios
+      .delete(`${prod}/api/posts/${postDeletedId}`, {
+          headers: {
+              'Content-Type': 'application/JSON',
+              'authorization': `Bearer ${token}`,
+          }
+      })
+      .then((response) => {
+        store.dispatch(changeFieldLoading(false, 'loading'));
+        axios.get(`${prod}/api/posts`)
+        .then((response) => {
+          store.dispatch(savePostList(response.data.data));
+        })
+        .catch((error) => {
+          //console.log(error);
+        })
+        axios.get(`${prod}/api/posts/all`, {
+          headers: {
+            'authorization': `Bearer ${token}`,
+          }
+        })
+        .then((response) => {
+          store.dispatch(saveAllPostList(response.data.data));
+          //console.log(response.data.data)
+        })
+        .catch((error) => {
+          //console.log(error);
+        })
+      })
+      .catch((error) => {
+        //console.log(error);
+        store.dispatch(changeFieldLoading(false, 'loading'));
       })
 
       next(action);

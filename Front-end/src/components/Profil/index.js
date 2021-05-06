@@ -5,7 +5,7 @@ import './profil.scss'
 
 const Profil = ({ isLogged, name, email }) => {
 
-    console.log(email);
+    document.title = `Profil - The Independent Gamers`;
 
     return(
         <main className="profil container">

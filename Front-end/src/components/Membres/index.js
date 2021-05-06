@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 
 const Membres = ({ listMembres, isAdmin}) => {
 
+  document.title = `Membres - The Independent Gamers`;
+
   return(
     
     <main className="container membre">

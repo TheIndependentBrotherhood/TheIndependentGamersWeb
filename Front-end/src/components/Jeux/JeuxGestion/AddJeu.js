@@ -5,6 +5,7 @@ const AddJeu = ({
     handleBack,
     token,
     fetchListJeux,
+    fetchListAllJeux,
 }) => {
 
     const prod = "https://api.theindependentgamers.fr";
@@ -66,6 +67,7 @@ const AddJeu = ({
         api.post(`${prod}/api/jeux`, formdata)
         .then((response) => {
             fetchListJeux();
+            fetchListAllJeux();
             handleBack(evt)
         })
         .catch((error) => {

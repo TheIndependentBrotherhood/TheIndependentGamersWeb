@@ -1,13 +1,20 @@
-import { CHANGE_FIELD, SAVE_POST_LIST, SAVE_MESSAGE_LIST, ADD_NEW_MESSAGE, NEW_POST_OK, NEW_POST_NOP } from '../actions/recrutement'; 
+import { CHANGE_FIELD, SAVE_POST_LIST, SAVE_MESSAGE_LIST, ADD_NEW_MESSAGE, NEW_POST_OK, NEW_POST_NOP, SAVE_ALL_POST_LIST } from '../actions/recrutement'; 
 
   const initialState = {
       newPostNop: false,
       newPostOk: false,
       listPost: [],
+      listAllPost: [],
       listMessage: [],
       newPostTitle: '',
       newPostContent: '',
-      newPostUserId: '',
+      postUpdateTitle: '',
+      postUpdateStatus: '',
+      postUpdateContent: '',
+      postUpdateIsActive: '',
+      postUpdateUserId: '',
+      postUpdateId: '',
+      postDeletedId: '',
       newMessageContent: '',
       postFocusId: '',
       loadingRecrutement: true,
@@ -28,6 +35,14 @@ import { CHANGE_FIELD, SAVE_POST_LIST, SAVE_MESSAGE_LIST, ADD_NEW_MESSAGE, NEW_P
               listPost: action.listPost,
               loadingRecrutement: false,
               newPostNop: false,
+        };
+
+        case SAVE_ALL_POST_LIST:
+          return{
+            ...state,
+            listAllPost: action.listAllPost,
+            loadingRecrutement: false,
+            newPostNop: false,
         };
 
         case SAVE_MESSAGE_LIST:

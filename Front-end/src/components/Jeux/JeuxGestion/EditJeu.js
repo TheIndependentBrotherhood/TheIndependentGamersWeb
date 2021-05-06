@@ -53,7 +53,8 @@ const EditJeu = ({ updateJeu, changeField, jeuSelect, handleBack }) => {
                    </div>
                    <div className="form-group">
                         <label htmlFor="subtitle">Visible ou non visible</label>
-                        <select onClick={handleIsActive} defaultValue={jeuSelect.isActive} className="custom-select">
+                        <select onClick={handleIsActive} className="custom-select">
+                            <option defaultValue={jeuSelect.isActive}></option>
                             <option value="1">Activé</option>
                             <option value="0">Désctivé</option>
                         </select>

@@ -5,6 +5,7 @@ const AddMembre = ({
     handleBack,
     token,
     fetchListMembres,
+    fetchListAllMembres,
 }) => {
 
     const prod = "https://api.theindependentgamers.fr";
@@ -66,6 +67,7 @@ const AddMembre = ({
         api.post(`${prod}/api/membre`, formdata)
         .then((response) => {
             fetchListMembres();
+            fetchListAllMembres();
             handleBack(evt)
         })
         .catch((error) => {

@@ -27,6 +27,9 @@ import twitchLolReverse from '../../assets/images/twitch-lol-reverse.png';
   }
 
  const Home = ( {listJeux, listMembres} ) => {
+
+	document.title = `The Independent Gamers`;
+
     return (
 
 		<>

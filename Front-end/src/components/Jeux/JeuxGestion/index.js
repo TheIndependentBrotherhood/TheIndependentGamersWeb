@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // components
 
@@ -14,9 +14,11 @@ const JeuxGestion = ({
   updateJeu,
   changeField,
   listJeux,
+  listAllJeux,
   isAdmin,
   token,
   fetchListJeux,
+  fetchListAllJeux,
   deleteJeu,
  }) => {
 
@@ -67,6 +69,10 @@ const JeuxGestion = ({
     return '❌'
   }
 
+  useEffect(() => {
+    fetchListAllJeux();
+  }, []);
+
   return(
     
     <main className="container membreGestion mt-5 mb-5">
@@ -79,7 +85,7 @@ const JeuxGestion = ({
           <ListJeuGestion 
             handleEdit={handleEdit}
             handleAdd={handleAdd}
-            listJeux={listJeux}
+            listJeux={listAllJeux}
             hundleDeleteJeu={hundleDeleteJeu}
             hundleDeleteJeuId={hundleDeleteJeuId}
             isActiveOrNot={isActiveOrNot}
@@ -91,6 +97,7 @@ const JeuxGestion = ({
             handleBack={handleBack}
             token={token}
             fetchListJeux={fetchListJeux}
+            fetchListAllJeux={fetchListAllJeux}
           />
         )}
 

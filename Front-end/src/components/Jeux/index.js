@@ -6,6 +6,8 @@ import logo from '../../assets/images/logo.png'
 import './jeux.scss';
 
 const Jeux = ({ listJeux, isAdmin }) => {
+
+    document.title = `Jeux - The Independent Gamers`;
     
     return(
 

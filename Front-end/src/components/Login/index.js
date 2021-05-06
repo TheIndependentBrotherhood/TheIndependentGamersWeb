@@ -38,6 +38,8 @@ const Login = ({ changeFieldLoading, loginemail, loginpassword, isLogged, logIn,
         }
         changeField(evt.target.value, "loginpassword");
     };
+
+    document.title = `Connexion - The Independent Gamers`;
     
     return(
         <main className="login">

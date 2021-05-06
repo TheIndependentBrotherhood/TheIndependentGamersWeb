@@ -56,6 +56,8 @@ const NewCandidature = ( {isLogged, newPostTitle, newPostContent, changeField, a
         }
     };
 
+    document.title = `Nouvelle Candidature - The Independent Gamers`;
+
     return(
         <main className="newcandidature">
 

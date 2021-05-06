@@ -57,7 +57,8 @@ const EditMembre = ({ updateMembre, changeField, membreSelect, handleBack }) => 
                    </div>
                    <div className="form-group">
                         <label htmlFor="subtitle">Visible ou non visible</label>
-                        <select onClick={handleIsActive} defaultValue={membreSelect.isActive} className="custom-select">
+                        <select onClick={handleIsActive} className="custom-select">
+                            <option defaultValue={membreSelect.isActive}></option>
                             <option value="1">Activé</option>
                             <option value="0">Désctivé</option>
                         </select>

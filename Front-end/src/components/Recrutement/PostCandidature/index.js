@@ -53,6 +53,8 @@ const PostCandidature = ({ listPost, loadingRecrutement, isLogged, newMessageCon
         fetchPostList();
     }, []);
 
+    document.title = `${post.title} - The Independent Gamers`;
+
     return(
 
         <>
@@ -81,7 +83,7 @@ const PostCandidature = ({ listPost, loadingRecrutement, isLogged, newMessageCon
 
                             <div className="postcandidature-content-header">
                                 <div className="postcandidature-content-info">
-                                    <p className="postcandidature-content-status">{post.status}</p>
+                                    <p className={`postcandidature-content-status_${post.status}`}>{post.status}</p>
                                     <p className="postcandidature-content-author">De {post.User.name}</p>
                                 </div>
                                 <p className="postcandidature-content-date">Le {GetFormattedDate(post.createdAt)}</p>

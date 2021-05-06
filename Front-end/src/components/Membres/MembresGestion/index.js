@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // components
 
@@ -14,9 +14,11 @@ const MembresGestion = ({
   updateMembre,
   changeField,
   listMembres,
+  listAllMembres,
   isAdmin,
   token,
   fetchListMembres,
+  fetchListAllMembres,
   deleteMembre,
  }) => {
 
@@ -67,6 +69,10 @@ const MembresGestion = ({
     return '❌'
   }
 
+  useEffect(() => {
+    fetchListAllMembres();
+  }, []);
+
   return(
     
     <main className="container membreGestion mt-5 mb-5">
@@ -79,7 +85,7 @@ const MembresGestion = ({
           <ListMembreGestion 
             handleEdit={handleEdit}
             handleAdd={handleAdd}
-            listMembres={listMembres}
+            listMembres={listAllMembres}
             hundleDeleteMembre={hundleDeleteMembre}
             hundleDeleteMembreId={hundleDeleteMembreId}
             isActiveOrNot={isActiveOrNot}
@@ -91,6 +97,7 @@ const MembresGestion = ({
             handleBack={handleBack}
             token={token}
             fetchListMembres={fetchListMembres}
+            fetchListAllMembres={fetchListAllMembres}
           />
         )}
 

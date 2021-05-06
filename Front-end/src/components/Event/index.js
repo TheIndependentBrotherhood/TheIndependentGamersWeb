@@ -7,10 +7,12 @@ import './event.scss'
 
 const Event = () => {
 
+    document.title = `Evenements - The Independent Gamers`;
+
     return(
         <main className="event container">
 
-            <h1 className="event-title">Calendrier des evenements</h1>
+            <h1 className="event-title">Calendrier des évenements</h1>
 
             <p className="event-text">Retrouvez ici le calendrier qui référence tous les évènements de la team. Pour participer à un évènement, rendez-vous sur le channel "Event" de Discord et ajoutez-vous.</p>
 

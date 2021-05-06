@@ -9,6 +9,10 @@ import './recrutement.scss'
 
 const Recrutement = ({ listPost, isAdmin, changeField }) => {
 
+    document.title = `Recrutements - The Independent Gamers`;
+
+    console.log(document.getElementById('statusId'))
+
     return(
         <main className="recrutement">
 
@@ -31,25 +35,16 @@ const Recrutement = ({ listPost, isAdmin, changeField }) => {
 
                     </div>
 
-                    {isAdmin && (
-                        <div className="recrutement-new">
-
-                            <NavLink className="recrutement-new-link" aria-current="page" to="nouvelle-candidature">Gestion</NavLink>
-    
-                        </div>
-                    )}
-
-
                 </div>
 
                 <section className="recrutement-content">
 
                     {listPost.map((post) => (
 
-                        <article className="recrutement-article">
+                        <article key={post.id} className="recrutement-article">
                             <div className="recrutement-article_header">
                                 <p className="recrutement-article_header_author">{post.User.name}</p>
-                                <p className="recrutement-article_header_status">{post.status}</p>
+                                <p className={`recrutement-article_header_status_${post.status}`}>{post.status}</p>
                                 <p className="recrutement-article_header_date">{GetFormattedDate(post.createdAt)}</p>
                             </div>
                             <div className="recrutement-article_content">
@@ -67,6 +62,12 @@ const Recrutement = ({ listPost, isAdmin, changeField }) => {
                 </section>
 
             </div>
+
+            {isAdmin && (
+                <div className="recrutement-Admin">
+                    <NavLink className="recrutement-new-admin" aria-current="page" to="/gestion-posts">Gérer</NavLink>
+                </div>
+            )}
 
         </main>
     );

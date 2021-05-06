@@ -60,9 +60,7 @@ exports.adminRequest = (req, res, next) => {
     const userId = decodedToken.userId;
     const userIsAdmin = decodedToken.isAdmin
     // console.log(userIsAdmin);
-    if(req.body.userId && Number(req.body.userId) !== userId) {
-      throw 'Invalid user Id';
-    } else if(userIsAdmin == true){
+    if(userIsAdmin == true){
       next();
     } else {
       res.status(403).json({
@@ -71,7 +69,7 @@ exports.adminRequest = (req, res, next) => {
     }
   } catch(err) {
     res.status(401).json({
-      error: (err + ', Invalid request! ta mere')
+      error: (err + ', Invalid request!')
     })
   }
 }

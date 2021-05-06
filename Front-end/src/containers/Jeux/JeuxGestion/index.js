@@ -2,11 +2,12 @@ import { connect } from 'react-redux';
 
 import JeuxGestion from '../../../components/Jeux/JeuxGestion';
 
-import { changeField, updateJeu, fetchListJeux, deleteJeu } from '../../../actions/list'
+import { changeField, updateJeu, fetchListJeux, fetchListAllJeux, deleteJeu } from '../../../actions/list'
 
 const mapStateToProps = (state) => ({
   // nom de la prop à remplir: donnée à récupérer dans le state
   listJeux: state.list.listJeux,
+  listAllJeux: state.list.listAllJeux,
   isAdmin: state.user.isAdmin,
   jeuNameUpdate: state.list.jeuNameUpdate,
   jeuDescriptionUpdate: state.list.jeuDescriptionUpdate,
@@ -29,6 +30,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   fetchListJeux: () => {
     dispatch(fetchListJeux());
+  },
+  fetchListAllJeux: () => {
+    dispatch(fetchListAllJeux());
   },
 });
 

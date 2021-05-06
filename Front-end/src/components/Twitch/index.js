@@ -102,6 +102,8 @@ const Twitch = () => {
     fetchDespe();
   }, []);
 
+  document.title = `Twitch - The Independent Gamers`;
+
   return (
 
     <main className="twitch">

@@ -1,5 +1,6 @@
 import {CHANGE_FIELD_LOADING} from '../actions/loading';
 import { SAVE_USER } from '../actions/user'
+import { FETCH_LIST_ALL_MEMBRES, SAVE_LIST_ALL_MEMBRES } from '../actions/list'
 
   const initialState = {
       loading: true,
@@ -18,7 +19,7 @@ import { SAVE_USER } from '../actions/user'
         return {
           ...state,
           loading: false,
-        }
+        };
   
         default: return state;
       }

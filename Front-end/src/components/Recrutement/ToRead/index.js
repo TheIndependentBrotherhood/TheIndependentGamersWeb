@@ -5,7 +5,9 @@ import logo from '../../../assets/images/logo.png'
 
 import './toread.scss'
 
-const Recrutement = () => {
+const Reglement = () => {
+
+    document.title = `Règlement - The Independent Gamers`;
 
     return(
         <main className="toread">
@@ -89,4 +91,4 @@ const Recrutement = () => {
     );
 };
 
-export default Recrutement;
+export default Reglement;
